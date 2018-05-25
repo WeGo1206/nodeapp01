@@ -7,6 +7,7 @@ const hostname = '192.168.1.106';
 const port = 3000;
 var requestCounter = 0;
 var htmlFile;
+var error;
 
 const server = http.createServer(function(request, response) {
 	requestCounter++;
@@ -15,8 +16,12 @@ const server = http.createServer(function(request, response) {
 	      
 
 	console.log('Requested: ' + ' [' + requestCounter + ']');
-
-	var data = fs.readFileSync(fileName, 'utf-8');
+	try {
+		var data = fs.readFileSync(fileName, 'utf-8');
+	}
+	catch (error) {
+		console.log(error);
+	}
 	var htmlFile = fs.readFileSync('./TemplateChart.html', 'utf-8');
 
 	console.log(data);

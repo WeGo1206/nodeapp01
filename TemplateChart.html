@@ -8,8 +8,8 @@
 		red: 'rgb(255, 99, 132)',
 		orange: 'rgb(255, 159, 64)',
 		yellow: 'rgb(255, 205, 86)',
-		green: 'rgb(75, 192, 192)',
-		blue: 'rgb(54, 162, 235)',
+		green: 'rgb(34, 139, 34)',
+		blue: 'rgb(0,0, 205)',
 		purple: 'rgb(153, 102, 255)',
 		grey: 'rgb(201, 203, 207)'
 	};</script>
@@ -28,15 +28,15 @@
 				labels: [@xvalues],
 				datasets: [{
 					label: 'Aussentemperatur',
-					backgroundColor: window.chartColors.red,
-					borderColor: window.chartColors.red,
+					backgroundColor: window.chartColors.blue,
+					borderColor: window.chartColors.blue,
 					data: [@yvalues1],
 					fill: false,
 				}, {
 					label: 'Innentemperatur',
 					fill: false,
-					backgroundColor: window.chartColors.blue,
-					borderColor: window.chartColors.blue,
+					backgroundColor: window.chartColors.green,
+					borderColor: window.chartColors.green,
 					data: [@yvalues2],
 				}]
 			},
@@ -44,7 +44,7 @@
 				responsive: true,
 				title: {
 					display: true,
-					text: 'Temperatur Messung - by WeGo1206'
+					text: 'Temperatur- Messung mit Raspberry PI                  [WeGo / 2018-05-25 / Version 0.0.3]'
 				},
 				tooltips: {
 					mode: 'index',
@@ -59,14 +59,14 @@
 						display: true,
 						scaleLabel: {
 							display: true,
-							labelString: 'Zeit'
+							labelString: '[ t ] ---->'
 						}
 					}],
 					yAxes: [{
 						display: true,
 						scaleLabel: {
 							display: true,
-							labelString: '[°C]'
+							labelString: '[ \u00b0C ] ---->'
 						}
 					}]
 				}
