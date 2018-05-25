@@ -5,11 +5,11 @@
 	<title>Line Chart</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 	<script>window.chartColors = {
-		red: 'rgb(255, 99, 132)',
+		red: 'rgb(255, 69, 0)',
 		orange: 'rgb(255, 159, 64)',
 		yellow: 'rgb(255, 205, 86)',
 		green: 'rgb(34, 139, 34)',
-		blue: 'rgb(0,0, 205)',
+		blue: 'rgb(30,144, 255)',
 		purple: 'rgb(153, 102, 255)',
 		grey: 'rgb(201, 203, 207)'
 	};</script>
@@ -32,12 +32,14 @@
 					borderColor: window.chartColors.blue,
 					data: [@yvalues1],
 					fill: false,
+					pointRadius: 0
 				}, {
 					label: 'Innentemperatur',
 					fill: false,
-					backgroundColor: window.chartColors.green,
-					borderColor: window.chartColors.green,
+					backgroundColor: window.chartColors.red,
+					borderColor: window.chartColors.red,
 					data: [@yvalues2],
+					pointRadius: 0
 				}]
 			},
 			options: {
