@@ -4,7 +4,7 @@ var http = require('http'),
     moment = require('moment');
 
 const hostname = '192.168.1.106';
-const port = 3000;
+const port = 80;
 var requestCounter = 0;
 var htmlFile;
 var error;
@@ -21,6 +21,7 @@ const server = http.createServer(function(request, response) {
 	}
 	catch (error) {
 		console.log(error);
+		return;
 	}
 	var htmlFile = fs.readFileSync('./TemplateChart.html', 'utf-8');
 
