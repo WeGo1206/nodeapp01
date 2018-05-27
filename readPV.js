@@ -16,10 +16,10 @@ module.exports = {
         console.log(fileName);
         d = 0;
         for (d = 0; d < fileName.length; d++) {
-            dataTemp = fs.readFileSync('./TestData/' + fileName[d] + '.txt', 'utf-8');
+            dataTemp = fs.readFileSync('/home/pi/Documents/' + fileName[d] + '.txt', 'utf-8');
             data = data.concat(dataTemp);
         };
-        console.log(data);
+        //console.log(data);
         
         var htmlFile = fs.readFileSync('./TemplateChart.html', 'utf-8');
         //console.log(data);

@@ -5,8 +5,8 @@ var http = require('http'),
     express = require('express'),
     readPV = require('./readPV');
 
-const hostname = '192.168.1.114';
-const port = 3000;
+const hostname = '192.168.1.106';
+const port = 80;
 var requestCounter = 0;
 var htmlFile;
 var error;
