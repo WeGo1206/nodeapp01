@@ -15,19 +15,24 @@ var error;
 const app = express();
 
 app.get('/', function (req, res) {
-res.send(readPV.readPV(1))});
+res.send(readPV.readPV(1));
+console.log('Request: ' + moment().format());});
 
 app.get('/Heute', function (req, res) {
-  res.send(readPV.readPV(1))});
+  res.send(readPV.readPV(1));
+console.log('Request: ' + moment().format());});
 
 app.get('/2t', function (req, res) {
-  res.send(readPV.readPV(2))});
+  res.send(readPV.readPV(2));
+console.log('Request: ' + moment().format());});
 
 app.get('/3t', function (req, res) {
-  res.send(readPV.readPV(3))});
+  res.send(readPV.readPV(3));
+console.log('Request: ' + moment().format());});
 
 app.get('/5t', function (req, res) {
-  res.send(readPV.readPV(5))});
+  res.send(readPV.readPV(5));
+console.log('Request: ' + moment().format());});
 
 app.post('/2t', function(req, res){   
   res.redirect('/2t');});

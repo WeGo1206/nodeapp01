@@ -13,7 +13,7 @@ module.exports = {
 
             fileName.push('Temperatur_Wohnung_' + moment().subtract(timeRangeDays-d,"days").format('YYYYMMDD'));
         };
-        console.log(fileName);
+        //console.log(fileName);
         d = 0;
         for (d = 0; d < fileName.length; d++) {
             dataTemp = fs.readFileSync('/home/pi/Documents/' + fileName[d] + '.txt', 'utf-8');
