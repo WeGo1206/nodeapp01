@@ -1,0 +1,25 @@
+{
+  "name": "nodeapp01",
+  "version": "0.0.4",
+  "description": "TemperaturMessung",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "moment": "^2.22.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeGo1206/nodeapp01.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WeGo1206/nodeapp01/issues"
+  },
+  "homepage": "https://github.com/WeGo1206/nodeapp01#readme"
+}
