@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>Line Chart</title>
+	<title>Chart</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 	<script>window.chartColors = {
 		red: 'rgb(255, 69, 0)',
@@ -20,6 +20,21 @@
 		<canvas id="canvas"></canvas>
 	</div>
 	<br>
+	<form action="Heute" method="post" style="float: left">
+		<input type="submit" value= "Heute" style="float: left">
+	</form>
+	
+	<form action="2t" method="post" style="float: left">
+		<input type="submit" value= "2 Tage" style="float: left">
+	</form>
+	
+	<form action="3t" method="post" style="float: left">
+		<input type="submit" value="3 Tage" style="float: left">
+	</form>
+	
+	<form action="5t" method="post" style="float: left">
+		<input type="submit" value="5 Tage" style="float: left">
+	</form>
 	<br>
 	<script>
 		var config = {
@@ -46,7 +61,7 @@
 				responsive: true,
 				title: {
 					display: true,
-					text: 'Temperatur- Messung mit Raspberry PI und DS18B20 Sensor                  [WeGo / 2018-05-25 / Version 0.0.3]'
+					text: 'Temperatur- Messung mit Raspberry PI und DS18B20 Sensor                  [WeGo / 2018-05-27 / Version 0.0.4]'
 				},
 				tooltips: {
 					mode: 'index',
