@@ -16,8 +16,13 @@ module.exports = {
         //console.log(fileName);
         d = 0;
         for (d = 0; d < fileName.length; d++) {
-            dataTemp = fs.readFileSync('/home/pi/Documents/' + fileName[d] + '.txt', 'utf-8');
-            data = data.concat(dataTemp);
+	    try{
+               dataTemp = fs.readFileSync('/home/pi/Documents/' + fileName[d] + '.txt', 'utf-8');
+               data = data.concat(dataTemp);
+	    }
+	    catch(err){
+               //console.log(err);
+	    };
         };
         //console.log(data);
         
@@ -41,7 +46,7 @@ module.exports = {
         };
         
         //console.log(normArr);
-        
+
         i = 0;
         for (i = 0; i < normArr.length; i++) {
             if(normArr[i][3]) {
@@ -49,23 +54,46 @@ module.exports = {
                 time.push("\"" + normArr[i][3] + "\"");
             };
             if(normArr[i][0]) {
-                dataset1.push(normArr[i][0].replace(",","."));
+                dataset1.push(Number(normArr[i][0].replace(",",".")));
+		
             };
             if(normArr[i][0]) {
-                dataset2.push(normArr[i][1].replace(",","."));
+                dataset2.push(Number(normArr[i][1].replace(",",".")));
+		
             };
         };
        
         //console.log(time);
         //console.log(dataset1);
         //console.log(dataset2);
+
+	var avg1 = 0;
+	var avg2 = 0;
+
+	for(i=0; i< dataset1.length; i++) {
+		avg1 += dataset1[i];
+	};
+	avg1 = avg1/dataset1.length;
+
         
+	for(i=0; i< dataset2.length; i++) {
+		avg2 += dataset2[i];
+	};
+	avg2 = avg2/dataset2.length;
+
         var newHtmlFile;
         newHtmlFile = htmlFile.replace("@xvalues", time);
         newHtmlFile = newHtmlFile.replace("@yvalues1", dataset1);
         newHtmlFile = newHtmlFile.replace("@yvalues2", dataset2);
+        newHtmlFile = newHtmlFile.replace("@num1", dataset1.length);
+        newHtmlFile = newHtmlFile.replace("@num2", dataset2.length);
+        newHtmlFile = newHtmlFile.replace("@min1", Math.min(...dataset1));
+        newHtmlFile = newHtmlFile.replace("@min2", Math.min(...dataset2));
+        newHtmlFile = newHtmlFile.replace("@max1", Math.max(...dataset1));
+        newHtmlFile = newHtmlFile.replace("@max2", Math.max(...dataset2));
+        newHtmlFile = newHtmlFile.replace("@avg1", avg1.toFixed(2));
+        newHtmlFile = newHtmlFile.replace("@avg2", avg2.toFixed(2));
         //console.log(newHtmlFile);
-
         return newHtmlFile;
     }
 }
