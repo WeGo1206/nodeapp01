@@ -46,7 +46,7 @@
 
 <body>
 	<p>Temperatur- Messung mit Raspberry PI und DS18B20 Sensor<p\>
-	<div style="width:75%;">
+	<div style="width:100%;">
 		<canvas id="canvas"></canvas>
 	</div>
 	<br>
@@ -90,8 +90,9 @@
 	</div>
 
 	<br>
-    <br>
-
+        <br>
+	<br>
+	<p>Statistik des aktuellen Zeitbereichs<p\>
 	<table>
  		<tr>
     		<th>Messstelle</th>
@@ -155,14 +156,14 @@
 						display: true,
 						scaleLabel: {
 							display: true,
-							labelString: '[ t ] ---->'
+							labelString: '>>>> [ t ] >>>>'
 						}
 					}],
 					yAxes: [{
 						display: true,
 						scaleLabel: {
 							display: true,
-							labelString: '[ \u00b0C ] ---->'
+							labelString: '>>>> [ \u00b0C ] >>>>'
 						}
 					}]
 				}
