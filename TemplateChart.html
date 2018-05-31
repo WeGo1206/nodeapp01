@@ -3,6 +3,18 @@
 
 <head>
 	<style>
+	.timerange-buttons {
+		font-family: arial, sans-serif;
+		font-weight: bold;
+		margin: 3px;
+		font-size: 16px;
+		
+
+	}
+	p {
+		font-family: arial, sans-serif;
+		font-weight: bold;
+	}
 	table {
     		font-family: arial, sans-serif;
     		border-collapse: collapse;
@@ -12,7 +24,7 @@
 	td, th {
     		border: 1px solid #dddddd;
     		text-align: left;
-   		padding: 8px;
+   			padding: 8px;
 	}
 
 	tr:nth-child(even) {
@@ -33,72 +45,76 @@
 </head>
 
 <body>
+	<p>Temperatur- Messung mit Raspberry PI und DS18B20 Sensor<p\>
 	<div style="width:75%;">
 		<canvas id="canvas"></canvas>
 	</div>
 	<br>
 	<p>Auswahl Zeitbereich<p\>
+	<div>
 	<form action="Heute" method="post" style="float: left">
-		<input type="submit" value= "Heute" style="float: left">
+		<input type="submit" value= "Heute" class="timerange-buttons">
 	</form>
 	
 	<form action="2t" method="post" style="float: left">
-		<input type="submit" value= "2 Tage" style="float: left">
+		<input type="submit" value= "2 Tage" class="timerange-buttons">
 	</form>
 	
 	<form action="3t" method="post" style="float: left">
-		<input type="submit" value="3 Tage" style="float: left">
+		<input type="submit" value="3 Tage" class="timerange-buttons">
 	</form>
 	
 	<form action="5t" method="post" style="float: left">
-		<input type="submit" value="5 Tage" style="float: left">
+		<input type="submit" value="5 Tage" class="timerange-buttons">
 	</form>
 
 	<form action="10t" method="post" style="float: left">
-		<input type="submit" value="10 Tage" style="float: left">
+		<input type="submit" value="10 Tage" class="timerange-buttons">
 	</form>
 
 	<form action="31t" method="post" style="float: left">
-		<input type="submit" value="1 Monat" style="float: left">
+		<input type="submit" value="1 Monat" class="timerange-buttons">
 	</form>
 
 	<form action="93t" method="post" style="float: left">
-		<input type="submit" value="3 Monate" style="float: left">
+		<input type="submit" value="3 Monate" class="timerange-buttons">
 	</form>
 
 	<form action="183t" method="post" style="float: left">
-		<input type="submit" value="6 Monate" style="float: left">
+		<input type="submit" value="6 Monate" class="timerange-buttons">
 	</form>
 
 	<form action="365t" method="post" style="float: left">
-		<input type="submit" value="12 Monate" style="float: left">
+		<input type="submit" value="12 Monate" class="timerange-buttons">
 	</form>
-	<br>
-        <br>
+	</div>
 
-<table>
-  <tr>
-    <th>Messstelle</th>
-    <th>Min</th>
-    <th>Max</th>
-    <th>Durchschnitt</th>
-    <th>Anzahl Messwerte</th>
-  </tr>
-  <tr>
-    <td>Aussen</th>
-    <td>@min1</th>
-    <td>@max1</th>
-    <td>@avg1</th>
-    <td>@num1</th>
-  </tr>
-  <tr>
-    <td>Innen</th>
-    <td>@min2</th>
-    <td>@max2</th>
-    <td>@avg2</th>
-    <td>@num2</th>
-  </tr>
-</table>
+	<br>
+    <br>
+
+	<table>
+ 		<tr>
+    		<th>Messstelle</th>
+    		<th>Min</th>
+    		<th>Max</th>
+    		<th>Durchschnitt</th>
+    		<th>Anzahl Messwerte</th>
+  		</tr>
+ 		 <tr>
+    		<td>Aussen</th>
+    		<td>@min1</th>
+    		<td>@max1</th>
+    		<td>@avg1</th>
+    		<td>@num1</th>
+  		</tr>
+  		<tr>
+    		<td>Innen</th>
+    		<td>@min2</th>
+    		<td>@max2</th>
+    		<td>@avg2</th>
+    		<td>@num2</th>
+  		</tr>
+	</table>
 	<script>
 		var config = {
 			type: 'line',
@@ -124,7 +140,7 @@
 				responsive: true,
 				title: {
 					display: true,
-					text: 'Temperatur- Messung mit Raspberry PI und DS18B20 Sensor                  [WeGo / 2018-05-27 / Version 0.0.4]'
+					text: ''
 				},
 				tooltips: {
 					mode: 'index',
