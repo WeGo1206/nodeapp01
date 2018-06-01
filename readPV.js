@@ -59,16 +59,16 @@ module.exports = {
                 arrayOfTime.push("\"" + arrayOfSeparatedValues[i][3] + "\"");
             };
             if(arrayOfSeparatedValues[i][0]) {
-                arrayOfYvalue1.push(Number(arrayOfSeparatedValues[i][0].replace(",",".")));
+		                arrayOfYvalue1.push(Number(arrayOfSeparatedValues[i][0].replace(",",".")));
 		
             };
-            if(arrayOfSeparatedValues[i][0]) {
+            if(arrayOfSeparatedValues[i][1]) {
                 arrayOfYvalue2.push(Number(arrayOfSeparatedValues[i][1].replace(",",".")));
 		
             };
         };
        
-        //console.log(time);
+	//console.log(time);
         //console.log(dataset1);
         //console.log(dataset2);
 
@@ -94,7 +94,7 @@ module.exports = {
         responseHTML = responseHTML.replace("@max2", Math.max(...arrayOfYvalue2));
         responseHTML = responseHTML.replace("@avg1", avgOfYvalue1.toFixed(2));
         responseHTML = responseHTML.replace("@avg2", avgOfYvalue2.toFixed(2));
-        //console.log(newHtmlFile);
+        //console.log(responseHTML);
         return responseHTML;
     }
 }

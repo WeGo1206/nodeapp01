@@ -54,6 +54,10 @@ app.get('/365t', function (req, res) {
   res.send(readPV.readPV(365));
 console.log('Request: ' + moment().format());});
 
+app.get('/730t', function (req, res) {
+  res.send(readPV.readPV(730));
+console.log('Request: ' + moment().format());});
+
 app.post('/Heute', function(req, res){   
   res.redirect('/Heute');});
 
@@ -81,7 +85,8 @@ app.post('/183t', function(req, res){
 app.post('/365t', function(req, res){   
   res.redirect('/365t');});
 
-
+app.post('/730t', function(req, res){   
+  res.redirect('/730t');});
 
 app.get('/About', function (req, res) {
 res.send('Temperatur-Messung mit Raspberry PI und DS18B20 Sensor \n WeGo v0.0.4')});
