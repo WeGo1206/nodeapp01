@@ -39,7 +39,7 @@ app.post('/pi', function(req, res){
 });
 
 app.post('/pi/2', function(req, res){ 
-  console.log('post2: ' + JSON.stringify(req.body));
+  //console.log('post2: ' + JSON.stringify(req.body));
   console.log('post2: ' + req.body.Zeitbereiche);
   //console.log('post: ' + req.body.edate);
   //this corrsponds to req.query.xxxx in get route
@@ -52,7 +52,7 @@ app.post('/pi/2', function(req, res){
   sDateF = sDateF.replace(/-/g,"");
   eDateF = eDateF.replace(/-/g,"");   */
   //res.send(piSelectValue.readByDateInput(sDateF, eDateF));
-  res.send(piFixedValue.readPV(1));
+  res.send(piFixedValue.readPV(req.body.Zeitbereiche));
 });
 
 app.listen(port, hostname, () => {
