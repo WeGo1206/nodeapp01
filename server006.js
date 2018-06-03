@@ -39,7 +39,7 @@ app.post('/pi', function(req, res){
 });
 
 app.post('/pi/2', function(req, res){ 
-  console.log('post2: ' + req.body);
+  console.log('post2: ' + JSON.stringify(req.body);
   //console.log('post: ' + req.body.edate);
   //this corrsponds to req.query.xxxx in get route
   //res.redirect('/page/1/?sdate='+ req.body.sdate+ '&edate='+ req.body.edate);
