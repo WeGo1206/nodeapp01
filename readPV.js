@@ -69,7 +69,7 @@ module.exports = {
 		
             };
             if(arrayOfSeparatedValues[i][2]) {
-                arrayOfYvalue3.push(Number(arrayOfSeparatedValues[i][1].replace(",",".")));
+                arrayOfYvalue3.push(Number(arrayOfSeparatedValues[i][2].replace(",",".")));
 		
             };
         };
