@@ -51,10 +51,12 @@
 	</div>
 	<br>
 	<form action="/pi" method="POST">
-        <p>Auswahl manueller Zeitbereich</p>
-        <input class="timerange-buttons" type="date" name="sdate" id="@sDate">
+		<p>Auswahl manueller Zeitbereich</p>
+		<p>Von:</p>
+		<input class="timerange-buttons" type="date" name="sdate" id="@sDate">
+		<p>Bis:</p>
         <input class="timerange-buttons" type="date" name="edate" id="@eDate">
-        <input class="timerange-buttons" type="submit" value="ok" id="submit">
+        <input class="timerange-buttons" type="submit" value="Ausf&uuml;hren" id="submit">
 	  </form>
 	<br>
 	<div>
@@ -72,7 +74,7 @@
 			  <option value="365">1 Jahr</option>
 			  <option value="730">2 Jahre</option>
 			</select>
-		<input type="submit" value="ok" class="timerange-buttons">
+		<input type="submit" value="Ausf&uuml;hren" class="timerange-buttons">
 	</form>
 	</div>
 
@@ -103,7 +105,7 @@
     		<td>@num2</th>
 		</tr>
 		<tr>
-    		<td>CPU</th>
+    		<td>PI Prozessor</th>
     		<td>@min3</th>
     		<td>@max3</th>
     		<td>@avg3</th>
