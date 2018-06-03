@@ -54,48 +54,22 @@
         <p>Auswahl manueller Zeitbereich<p\>
         <input class="timerange-buttons" type="date" name="sdate" id="@sDate">
         <input class="timerange-buttons" type="date" name="edate" id="@eDate">
-        <input class="timerange-buttons" type="submit" id="submit">
+        <input class="timerange-buttons" type="submit" value="ok" id="submit">
       </form>
 	<p>Auswahl vordefinierte Zeitbereich<p\>
 	<div>
-	<form action="Heute" method="post" style="float: left">
-		<input type="submit" value= "Heute" class="timerange-buttons">
-	</form>
-	
-	<form action="2t" method="post" style="float: left">
-		<input type="submit" value= "2 Tage" class="timerange-buttons">
-	</form>
-	
-	<form action="3t" method="post" style="float: left">
-		<input type="submit" value="3 Tage" class="timerange-buttons">
-	</form>
-	
-	<form action="5t" method="post" style="float: left">
-		<input type="submit" value="5 Tage" class="timerange-buttons">
-	</form>
-
-	<form action="10t" method="post" style="float: left">
-		<input type="submit" value="10 Tage" class="timerange-buttons">
-	</form>
-
-	<form action="31t" method="post" style="float: left">
-		<input type="submit" value="1 Monat" class="timerange-buttons">
-	</form>
-
-	<form action="93t" method="post" style="float: left">
-		<input type="submit" value="3 Monate" class="timerange-buttons">
-	</form>
-
-	<form action="183t" method="post" style="float: left">
-		<input type="submit" value="6 Monate" class="timerange-buttons">
-	</form>
-
-	<form action="365t" method="post" style="float: left">
-		<input type="submit" value="12 Monate" class="timerange-buttons">
-	</form>
-
-	<form action="730t" method="post" style="float: left">
-		<input type="submit" value="24 Monate" class="timerange-buttons">
+		<form action="/pi/2">
+			<select name="cars">
+			  <option value="Heute" name="1T">Heute</option>
+			  <option value="2 Tage" name="2T">2 Tage</option>
+			  <option value="3 Tage" name="3T">3 Tage</option>
+			  <option value="5 Tage" name="5T">5 Tage</option>
+			  <option value="10 Tage" name="10T">2 Tage</option>
+			  <option value="14 Tage" name="14T">14 Tage</option>
+			  <option value="31 Tage" name="31T">31 Tage</option>
+			</select>
+			<br><br>
+		<input type="submit" value="ok" class="timerange-buttons">
 	</form>
 	</div>
 

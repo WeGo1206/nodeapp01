@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
   //this corresponds to route parameters directly the path separeted by '/'
   console.log('get2: ' + req.params.sdate);
   console.log('get2: ' + req.params.edate);
-  res.send(piFixedValue.readPV(8));
+  res.send(piFixedValue.readPV(1));
 });
 
 app.post('/pi', function(req, res){ 
@@ -36,6 +36,22 @@ app.post('/pi', function(req, res){
   sDateF = sDateF.replace(/-/g,"");
   eDateF = eDateF.replace(/-/g,"");  
   res.send(piSelectValue.readByDateInput(sDateF, eDateF));
+});
+
+app.post('/pi/2', function(req, res){ 
+  console.log('post: ' + req.body.sdate);
+  //console.log('post: ' + req.body.edate);
+  //this corrsponds to req.query.xxxx in get route
+  //res.redirect('/page/1/?sdate='+ req.body.sdate+ '&edate='+ req.body.edate);
+
+  //this corresponds to req.params.xxxx in get route
+  //res.redirect('/page/1/'+ req.body.sdate+ '/'+ req.body.edate);
+  /* var sDateF = req.body.sdate;
+  var eDateF = req.body.edate;
+  sDateF = sDateF.replace(/-/g,"");
+  eDateF = eDateF.replace(/-/g,"");   */
+  //res.send(piSelectValue.readByDateInput(sDateF, eDateF));
+  res.send(piFixedValue.readPV(1));
 });
 
 app.listen(port, hostname, () => {
