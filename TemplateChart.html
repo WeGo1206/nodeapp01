@@ -88,9 +88,9 @@
 	<form action="/pi" method="POST">
 		<p>Auswahl manueller Zeitbereich</p>
 		<p>Von:</p>
-		<input class="timerange-buttons" type="date" name="sdate" id="@sDate">
+		<input class="timerange-buttons" type="date" name="sdate" id="_sDate">
 		<p>Bis:</p>
-        <input class="timerange-buttons" type="date" name="edate" id="@eDate">
+        <input class="timerange-buttons" type="date" name="edate" id="_eDate">
         <input class="timerange-buttons" type="submit" value="Ausf&uuml;hren" id="submit">
 	  </form>
 	</div>
@@ -126,24 +126,24 @@
   		</tr>
  		 <tr>
     		<td>Aussen</th>
-    		<td>@min1</th>
-    		<td>@max1</th>
-    		<td>@avg1</th>
-    		<td>@num1</th>
+    		<td>_min1</th>
+    		<td>_max1</th>
+    		<td>_avg1</th>
+    		<td>_num1</th>
   		</tr>
   		<tr>
     		<td>Innen</th>
-    		<td>@min2</th>
-    		<td>@max2</th>
-    		<td>@avg2</th>
-    		<td>@num2</th>
+    		<td>_min2</th>
+    		<td>_max2</th>
+    		<td>_avg2</th>
+    		<td>_num2</th>
 		</tr>
 		<tr>
     		<td>PI Prozessor</th>
-    		<td>@min3</th>
-    		<td>@max3</th>
-    		<td>@avg3</th>
-    		<td>@num3</th>
+    		<td>_min3</th>
+    		<td>_max3</th>
+    		<td>_avg3</th>
+    		<td>_num3</th>
   		</tr>
 	</table>
 	</div>
@@ -151,12 +151,12 @@
 		var config = {
 			type: 'line',
 			data: {
-				labels: [@xvalues],
+				labels: [_xvalues],
 				datasets: [{
 					label: 'Aussentemperatur',
 					backgroundColor: window.chartColors.blue,
 					borderColor: window.chartColors.blue,
-					data: [@yvalues1],
+					data: [_yvalues1],
 					fill: false,
 					pointRadius: 0
 				}, {
@@ -164,14 +164,14 @@
 					fill: false,
 					backgroundColor: window.chartColors.red,
 					borderColor: window.chartColors.red,
-					data: [@yvalues2],
+					data: [_yvalues2],
 					pointRadius: 0
 				}, {
 					label: 'PI Prozessortemperatur',
 					fill: false,
 					backgroundColor: window.chartColors.grey,
 					borderColor: window.chartColors.grey,
-					data: [@yvalues3],
+					data: [_yvalues3],
 					pointRadius: 0
 				}]
 			},
