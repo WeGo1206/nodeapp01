@@ -28,10 +28,16 @@
 		padding-left: 15px;
 	}
 
+	.statistic-table {
+		border: 1px solid black;
+    	outline: #4CAF50 solid 3px;
+	}
+
 	table {
     		font-family: arial, sans-serif;
     		border-collapse: collapse;
     		width: 100%;
+			padding-left: 15px;
 		}	
 
 	td, th {
@@ -92,11 +98,9 @@
 		<input type="submit" value="Ausf&uuml;hren" class="timerange-buttons">
 	</form>
 	</div>
-
 	<br>
-        <br>
-	<br>
-	<p>Statistik des aktuellen Zeitbereichs<p\>
+	<div class="statistic-table">
+	<p>Statistik des aktuellen Zeitbereichs</p>
 	<table>
  		<tr>
     		<th>Messstelle</th>
@@ -127,6 +131,7 @@
     		<td>@num3</th>
   		</tr>
 	</table>
+	</div>
 	<script>
 		var config = {
 			type: 'line',
