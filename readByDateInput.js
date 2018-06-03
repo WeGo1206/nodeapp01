@@ -35,7 +35,7 @@ module.exports = {
                data = data.concat(dataTemp);
 	    }
 	    catch(err){
-               console.log('./' + fileName[d] + '.txt');
+               //console.log('./' + fileName[d] + '.txt');
 	    };
         };
         //console.log(data);
