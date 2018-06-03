@@ -101,6 +101,13 @@
     		<td>@max2</th>
     		<td>@avg2</th>
     		<td>@num2</th>
+		</tr>
+		<tr>
+    		<td>CPU</th>
+    		<td>@min3</th>
+    		<td>@max3</th>
+    		<td>@avg3</th>
+    		<td>@num3</th>
   		</tr>
 	</table>
 	<script>
@@ -121,6 +128,13 @@
 					backgroundColor: window.chartColors.red,
 					borderColor: window.chartColors.red,
 					data: [@yvalues2],
+					pointRadius: 0
+				}, {
+					label: 'PI Prozessortemperatur',
+					fill: false,
+					backgroundColor: window.chartColors.red,
+					borderColor: window.chartColors.red,
+					data: [@yvalues3],
 					pointRadius: 0
 				}]
 			},
