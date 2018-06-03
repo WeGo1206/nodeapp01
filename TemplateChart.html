@@ -51,14 +51,15 @@
 	</div>
 	<br>
 	<form action="/pi" method="POST">
-        <p>Auswahl manueller Zeitbereich<p\>
+        <p>Auswahl manueller Zeitbereich</p>
         <input class="timerange-buttons" type="date" name="sdate" id="@sDate">
         <input class="timerange-buttons" type="date" name="edate" id="@eDate">
         <input class="timerange-buttons" type="submit" value="ok" id="submit">
       </form>
-	<p>Auswahl vordefinierte Zeitbereich<p\>
+
 	<div>
 		<form action="/pi/2" method="POST">
+			<p>Auswahl vordefinierte Zeitbereiche</p>
 			<select name="Zeitbereiche">
 			  <option value="1">Heute</option>
 			  <option value="2">2 Tage</option>
@@ -71,7 +72,6 @@
 			  <option value="365">1 Jahr</option>
 			  <option value="730">2 Jahre</option>
 			</select>
-			<br><br>
 		<input type="submit" value="ok" class="timerange-buttons">
 	</form>
 	</div>
