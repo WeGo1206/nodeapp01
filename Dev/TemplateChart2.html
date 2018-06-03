@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+
+<head>
+	<style>
+	.timerange-buttons {
+		font-family: arial, sans-serif;
+		font-weight: bold;
+		margin: 3px;
+		font-size: 16px;
+		
+
+	}
+	p {
+		font-family: arial, sans-serif;
+		font-weight: bold;
+	}
+	table {
+    		font-family: arial, sans-serif;
+    		border-collapse: collapse;
+    		width: 100%;
+		}	
+
+	td, th {
+    		border: 1px solid #dddddd;
+    		text-align: left;
+   			padding: 8px;
+	}
+
+	tr:nth-child(even) {
+    		background-color: #dddddd;
+	}
+	</style>
+	<title>Chart</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+	<script>window.chartColors = {
+		red: 'rgb(255, 69, 0)',
+		orange: 'rgb(255, 159, 64)',
+		yellow: 'rgb(255, 205, 86)',
+		green: 'rgb(34, 139, 34)',
+		blue: 'rgb(30,144, 255)',
+		purple: 'rgb(153, 102, 255)',
+		grey: 'rgb(201, 203, 207)'
+	};</script>
+</head>
+
+<body>
+	<p>Temperatur- Messung mit Raspberry PI und DS18B20 Sensor<p\>
+	<div style="width:100%;">
+		<canvas id="canvas"></canvas>
+	</div>
+	<br>
+	<form action="/pi" method="POST">
+        <p>Auswahl manueller Zeitbereich<p\>
+        <input class="timerange-buttons" type="date" name="sdate" id="@sDate">
+        <input class="timerange-buttons" type="date" name="edate" id="@eDate">
+        <input class="timerange-buttons" type="submit" id="submit">
+      </form>
+	<p>Auswahl vordefinierte Zeitbereich<p\>
+	<div>
+	<form action="Heute" method="post" style="float: left">
+		<input type="submit" value= "Heute" class="timerange-buttons">
+	</form>
+	
+	<form action="2t" method="post" style="float: left">
+		<input type="submit" value= "2 Tage" class="timerange-buttons">
+	</form>
+	
+	<form action="3t" method="post" style="float: left">
+		<input type="submit" value="3 Tage" class="timerange-buttons">
+	</form>
+	
+	<form action="5t" method="post" style="float: left">
+		<input type="submit" value="5 Tage" class="timerange-buttons">
+	</form>
+
+	<form action="10t" method="post" style="float: left">
+		<input type="submit" value="10 Tage" class="timerange-buttons">
+	</form>
+
+	<form action="31t" method="post" style="float: left">
+		<input type="submit" value="1 Monat" class="timerange-buttons">
+	</form>
+
+	<form action="93t" method="post" style="float: left">
+		<input type="submit" value="3 Monate" class="timerange-buttons">
+	</form>
+
+	<form action="183t" method="post" style="float: left">
+		<input type="submit" value="6 Monate" class="timerange-buttons">
+	</form>
+
+	<form action="365t" method="post" style="float: left">
+		<input type="submit" value="12 Monate" class="timerange-buttons">
+	</form>
+	</div>
+
+	<br>
+        <br>
+	<br>
+	<p>Statistik des aktuellen Zeitbereichs<p\>
+	<table>
+ 		<tr>
+    		<th>Messstelle</th>
+    		<th>Min</th>
+    		<th>Max</th>
+    		<th>Durchschnitt</th>
+    		<th>Anzahl Messwerte</th>
+  		</tr>
+ 		 <tr>
+    		<td>Aussen</th>
+    		<td>@min1</th>
+    		<td>@max1</th>
+    		<td>@avg1</th>
+    		<td>@num1</th>
+  		</tr>
+  		<tr>
+    		<td>Innen</th>
+    		<td>@min2</th>
+    		<td>@max2</th>
+    		<td>@avg2</th>
+    		<td>@num2</th>
+  		</tr>
+	</table>
+	<script>
+		var config = {
+			type: 'line',
+			data: {
+				labels: [@xvalues],
+				datasets: [{
+					label: 'Aussentemperatur',
+					backgroundColor: window.chartColors.blue,
+					borderColor: window.chartColors.blue,
+					data: [@yvalues1],
+					fill: false,
+					pointRadius: 0
+				}, {
+					label: 'Innentemperatur',
+					fill: false,
+					backgroundColor: window.chartColors.red,
+					borderColor: window.chartColors.red,
+					data: [@yvalues2],
+					pointRadius: 0
+				}]
+			},
+			options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: ''
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: '>>>> [ t ] >>>>'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: '>>>> [ \u00b0C ] >>>>'
+						}
+					}]
+				}
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myLine = new Chart(ctx, config);
+		};
+	</script>
+</body>
+
+</html>
+

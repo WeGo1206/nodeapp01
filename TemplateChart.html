@@ -50,7 +50,13 @@
 		<canvas id="canvas"></canvas>
 	</div>
 	<br>
-	<p>Auswahl Zeitbereich<p\>
+	<form action="/pi" method="POST">
+        <p>Auswahl manueller Zeitbereich<p\>
+        <input class="timerange-buttons" type="date" name="sdate" id="@sDate">
+        <input class="timerange-buttons" type="date" name="edate" id="@eDate">
+        <input class="timerange-buttons" type="submit" id="submit">
+      </form>
+	<p>Auswahl vordefinierte Zeitbereich<p\>
 	<div>
 	<form action="Heute" method="post" style="float: left">
 		<input type="submit" value= "Heute" class="timerange-buttons">
