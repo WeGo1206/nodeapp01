@@ -94,22 +94,22 @@ module.exports = {
 	    };
 	    avgOfYvalue3 = avgOfYvalue3/arrayOfYvalue3.length;
 
-        responseHTML = htmlTemplateFile.replace("@xvalues", arrayOfTime);
-        responseHTML = responseHTML.replace("@yvalues1", arrayOfYvalue1);
-        responseHTML = responseHTML.replace("@yvalues2", arrayOfYvalue2);
-        responseHTML = responseHTML.replace("@yvalues3", arrayOfYvalue3);
-        responseHTML = responseHTML.replace("@num1", arrayOfYvalue1.length);
-        responseHTML = responseHTML.replace("@num2", arrayOfYvalue2.length);
-        responseHTML = responseHTML.replace("@num3", arrayOfYvalue3.length);
-        responseHTML = responseHTML.replace("@min1", Math.min(...arrayOfYvalue1));
-        responseHTML = responseHTML.replace("@min2", Math.min(...arrayOfYvalue2));
-        responseHTML = responseHTML.replace("@min3", Math.min(...arrayOfYvalue3));
-        responseHTML = responseHTML.replace("@max1", Math.max(...arrayOfYvalue1));
-        responseHTML = responseHTML.replace("@max2", Math.max(...arrayOfYvalue2));
-        responseHTML = responseHTML.replace("@max3", Math.max(...arrayOfYvalue3));
-        responseHTML = responseHTML.replace("@avg1", avgOfYvalue1.toFixed(2));
-        responseHTML = responseHTML.replace("@avg2", avgOfYvalue2.toFixed(2));
-        responseHTML = responseHTML.replace("@avg3", avgOfYvalue3.toFixed(2));
+        responseHTML = htmlTemplateFile.replace("_xvalues", arrayOfTime);
+        responseHTML = responseHTML.replace("_yvalues1", arrayOfYvalue1);
+        responseHTML = responseHTML.replace("_yvalues2", arrayOfYvalue2);
+        responseHTML = responseHTML.replace("_yvalues3", arrayOfYvalue3);
+        responseHTML = responseHTML.replace("_num1", arrayOfYvalue1.length);
+        responseHTML = responseHTML.replace("_num2", arrayOfYvalue2.length);
+        responseHTML = responseHTML.replace("_num3", arrayOfYvalue3.length);
+        responseHTML = responseHTML.replace("_min1", Math.min(...arrayOfYvalue1));
+        responseHTML = responseHTML.replace("_min2", Math.min(...arrayOfYvalue2));
+        responseHTML = responseHTML.replace("_min3", Math.min(...arrayOfYvalue3));
+        responseHTML = responseHTML.replace("_max1", Math.max(...arrayOfYvalue1));
+        responseHTML = responseHTML.replace("_max2", Math.max(...arrayOfYvalue2));
+        responseHTML = responseHTML.replace("_max3", Math.max(...arrayOfYvalue3));
+        responseHTML = responseHTML.replace("_avg1", avgOfYvalue1.toFixed(2));
+        responseHTML = responseHTML.replace("_avg2", avgOfYvalue2.toFixed(2));
+        responseHTML = responseHTML.replace("_avg3", avgOfYvalue3.toFixed(2));
         //console.log(responseHTML);
         return responseHTML;
     }
