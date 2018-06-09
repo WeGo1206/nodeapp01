@@ -2,8 +2,7 @@
 		border: 1px solid black;
 		font-family: arial, sans-serif;
 		font-weight: bold;
-		font-size: 15px;
-    	padding-left: 15px;
+		padding-left: 15px;
 		margin-bottom: 15px;
 		background-color: #e8eaf7;
     	}
@@ -12,8 +11,7 @@
 		border: 1px solid black;
 		font-family: arial, sans-serif;
 		font-weight: bold;
-		font-size: 15px;
-    	padding-left: 15px;
+		padding-left: 15px;
 		margin-bottom: 15px;
 		background-color: #e8eaf7;
     	}
@@ -21,7 +19,16 @@
 	.timerange-buttons {
 		font-family: arial, sans-serif;
 		font-weight: bold;
-		font-size: 15px;
+		font-size: 18px;
+		padding-left: 15px;
+        margin-bottom: 15px;
+        float: left;
+    }
+    
+    .timerange-inputs {
+		font-family: arial, sans-serif;
+		font-weight: bold;
+		font-size: 18px;
 		padding-left: 15px;
         margin-bottom: 15px;
         float: left;
