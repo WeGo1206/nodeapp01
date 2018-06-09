@@ -1,39 +1,15 @@
-	.manual-form {
-		border: 1px solid black;
-		font-family: arial, sans-serif;
-		font-weight: bold;
-		padding-left: 15px;
-		margin-bottom: 15px;
-		background-color: #e8eaf7;
-    	}
+select {
+	padding: 3px 0px 3px 0px;
+	float: left;
+}
 
-	.select-form {
-		border: 1px solid black;
-		font-family: arial, sans-serif;
-		font-weight: bold;
-		padding-left: 15px;
-		margin-bottom: 15px;
-		background-color: #e8eaf7;
-    	}
-
-	.timerange-buttons {
-		font-family: arial, sans-serif;
-		font-weight: bold;
-		font-size: 15px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-bottom: 15px;
-        float: left;
-    }
-    
-    .timerange-inputs {
-		font-family: arial, sans-serif;
-		font-weight: bold;
-		font-size: 15px;
-		padding-left: 15px;
-        margin-bottom: 15px;
-        float: left;
-	}
+.inputfield {
+	padding: 0px 0px 0px 0px;
+	float: left;
+}
+.timerange-buttons {
+	padding: 2px 2px 2px 2px;
+}
 
 	p {
 		font-family: arial, sans-serif;
