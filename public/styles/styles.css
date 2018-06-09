@@ -1,13 +1,16 @@
 select {
+	margin-left: 15px;
 	padding: 3px 0px 3px 0px;
 	float: left;
 }
 
 .inputfield {
+	margin-left: 15px;
 	padding: 0px 0px 0px 0px;
 	float: left;
 }
 .timerange-buttons {
+	margin-left: 15px;
 	padding: 2px 2px 2px 2px;
 }
 
