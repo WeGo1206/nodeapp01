@@ -17,7 +17,7 @@ select {
 	font-family: arial, sans-serif;
 	padding-left: 14px;
 	font-size: 13px;
-
+	float: left;
 }
 	p {
 		font-family: arial, sans-serif;
