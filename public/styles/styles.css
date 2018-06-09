@@ -15,7 +15,8 @@ select {
 }
 .menuetext {
 	font-family: arial, sans-serif;
-	padding-left: 10px;
+	padding-left: 15px;
+	font-size: 10px;
 }
 	p {
 		font-family: arial, sans-serif;
