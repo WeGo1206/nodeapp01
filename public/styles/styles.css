@@ -13,7 +13,10 @@ select {
 	margin-left: 15px;
 	padding: 2px 2px 2px 2px;
 }
-
+.menuetext {
+	font-family: arial, sans-serif;
+	padding-left: 15px;
+}
 	p {
 		font-family: arial, sans-serif;
 		font-weight: bold;
