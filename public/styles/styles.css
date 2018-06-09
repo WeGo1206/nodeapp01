@@ -14,9 +14,9 @@ select {
 	padding: 2px 2px 2px 2px;
 }
 .menuetext {
-	margin-right: 15px;
 	font-family: arial, sans-serif;
 	padding-left: 15px;
+	padding-bottom: 5px;
 	font-size: 13px;
 	float: left;
 }
