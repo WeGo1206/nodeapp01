@@ -27,11 +27,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/fixedTimeRange', function (req, res) {
-  res.send(piFixedValue.readPV(req.query.timeRange));
+  res.send(resHTML.responseHTML(piFixedValue.readPV(req.query.timeRange)));
 });
 
 app.get('/selectedTimeRange', function (req, res) {
-  res.send(piSelectValue.readByDateInput(req.query.sdate, req.query.edate));
+  res.send(resHTML.responseHTML(piSelectValue.readByDateInput(req.query.sdate, req.query.edate)));
 });
 
 app.post('/pi', function(req, res){ 
