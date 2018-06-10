@@ -110,6 +110,8 @@ module.exports = {
         responseHTML = responseHTML.replace("_avg1", avgOfYvalue1.toFixed(2));
         responseHTML = responseHTML.replace("_avg2", avgOfYvalue2.toFixed(2));
         responseHTML = responseHTML.replace("_avg3", avgOfYvalue3.toFixed(2));
+        responseHTML = responseHTML.replace("id=\"_sDate\"", "id=\"_sDate\"" + "value=\"" + moment().format("YYYY-MM-DD") + "\"");
+        responseHTML = responseHTML.replace("id=\"_eDate\"", "id=\"_eDate\"" + "value=\"" + moment().format("YYYY-MM-DD") + "\"");
         //console.log(responseHTML);
         return responseHTML;
     }
