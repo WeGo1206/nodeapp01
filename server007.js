@@ -3,6 +3,7 @@ var path    = require("path");
 var bodyParser = require('body-parser');
 var piFixedValue = require('./readPV');
 var piSelectValue = require('./readByDateInput');
+var responseHTML = require('./responseHTML');
 
 var app = express();
 
@@ -22,7 +23,7 @@ app.get('/', function (req, res) {
   //this corresponds to route parameters directly the path separeted by '/'
   //console.log('get2: ' + req.params.sdate);
   //console.log('get2: ' + req.params.edate);
-  res.send(piFixedValue.readPV(1));
+  res.send(responseHTML(piFixedValue.readPV(1)));
 });
 
 app.get('/fixedTimeRange', function (req, res) {

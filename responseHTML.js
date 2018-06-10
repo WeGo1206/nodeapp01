@@ -2,83 +2,43 @@ var fs = require('fs');
 var moment = require('moment');
 
 module.exports = {
-    readPV: function(timeRangeByDays) {
-        var date = moment().subtract(timeRangeByDays, 'days').format("YYYYMMDD");
-        //console.log(date);
-        var fileName = [];
-        var d;
-        var dataTemp = "";
-        var data = "";
-        var splitByRow;
+    responseHTML: function(dataArray) {
+        
+        var i;
         var arrayOfTime = [];
         var arrayOfYvalue1 = [];
         var arrayOfYvalue2 = [];
         var arrayOfYvalue3 = [];
-        var splitByValue = [];
-        var arrayOfSeparatedValues = [];
         var avgOfYvalue1 = 0;
         var avgOfYvalue2 = 0;
         var avgOfYvalue3 = 0;
         var htmlTemplateFile;
         var responseHTML;
 
-        for (d = 1; d <= timeRangeByDays; d++) {
-
-            fileName.push('Temperatur_Wohnung_' + moment().subtract(timeRangeByDays-d,"days").format('YYYYMMDD'));
-        };
-        //console.log(fileName);
-        //d = 0;
-        for (d = 0; d < fileName.length; d++) {
-	    try{
-               dataTemp = fs.readFileSync('/home/pi/Documents/' + fileName[d] + '.txt', 'utf-8');
-               data = data.concat(dataTemp);
-	    }
-	    catch(err){
-               //console.log(err);
-	    };
-        };
-        //console.log(data);
-        
         htmlTemplateFile = fs.readFileSync('./TemplateChart.html', 'utf-8');
         //console.log(data);
         //console.log(htmlFile);
                
-        splitByRow = data.split('\n')
-        //console.log(split);
-        //var i = 0;
-        for (i = 0; i < splitByRow.length; i++) {
-            splitByValue = splitByRow[i].split(';');
-            arrayOfSeparatedValues.push(splitByValue);
-            //console.log(split2);
-        };
         
-        return arrayOfSeparatedValues;
-        //console.log(normArr);
-/*
-       // i = 0;
-        for (i = 0; i < arrayOfSeparatedValues.length; i++) {
-            if(arrayOfSeparatedValues[i][3]) {
-                arrayOfSeparatedValues[i][3] = arrayOfSeparatedValues[i][3].substring(0,19);
-                arrayOfTime.push("\"" + arrayOfSeparatedValues[i][3] + "\"");
+        for (i = 0; i < dataArray.length; i++) {
+            if(dataArray[i][3]) {
+                dataArray[i][3] = dataArray[i][3].substring(0,19);
+                arrayOfTime.push("\"" + dataArray[i][3] + "\"");
             };
-            if(arrayOfSeparatedValues[i][0]) {
-		                arrayOfYvalue1.push(Number(arrayOfSeparatedValues[i][0].replace(",",".")));
+            if(dataArray[i][0]) {
+		                arrayOfYvalue1.push(Number(dataArray[i][0].replace(",",".")));
 		
             };
-            if(arrayOfSeparatedValues[i][1]) {
-                arrayOfYvalue2.push(Number(arrayOfSeparatedValues[i][1].replace(",",".")));
+            if(dataArray[i][1]) {
+                arrayOfYvalue2.push(Number(dataArray[i][1].replace(",",".")));
 		
             };
-            if(arrayOfSeparatedValues[i][2]) {
-                arrayOfYvalue3.push(Number(arrayOfSeparatedValues[i][2].replace(",",".")));
+            if(dataArray[i][2]) {
+                arrayOfYvalue3.push(Number(dataArray[i][2].replace(",",".")));
 		
             };
         };
        
-	    //console.log(time);
-        //console.log(dataset1);
-        //console.log(dataset2);
-
         for(i=0; i< arrayOfYvalue1.length; i++) {
 		avgOfYvalue1 += arrayOfYvalue1[i];
         };
@@ -121,7 +81,6 @@ module.exports = {
         responseHTML = responseHTML.replace("id=\"_eDate\"", "id=\"_eDate\"" + "value=\"" + moment().format("YYYY-MM-DD") + "\"");
         //console.log(responseHTML);
         return responseHTML;
-        */
     }
 }
 
