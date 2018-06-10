@@ -32,22 +32,24 @@
 			<input class="timerange-buttons" type="submit" value="Ausf&uuml;hren" id="submit">
 		</form>
 	</fieldset>
-	<form action="/pi/2" method="POST">
-			<p>Auswahl vordefinierte Zeitbereiche</p>
+	<fieldset>
+		<legend>Auswahl vordefinierte Zeitbereiche</legend>
+		<form action="/pi/2" method="POST">
 			<select name="Zeitbereiche">
-			  <option value="1">Heute</option>
-			  <option value="2">2 Tage</option>
-			  <option value="3">3 Tage</option>
-			  <option value="5">5 Tage</option>
-			  <option value="10">10 Tage</option>
-			  <option value="14">14 Tage</option>
-			  <option value="31">1 Monat</option>
-			  <option value="183">6 Monate</option>
-			  <option value="365">1 Jahr</option>
-			  <option value="730">2 Jahre</option>
+			<option value="1">Heute</option>
+			<option value="2">2 Tage</option>
+			<option value="3">3 Tage</option>
+			<option value="5">5 Tage</option>
+			<option value="10">10 Tage</option>
+			<option value="14">14 Tage</option>
+			<option value="31">1 Monat</option>
+			<option value="183">6 Monate</option>
+			<option value="365">1 Jahr</option>
+			<option value="730">2 Jahre</option>
 			</select>
-		<input type="submit" value="Ausf&uuml;hren" class="timerange-buttons">
-	</form>
+			<input type="submit" value="Ausf&uuml;hren" class="timerange-buttons">
+		</form>
+	</fieldset>
 	<br style="clear:left">
 	<div class="statistic-table">
 	<p>Statistik des aktuellen Zeitbereichs</p>
