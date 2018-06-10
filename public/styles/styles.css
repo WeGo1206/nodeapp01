@@ -7,7 +7,7 @@ select {
 .inputfield {
 	margin-left: 15px;
 	padding: 0px 0px 0px 0px;
-	float: left;
+	
 }
 .timerange-buttons {
 	margin-left: 15px;
@@ -17,7 +17,7 @@ select {
 	font-family: arial, sans-serif;
 	padding-left: 15px;
 	font-size: 13px;
-	float: left;
+	
 }
 
 .separation {
