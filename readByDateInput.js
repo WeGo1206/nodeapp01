@@ -37,27 +37,6 @@ module.exports = {
             arrayOfSeparatedValues.push(splitByValue);
 
         };
-        
-
-        for (i = 0; i < arrayOfSeparatedValues.length; i++) {
-            if(arrayOfSeparatedValues[i][3]) {
-                arrayOfSeparatedValues[i][3] = arrayOfSeparatedValues[i][3].substring(0,19);
-                arrayOfTime.push("\"" + arrayOfSeparatedValues[i][3] + "\"");
-            };
-            if(arrayOfSeparatedValues[i][0]) {
-		                arrayOfYvalue1.push(Number(arrayOfSeparatedValues[i][0].replace(",",".")));
-		
-            };
-            if(arrayOfSeparatedValues[i][1]) {
-                arrayOfYvalue2.push(Number(arrayOfSeparatedValues[i][1].replace(",",".")));
-		
-            };
-            if(arrayOfSeparatedValues[i][2]) {
-                arrayOfYvalue3.push(Number(arrayOfSeparatedValues[i][2].replace(",",".")));
-		
-            };
-        };
-       
         return arrayOfSeparatedValues;
     }
 }
