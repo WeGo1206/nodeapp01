@@ -9,6 +9,10 @@ select {
 	padding: 0px 0px 0px 0px;
 	
 }
+
+label {
+	margin-left: 15px;
+}
 .timerange-buttons {
 	margin-left: 15px;
 	padding: 2px 2px 2px 2px;
