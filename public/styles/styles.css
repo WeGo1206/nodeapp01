@@ -1,4 +1,5 @@
 select {
+	font-family: arial, sans-serif;
 	padding: 3px 0px 3px 0px;
 }
 
@@ -9,9 +10,11 @@ select {
 }*/
 
 label {
+	font-family: arial, sans-serif;
 	margin-left: 15px;
 }
 .timerange-buttons {
+	font-family: arial, sans-serif;
 	margin-left: 15px;
 	padding: 2px 2px 2px 2px;
 }
