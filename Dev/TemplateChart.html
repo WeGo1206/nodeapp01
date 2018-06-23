@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Chart</title>
+	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+	<script>window.chartColors = {
+		red: 'rgb(255, 69, 0)',
+		orange: 'rgb(255, 159, 64)',
+		yellow: 'rgb(255, 205, 86)',
+		green: 'rgb(34, 139, 34)',
+		blue: 'rgb(30,144, 255)',
+		purple: 'rgb(153, 102, 255)',
+		grey: 'rgb(201, 203, 207)'
+	};</script>
+</head>
+
+<body>
+	<p class="trend-area">Temperatur- Messung mit Raspberry PI und DS18B20 Sensor<p\>
+	<div style="width:100%;">
+		<canvas id="canvas"></canvas>
+	</div>
+	<br>
+	<fieldset>
+		<legend>Auswahl manueller Zeitbereich</legend>
+		<form action="/pi" method="POST">
+			<label for="_sDate">Start- Datum:</label>
+			<input class="inputfield" type="date" name="sdate" id="_sDate">
+			<label for="_eDate" style="padding-left:20px">Ende- Datum:</label>
+			<input class="inputfield" type="date" name="edate" id="_eDate">
+			<input class="timerange-buttons" type="submit" value="Ausf&uuml;hren" id="submit">
+		</form>
+	</fieldset>
+	<br>
+	<fieldset>
+		<legend>Auswahl vordefinierte Zeitbereiche</legend>
+		<form action="/pi/2" method="POST">
+			<label for="selTimeRange">Zeitbereiche:</label>
+			<select name="Zeitbereiche" id="selTimeRange">
+			<option value="1">Heute</option>
+			<option value="2">2 Tage</option>
+			<option value="3">3 Tage</option>
+			<option value="5">5 Tage</option>
+			<option value="10">10 Tage</option>
+			<option value="14">14 Tage</option>
+			<option value="31">1 Monat</option>
+			<option value="183">6 Monate</option>
+			<option value="365">1 Jahr</option>
+			<option value="730">2 Jahre</option>
+			</select>
+			<input type="submit" value="Ausf&uuml;hren" class="timerange-buttons">
+		</form>
+	</fieldset>
+	<br style="clear:left">
+	<div class="statistic-table">
+	<p>Statistik des aktuellen Zeitbereichs</p>
+	<table>
+ 		<tr>
+			<th>Messstelle</th>
+			<th>Einheit</th>
+    		<th>Min</th>
+    		<th>Max</th>
+    		<th>Durchschnitt</th>
+    		<th>Anzahl Messwerte</th>
+  		</tr>
+ 		 <tr>
+			<td>Aussen</th>
+			<td>&deg;C</td>	
+    		<td>_min1</th>
+    		<td>_max1</th>
+    		<td>_avg1</th>
+    		<td>_num1</th>
+  		</tr>
+  		<tr>
+			<td>Innen</th>
+			<td>&deg;C</td>	
+    		<td>_min2</th>
+    		<td>_max2</th>
+    		<td>_avg2</th>
+    		<td>_num2</th>
+		</tr>
+		<tr>
+			<td>PI Prozessor</th>
+			<td>&deg;C</td>	
+    		<td>_min3</th>
+    		<td>_max3</th>
+    		<td>_avg3</th>
+    		<td>_num3</th>
+  		</tr>
+	</table>
+	</div>
+	<script>
+		var config = {
+			type: 'line',
+			data: {
+				labels: [_xvalues],
+				datasets: [{
+					label: 'Aussentemperatur',
+					backgroundColor: window.chartColors.blue,
+					borderColor: window.chartColors.blue,
+					data: [_yvalues1],
+					fill: false,
+					pointRadius: 0
+				}, {
+					label: 'Innentemperatur',
+					fill: false,
+					backgroundColor: window.chartColors.red,
+					borderColor: window.chartColors.red,
+					data: [_yvalues2],
+					pointRadius: 0
+				}, {
+					label: 'PI Prozessortemperatur',
+					fill: false,
+					backgroundColor: window.chartColors.grey,
+					borderColor: window.chartColors.grey,
+					data: [_yvalues3],
+					pointRadius: 0
+				}]
+			},
+			options: {
+				responsive: true,
+				title: {
+					display: true,
+					text: ''
+				},
+				tooltips: {
+					mode: 'index',
+					intersect: false,
+				},
+				hover: {
+					mode: 'nearest',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: '>>>> [ t ] >>>>'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							display: true,
+							labelString: '>>>> [ \u00b0C ] >>>>'
+						}
+					}]
+				}
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myLine = new Chart(ctx, config);
+		};
+	</script>
+</body>
+
+</html>
+

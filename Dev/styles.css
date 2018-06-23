@@ -1,0 +1,69 @@
+select {
+	font-family: arial, sans-serif;
+	padding: 3px 0px 3px 0px;
+}
+
+/*.inputfield {
+	 margin-left: 3px;
+	padding: 0px 0px 0px 0px; 
+	
+}*/
+
+label {
+	font-family: arial, sans-serif;
+	margin-left: 15px;
+}
+.timerange-buttons {
+	font-family: arial, sans-serif;
+	margin-left: 15px;
+	padding: 2px 2px 2px 2px;
+}
+.menuetext {
+	font-family: arial, sans-serif;
+	padding-left: 15px;
+	font-size: 13px;
+	
+}
+
+.separation {
+	background-color: #e8eaf7;
+}
+
+legend {
+	font-family: arial, sans-serif;
+	font-weight: bold;
+}
+
+p {
+	font-family: arial, sans-serif;
+	font-weight: bold;
+	padding-left: 15px;
+}
+
+.statistic-table {
+	border: 1px solid black;
+	background-color: #e8eaf7;
+	}
+
+.trend-area {
+	border: 1px solid black;
+	background-color: #e8eaf7;
+	}
+
+table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		padding-left: 15px;
+		padding-bottom: 15px;
+	}	
+
+td, th {
+		border: 1px solid #cbd0ef;
+		text-align: left;
+		padding: 8px;
+}
+
+tr:nth-child(even) {
+		background-color: #cbd0ef;
+}
