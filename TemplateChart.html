@@ -4,7 +4,6 @@
 <head>
 	<title>Chart</title>
 	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
-	<base href="http://wego67.internet-box.ch/">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 	<script>window.chartColors = {
 		red: 'rgb(255, 69, 0)',
@@ -23,96 +22,99 @@
 		<nav class="main-nav">
 				<ul>
 					<li>
-						<a href="#">Home</a>
+						<a id="nav-home" href="http://192.168.1.114:3000">Home</a>
 					</li>
 					<li>
-						<a href="http://wego67.internet-box.ch/views/service.html">Service</a>
+						<a id="nav-service" href="#" onclick="changeView(2)">Service</a>
 					</li>
 					<li>
-						<a href="http://wego67.internet-box.ch/views/about.html">About</a>
+						<a id="nav-about" href="#" onclick="changeView(3)">About</a>
 					</li>
 					<li>
-						<a href="http://wego67.internet-box.ch/views/contact.html">Contact</a>
+						<a id="nav-contact" href="#" onclick="changeView(4)">Contact</a>
 					</li>
 				</ul>
 			</nav>
-		<section class="top-container">
-			<div class="trend">
-				<canvas id="canvas"></canvas>
-			</div>
-			<fieldset class="box-a">
-				<legend>Auswahl manueller Zeitbereich</legend>
-				<form action="/pi" method="POST">
-					<br>
-					<label for="_sDate" style="padding-right:4px">Start- Datum:</label>
-					<input class="inputfield" type="date" name="sdate" id="_sDate">
-					<br>
-					<br>
-					<label for="_eDate">Ende- Datum:</label>
-					<input class="inputfield" type="date" name="edate" id="_eDate">
-					<input class="timerange-buttons" type="submit" value="Ausf&uuml;hren" id="submit">
-				</form>
-			</fieldset>
-			<fieldset class="box-b">
-				<legend>Auswahl vordefinierte Zeitbereiche</legend>
-				<form action="/pi/2" method="POST">
-					<br>
-					<label for="selTimeRange">Zeitbereiche:</label>
-					<select name="Zeitbereiche" id="selTimeRange">
-					<option value="1">Heute</option>
-					<option value="2">2 Tage</option>
-					<option value="3">3 Tage</option>
-					<option value="5">5 Tage</option>
-					<option value="10">10 Tage</option>
-					<option value="14">14 Tage</option>
-					<option value="31">1 Monat</option>
-					<option value="183">6 Monate</option>
-					<option value="365">1 Jahr</option>
-					<option value="730">2 Jahre</option>
-					</select>
-					<input type="submit" value="Ausf&uuml;hren" class="timerange-buttons">
-				</form>
-			</fieldset>
-		</section>
-		<section class="info">
-			<div class="statistic-table">
-				<p class="tablename">Statistik des aktuellen Zeitbereichs</p>
-				<table>
-					<tr>
-						<th>Messstelle</th>
-						<th>Einheit</th>
-						<th>Min</th>
-						<th>Max</th>
-						<th>Durchschnitt</th>
-						<th>Anzahl Messwerte</th>
-					</tr>
+		<div id="content">
+			<section class="top-container">
+				<div class="trend">
+					<canvas id="canvas"></canvas>
+				</div>
+				<fieldset class="box-a">
+					<legend>Auswahl manueller Zeitbereich</legend>
+					<form action="/pi" method="POST">
+						<br>
+						<label for="_sDate" style="padding-right:4px">Start- Datum:</label>
+						<input class="inputfield" type="date" name="sdate" id="_sDate">
+						<br>
+						<br>
+						<label for="_eDate">Ende- Datum:</label>
+						<input class="inputfield" type="date" name="edate" id="_eDate">
+						<input class="timerange-buttons" type="submit" value="Ausf&uuml;hren" id="submit">
+					</form>
+				</fieldset>
+				<fieldset class="box-b">
+					<legend>Auswahl vordefinierte Zeitbereiche</legend>
+					<form action="/pi/2" method="POST">
+						<br>
+						<label for="selTimeRange">Zeitbereiche:</label>
+						<select name="Zeitbereiche" id="selTimeRange">
+						<option value="1">Heute</option>
+						<option value="2">2 Tage</option>
+						<option value="3">3 Tage</option>
+						<option value="5">5 Tage</option>
+						<option value="10">10 Tage</option>
+						<option value="14">14 Tage</option>
+						<option value="31">1 Monat</option>
+						<option value="183">6 Monate</option>
+						<option value="365">1 Jahr</option>
+						<option value="730">2 Jahre</option>
+						</select>
+						<input type="submit" value="Ausf&uuml;hren" class="timerange-buttons">
+					</form>
+				</fieldset>
+			</section>
+			<section class="info">
+				<div class="statistic-table">
+					<p class="tablename">Statistik des aktuellen Zeitbereichs</p>
+					<table>
 						<tr>
-						<td>Aussen</th>
-						<td>&deg;C</td>	
-						<td>_min1</th>
-						<td>_max1</th>
-						<td>_avg1</th>
-						<td>_num1</th>
-					</tr>
-					<tr>
-						<td>Innen</th>
-						<td>&deg;C</td>	
-						<td>_min2</th>
-						<td>_max2</th>
-						<td>_avg2</th>
-						<td>_num2</th>
-					</tr>
-					<tr>
-						<td>PI Prozessor</th>
-						<td>&deg;C</td>	
-						<td>_min3</th>
-						<td>_max3</th>
-						<td>_avg3</th>
-						<td>_num3</th>
-					</tr>
-				</table>
-			</div>
-		</section>
+							<th>Messstelle</th>
+							<th>Einheit</th>
+							<th>Min</th>
+							<th>Max</th>
+							<th>Durchschnitt</th>
+							<th>Anzahl Messwerte</th>
+						</tr>
+							<tr>
+							<td>Aussen</th>
+							<td>&deg;C</td>	
+							<td>_min1</th>
+							<td>_max1</th>
+							<td>_avg1</th>
+							<td>_num1</th>
+						</tr>
+						<tr>
+							<td>Innen</th>
+							<td>&deg;C</td>	
+							<td>_min2</th>
+							<td>_max2</th>
+							<td>_avg2</th>
+							<td>_num2</th>
+						</tr>
+						<tr>
+							<td>PI Prozessor</th>
+							<td>&deg;C</td>	
+							<td>_min3</th>
+							<td>_max3</th>
+							<td>_avg3</th>
+							<td>_num3</th>
+						</tr>
+					</table>
+				</div>
+			</section>
+		</div>
+		
 		<footer>
 			<p>2018 WeGo67 - Raspberry Pi mit Sensor DS18B20</p>
 						
@@ -184,6 +186,7 @@
 			window.myLine = new Chart(ctx, config);
 		};
 	</script>
+	<script src="http://192.168.1.114:3000/js/nav.js"></script>
 </body>
 
 </html>
