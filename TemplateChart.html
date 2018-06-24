@@ -25,13 +25,13 @@
 						<a href="#">Home</a>
 					</li>
 					<li>
-						<a href="#">Service</a>
+						<a href="views/service.html">Service</a>
 					</li>
 					<li>
-						<a href="#">About</a>
+						<a href="views/about.html">About</a>
 					</li>
 					<li>
-						<a href="#">Contact</a>
+						<a href="views/contact.html">Contact</a>
 					</li>
 				</ul>
 			</nav>
@@ -42,9 +42,12 @@
 			<fieldset class="box-a">
 				<legend>Auswahl manueller Zeitbereich</legend>
 				<form action="/pi" method="POST">
-					<label for="_sDate">Start- Datum:</label>
+					<br>
+					<label for="_sDate" style="padding-right:4px">Start- Datum:</label>
 					<input class="inputfield" type="date" name="sdate" id="_sDate">
-					<label for="_eDate" style="padding-left:20px">Ende- Datum:</label>
+					<br>
+					<br>
+					<label for="_eDate">Ende- Datum:</label>
 					<input class="inputfield" type="date" name="edate" id="_eDate">
 					<input class="timerange-buttons" type="submit" value="Ausf&uuml;hren" id="submit">
 				</form>
@@ -52,6 +55,7 @@
 			<fieldset class="box-b">
 				<legend>Auswahl vordefinierte Zeitbereiche</legend>
 				<form action="/pi/2" method="POST">
+					<br>
 					<label for="selTimeRange">Zeitbereiche:</label>
 					<select name="Zeitbereiche" id="selTimeRange">
 					<option value="1">Heute</option>

@@ -5,6 +5,11 @@
 	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
+/*.top-container-about {
+	
+	height: 100%;
+}*/
+
 html {
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
@@ -22,7 +27,41 @@ body {
 	grid-gap: 0px;
 }
 
+.about-text img {
+	width: 50%;
+	float: left;
+	margin: 20px;
+
+}
+
+.service-text img {
+	width: 50%;
+	float: right;
+	margin: 20px;
+
+}
+
+.contact-text img {
+	width: 50%;
+	float: left;
+	margin: 20px;
+
+}
+
+.wrapper-about {
+	color: var(--dark);
+}
+
+.wrapper-contact {
+	color: var(--dark);
+}
+
+.wrapper-service {
+	color: var(--dark);
+}
+
 .main-nav ul {
+	width:100%;
 	display: grid;
 	grid-gap: 20px;
 	padding: 0;
@@ -65,10 +104,12 @@ body {
 
 .box-a {
 	grid-area: box-a;
+	margin-bottom: 10px
 	}
 
 .box-b {
 	grid-area: box-b;
+	margin-bottom: 10px
 	}
 
 select {
@@ -76,6 +117,10 @@ select {
 	padding: 3px 0px 3px 0px;
 }
 
+
+.info {
+	width:100%;
+}
 /*
 canvas {
 	max-width: 95%;
