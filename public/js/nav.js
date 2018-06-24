@@ -14,11 +14,11 @@ function changeView(i) {
         };  
 
     if (i===2){
-        xhttp.open("GET", "http://192.168.1.114:3000/service", true);
+        xhttp.open("GET", "http://wego67.internet-box.ch/service", true);
     } else if (i===3){
-        xhttp.open("GET", "http://192.168.1.114:3000/about", true);
+        xhttp.open("GET", "http://wego67.internet-box.ch/about", true);
     } else if (i===4){
-        xhttp.open("GET", "http://192.168.1.114:3000/contact", true);
+        xhttp.open("GET", "http://wego67.internet-box.ch/contact", true);
     }
     
     xhttp.send();
