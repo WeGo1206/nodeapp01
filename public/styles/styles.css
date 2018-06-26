@@ -34,18 +34,27 @@ body {
 
 }
 
-.service-text img {
-	width: 50%;
-	float: right;
+.pi {
+	width: 60%;
 	margin: 20px;
-
+	float: left;
 }
 
+.circuit {
+	width: 65%;
+	margin: 20px;
+	float: left;
+}
+
+.sensor {
+	width: 30%;
+	margin: 20px;
+	float: left;
+}
 .contact-text img {
 	width: 50%;
 	float: left;
 	margin: 20px;
-
 }
 
 .wrapper-about {
