@@ -203,6 +203,10 @@ td, th {
 		text-align: left;
 		padding: 4px;
 }
+
+footer p {
+	text-align: center;
+}
 /*
 tr:nth-child(even) {
 		background-color: #cbd0ef;
