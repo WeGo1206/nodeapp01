@@ -1,6 +1,6 @@
 <div class="service-text">
 	<h1>Dokumentation</h1>
-	<h2>Hardware</h2>
+	<h2>Hardware- Design</h2>
 	<div>
 		<img class="pi" src="/images/RASP_03_01.png" alt="">
 		<h3>RASPBERRY PI 3 MODEL B</h3>
@@ -32,12 +32,69 @@
 	</div>
 	<div>
 		<img src="/images/DS18B20.PNG" alt="" class="sensor">
-		<h3>Temperatur- Sensor</h1>
+		<h3>Temperatur- Sensor</h3>
 		<p>(Auszug aus dem orginal Datenblatt)</p>
 		<div style="font: italic">
 			<p>The DS18B20 Digital Thermometer provides 9 to 12-bit (configurable) temperature readings which indicate the temperature of the device.</p>
 			<p>Information is sent to/from the DS18B20 over a 1-Wire interface, so that only one wire (and ground) needs to be connected from a central microprocessor to a DS18B20.  Power for reading, writing, and performing temperature conversions can be derived from the data line itself with no need for an external power source.</p> 
 			<p>Because each DS18B20 contains a unique silicon serial number, multiple DS18B20s can exist on the same 1-Wire bus.  This allows for placing temperature sensors in many different places.  Applications where this feature is useful include HVAC environmental controls, sensing temperatures inside buildings, equipment or machinery, and process monitoring and control.</p>
 		</div>
+		<div>
+			<h3>W1- Bus auf gpio-pin 4 aktivieren</h3>
+			<p> Die Datei /boot/config.txt wie folgt erg&auml;nzen: <br>
+				dtoverlay=w1-gpio,gpiopin=4</p>
 	</div>
+	<h2>Software Design</h2> 
+	<div>
+		<p>Phyton Programm zum Auslesen der Temperatur- Istwerte<br>
+			# tempread.py<br>
+			import smtplib, sys<br>
+			import os, time<br>
+			from email.mime.text import MIMEText<br>
+			from email.header import Header<br>
+			from time import *<br>
+			
+			os.system("modprobe wire") #1<br>
+			os.system("modprobe w1-gpio")<br>
+			os.system("modprobe w1-therm")<br>
+						
+			import os, time<br>
+			
+			ok = False<br>
+			while not ok:<br>
+				f1 = open("/sys/bus/w1/devices/28-000007360dfe/w1_slave", "r") #4<br>
+				f1.close()<br>
+					ok = True<br>
+				tempString1 = second1.split("=")[1] #7<br>
+			T1 = int(tempString1)/1000 #8<br>
+			print("T1=",T1)<br>
+			
+			ok = False<br>
+			while not ok:<br>
+				f2 = open("/sys/bus/w1/devices/28-00000735e872/w1_slave", "r") #4<br>
+				first2, second2 = f2.readlines() #5<br>
+				f2.close()<br>
+				if first2.find("YES") != -1: #6<br>
+				tempString2 = second2.split("=")[1] #7
+			T2 = int(tempString2)/1000 #8<br>
+			print("T2=",T2)<br>
+			
+			tFile = open("/sys/class/thermal/thermal_zone0/temp")<br>
+			cpuTemp = tFile.read()<br>
+			tFile.close()<br>
+			fcpuTemp = round(float(cpuTemp)/1000,1)<br>
+			
+			localtime = time.strftime("%d.%m.%Y %H:%M:%S")<br>
+			
+			print(T1,"°C /", T2,"°C /",localtime)<br>
+			##logText = "Raum= " + str(round(T2,1)) + "°C" + " / Aussen= " + str(round(T1,1)) + "°C" + " / CPU= " + str(fcpuTemp) + "°C / " + localtime + "\n"<br>
+			##macht komische Zeichen vor °C<br>
+			logText = str(round(T1,1)) + ";" + str(round(T2,1)) + ";" + str(fcpuTemp) + ";" + localtime + "\n"
+			logText = logText.replace(".",",",3)<br>
+			
+			filename_daily= time.strftime("/home/pi/Documents/Temperatur_Wohnung_%Y%m%d.txt")<br>
+			fT = open(filename_daily, "a")<br>
+			fT.write(logText)<br>
+			fT.close<br>
+		</div>
 </div>
