@@ -52,19 +52,19 @@
 	<div>
 		<p>Phyton Programm zum Auslesen der Temperatur- Istwerte<br>
 			<br>
-			<div class= "code">#tempread.py<br>
+			<div class= "code">#tempread.py><br>
 				import smtplib, sys<br>
 				import os, time<br>
 				from email.mime.text import MIMEText<br>
 				from email.header import Header<br>
 				from time import *<br>
-				
+				<br>
 				os.system("modprobe wire") #1<br>
 				os.system("modprobe w1-gpio")<br>
 				os.system("modprobe w1-therm")<br>
-							
+				<br>			
 				import os, time<br>
-				
+				<br>
 				ok = False<br>
 				while not ok:<br>
 					f1 = open("/sys/bus/w1/devices/28-000007360dfe/w1_slave", "r") #4<br>
@@ -73,7 +73,7 @@
 					tempString1 = second1.split("=")[1] #7<br>
 				T1 = int(tempString1)/1000 #8<br>
 				print("T1=",T1)<br>
-				
+				<br>
 				ok = False<br>
 				while not ok:<br>
 					f2 = open("/sys/bus/w1/devices/28-00000735e872/w1_slave", "r") #4<br>
@@ -83,24 +83,23 @@
 					tempString2 = second2.split("=")[1] #7
 				T2 = int(tempString2)/1000 #8<br>
 				print("T2=",T2)<br>
-				
+				<br>
 				tFile = open("/sys/class/thermal/thermal_zone0/temp")<br>
 				cpuTemp = tFile.read()<br>
 				tFile.close()<br>
 				fcpuTemp = round(float(cpuTemp)/1000,1)<br>
-				
+				<br>
 				localtime = time.strftime("%d.%m.%Y %H:%M:%S")<br>
-				
+				<br>
 				print(T1,"°C /", T2,"°C /",localtime)<br>
 				##logText = "Raum= " + str(round(T2,1)) + "°C" + " / Aussen= " + str(round(T1,1)) + "°C" + " / CPU= " + str(fcpuTemp) + "°C / " + localtime + "\n"<br>
 				##macht komische Zeichen vor °C<br>
 				logText = str(round(T1,1)) + ";" + str(round(T2,1)) + ";" + str(fcpuTemp) + ";" + localtime + "\n"
 				logText = logText.replace(".",",",3)<br>
-				
+				<br>
 				filename_daily= time.strftime("/home/pi/Documents/Temperatur_Wohnung_%Y%m%d.txt")<br>
 				fT = open(filename_daily, "a")<br>
 				fT.write(logText)<br>
 				fT.close<br></div>
-			
-		</div>
+			</div>
 </div>
