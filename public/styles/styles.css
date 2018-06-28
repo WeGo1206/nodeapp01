@@ -27,6 +27,10 @@ body {
 	grid-gap: 0px;
 }
 
+.code {
+	margin-left: 10px;
+}
+
 .about-text img {
 	width: 50%;
 	float: left;
