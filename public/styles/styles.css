@@ -47,11 +47,13 @@ body {
 .pi-code {
 	width: 50%;
 	margin: 20px;
+	float: left;
 }
 
 .pi-cron {
 	width: 50%;
 	margin: 20px;
+	float: left;
 }
 .circuit {
 	width: 65%;
