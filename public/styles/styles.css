@@ -44,6 +44,15 @@ body {
 	float: left;
 }
 
+.pi-code {
+	width: 50%;
+	margin: 20px;
+}
+
+.pi-cron {
+	width: 50%;
+	margin: 20px;
+}
 .circuit {
 	width: 65%;
 	margin: 20px;
