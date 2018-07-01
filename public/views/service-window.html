@@ -49,18 +49,14 @@
 	<p>Raspbian GNU/Linux 8 (jessie)</p>
 	<div>
 		<h3>W1- Bus auf gpio-pin 4 aktivieren</h3>
-		<p> Die Datei /boot/config.txt wie folgt erg&auml;nzen: 
-			<br>
-			<br>
+		<p> Die Systemdatei /boot/config.txt wie folgt erg&auml;nzen: 
+			<br><br>
 			dtoverlay=w1-gpio,gpiopin=4
-			<br>
-			Somit wir der w1- Bus beim Neustart des Raspberry PI aktiviert.
+			<br><br>
+			Somit wir der w1- Bus beim Neustart des Raspberry PI aktiviert. <br><br>
 		</p>
-	
 	</div>
 	<div class="code-description">
-		<br>
-		<br>
 		<h3>Pyton Programm zum Auslesen der Temperatur- Istwerte</h3>
 		<p>Der W1- Bus speichert die aktuellen Messwerte der angeschlossenen Sensoren automatisch als Dateien ab. <br>
 		Dazu wird unter /sys/bus/w1/devices für jeden Sensor ein Unterverzeichnis mit dem Namen der jeweiligen Sensor- ID angelegt. <br><br>
