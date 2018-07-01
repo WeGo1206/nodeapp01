@@ -47,20 +47,57 @@
 	<h1>Software Konfiguration</h1> 
 	<div>
 		<h3>W1- Bus auf gpio-pin 4 aktivieren</h3>
-		<p> Die Datei /boot/config.txt wie folgt erg&auml;nzen: <br>
-			dtoverlay=w1-gpio,gpiopin=4</p>
+		<p> Die Datei /boot/config.txt wie folgt erg&auml;nzen: 
+			<br>
+			<br>
+			dtoverlay=w1-gpio,gpiopin=4
+			<br>
+			Somit wir der w1- Bus beim Neustart des Raspberry PI aktiviert.
+		</p>
+	
 	</div>
 	<div class="code-description">
 		<br>
 		<br>
-		<h3>Phyton Programm zum Auslesen der Temperatur- Istwerte</h3>
+		<h3>Pyton Programm zum Auslesen der Temperatur- Istwerte</h3>
+		<p>Der W1- Bus speichert die aktuellen Messwerte der angeschlossenen Sensoren automatisch als Dateien ab. <br>
+		Dazu wird unter /sys/bus/w1/devices für jeden Sensor ein Unterverzeichnis mit dem Namen der jeweiligen Sensor- ID angelegt. <br>
+		In diesem Unterordner befindet sich die Datei w1_slave, welche den aktuellen Sensor- Messwert enthält. <br>
+		Beispiel für einen angeschlossenen Sensor mit der ID= 28-000007360dfe: <br>
+		Der aktuelle Messwert befindet sich dann unter: <br>
+		/sys/bus/w1/devices/28-000007360dfe/w1_bus <br><br>
+	
+		Das folgende Python-Programm liest diese Dateien und extrahiert den Messwert. Die Messwerte der <br>
+		angeschlossenen Sensoren werden anschliessend in der täglichen Messwert- Datei eingefügt. Nach Mitternacht wird <br>
+		immer eine neue Messwert- Datei erzeugt. <br>
+		
+		Beispiel des generierten Dateinamens: <br>
+		Temperatur_Wohnung_20180630.txt <br>
+
+		Speicherformat der Messwerte in der Datei: <br>
+		T1;T2;T3;timestamp <br>
+
+		T1: Temperatur Aussen <br>
+		T2: Temperatur Innen <br>
+		T3: Temperatur PI Prozessor <br>
+		timestamp: Zeitstempel der Messwerte <br>
+		<br>
+		Bei jeder Ausführung des Python-Programmes wird eine neue Zeile angefügt: <br>
+		<br>
+		22,4;22,9;47,2;22.05.2018 00:00:03 <br>
+		22,4;22,9;47,2;22.05.2018 00:20:03 <br>
+		22,4;22,9;49,4;22.05.2018 00:40:03 <br>
+
+		</p>
 			<br>
 			<img src="/images/py-code-01.PNG" alt="" class="py-code">
 			<br>
 			<img src="/images/py-code-02.PNG" alt="" class="py-code">
 			<br>
 			<br>
-		<h3>Zyklischer Programm- Aufruf alle 20min</h3>
+		<h3>Zyklischer Programm- Aufruf</h3>
+		<p>Der zyklische Aufruf des Python-Programmes ist mit dem Raspian Task- Schedulars "cron" realisiert. <br>
+		In diesem Beispiel erfolgt der Aufruf alle 20 min <br></p>
 			<img src="/images/py-code-04.PNG" alt="" class="py-cron">
 			<br>
 			<img src="/images/py-code-03.PNG" alt="" class="py-cron">
