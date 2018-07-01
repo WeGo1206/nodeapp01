@@ -1,9 +1,8 @@
 <div class="service-text">
-	<h1>Dokumentation</h1>
-	<h2>Hardware- Konfiguration</h2>
-	<div>
-		<img class="pi" src="/images/RASP_03_01.png" alt="">
+	<h1>Hardware- Konfiguration</h1>
+	<div class="pi">
 		<h3>RASPBERRY PI 3 MODEL B</h3>
+		<img class="pi-pic" src="/images/RASP_03_01.png" alt="">
 		<p>Single-board computer<br>
 		Entwicklungsboard Eigenschaften<br>
 		Prozessorfamilie	Broadcom<br>		
@@ -22,40 +21,48 @@
 		Speicherkartentyp	microSD<br>
 		Zus&auml;tzliche Anschl&uuml;sse	GPIO , RCA , DSI</p>
 	</div>
-	<div>
-		<img src="/images/RaspberryPI_DS18B20.jpg" alt="" class="circuit">
+	<div class="circuit">
+		<br>
+		<br>
 		<h3>Schaltplan</h3>
+		<img src="/images/RaspberryPI_DS18B20.jpg" alt="" class="circuit-pic">
 		<p>Anschluss von DS18B20 Sensoren an der GPIO Schnittstelle des PI.<br>
 		Pin 	1: +3.3V<br>
 		Pin 	4: GPIO4<br>
 		PIN 38: GND</p>
 	</div>
-	<div>
-		<img src="/images/DS18B20.PNG" alt="" class="sensor">
+	<div class="sensor">
+		<br>
+		<br>
 		<h3>Temperatur- Sensor</h3>
+		<img src="/images/DS18B20.PNG" alt="" class="sensor-pic">
 		<p>(Auszug aus dem orginal Datenblatt)</p>
 		<div style="font: italic">
 			<p>The DS18B20 Digital Thermometer provides 9 to 12-bit (configurable) temperature readings which indicate the temperature of the device.</p>
-			<p>Information is sent to/from the DS18B20 over a 1-Wire interface, so that only one wire (and ground) needs to be connected from a central microprocessor to a DS18B20.  Power for reading, writing, and performing temperature conversions can be derived from the data line itself with no need for an external power source.</p> 
-			<p>Because each DS18B20 contains a unique silicon serial number, multiple DS18B20s can exist on the same 1-Wire bus.  This allows for placing temperature sensors in many different places.  Applications where this feature is useful include HVAC environmental controls, sensing temperatures inside buildings, equipment or machinery, and process monitoring and control.</p>
+			<p>Information is sent to/from the DS18B20 over a 1-Wire interface, so that only one wire (and ground) needs to be connected from a central <br> microprocessor to a DS18B20.  Power for reading, writing, and performing temperature conversions can be derived from the data line <br> itself with no need for an external power source.</p> 
+			<p>Because each DS18B20 contains a unique silicon serial number, multiple DS18B20s can exist on the same 1-Wire bus.  This allows for placing <br> temperature sensors in many different places.  Applications where this feature is useful include HVAC environmental controls, sensing <br> temperatures inside buildings, equipment or machinery, and process monitoring and control.</p>
 		</div>
-		<div>
-			<h3>W1- Bus auf gpio-pin 4 aktivieren</h3>
-			<p> Die Datei /boot/config.txt wie folgt erg&auml;nzen: <br>
-				dtoverlay=w1-gpio,gpiopin=4</p>
-	</div>
 	<br>
 	<br>
-	<br>
-	<br>
-	<h2>Software Konfiguration</h2> 
+	<h1>Software Konfiguration</h1> 
 	<div>
-		<p>Phyton Programm zum Auslesen der Temperatur- Istwerte<br>
+		<h3>W1- Bus auf gpio-pin 4 aktivieren</h3>
+		<p> Die Datei /boot/config.txt wie folgt erg&auml;nzen: <br>
+			dtoverlay=w1-gpio,gpiopin=4</p>
+	</div>
+	<div class="code-description">
+		<br>
+		<br>
+		<h3>Phyton Programm zum Auslesen der Temperatur- Istwerte</h3>
 			<br>
 			<img src="/images/py-code-01.PNG" alt="" class="py-code">
+			<br>
 			<img src="/images/py-code-02.PNG" alt="" class="py-code">
-		<p>Zyklischer Programm- Aufruf alle 20min</p>
+			<br>
+			<br>
+		<h3>Zyklischer Programm- Aufruf alle 20min</h3>
 			<img src="/images/py-code-04.PNG" alt="" class="py-cron">
+			<br>
 			<img src="/images/py-code-03.PNG" alt="" class="py-cron">
 
 	</div>

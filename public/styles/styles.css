@@ -5,11 +5,6 @@
 	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
-/*.top-container-about {
-	
-	height: 100%;
-}*/
-
 html {
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, Arial, Helvetica, sans-serif;
@@ -27,9 +22,6 @@ body {
 	grid-gap: 0px;
 }
 
-.code {
-	padding-left: 20px;
-}
 
 .about-text img {
 	width: 50%;
@@ -38,33 +30,23 @@ body {
 
 }
 
-.pi {
-	width: 50%;
-	margin: 20px;
-	float: left;
+.pi-pic {
+	width: 55%;
 }
 
-.pi-code {
-	width: 50%;
-	margin: 20px;
-	float: left;
-}
-
-.pi-cron {
-	width: 50%;
-	margin: 20px;
-	float: left;
-}
-.circuit {
+.py-code {
 	width: 65%;
-	margin: 20px;
-	float: left;
 }
 
-.sensor {
-	width: 30%;
-	margin: 20px;
-	float: left;
+.py-cron {
+	width: 65%;
+}
+.circuit-pic {
+	width: 55%;
+}
+
+.sensor-pic {
+	width: 25%;
 }
 .contact-text img {
 	width: 50%;
@@ -141,20 +123,9 @@ select {
 	padding: 3px 0px 3px 0px;
 }
 
-
 .info {
 	width:100%;
 }
-/*
-canvas {
-	max-width: 95%;
-}
-*/
-/*.inputfield {
-	 margin-left: 3px;
-	padding: 0px 0px 0px 0px; 
-	
-}*/
 
 label {
 	font-family: Arial, Helvetica, sans-serif;
@@ -164,16 +135,6 @@ label {
 	font-family: Arial, Helvetica, sans-serif;
 	margin-left: 15px;
 	padding: 2px 2px 2px 2px;
-}
-.menuetext {
-	font-family: Arial, Helvetica, sans-serif;
-	padding-left: 15px;
-	font-size: 13px;
-	
-}
-
-.separation {
-	background-color: #e8eaf7;
 }
 
 legend {
