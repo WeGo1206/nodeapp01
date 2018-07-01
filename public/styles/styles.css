@@ -23,7 +23,7 @@ body {
 }
 
 
-.about-text img {
+.info-text img {
 	width: 50%;
 	float: left;
 	margin: 20px;
@@ -54,7 +54,7 @@ body {
 	margin: 20px;
 }
 
-.wrapper-about {
+.wrapper-info {
 	color: var(--dark);
 }
 
@@ -62,7 +62,7 @@ body {
 	color: var(--dark);
 }
 
-.wrapper-service {
+.wrapper-documentation {
 	color: var(--dark);
 }
 

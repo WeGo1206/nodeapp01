@@ -26,12 +26,12 @@ app.get('/', function (req, res) {
   res.send(resHTML.responseHTML(piFixedValue.readPV(1)));
 });
 
-app.get('/service', function (req, res) {
-  res.sendFile(__dirname + "/public/views/service-window.html");
+app.get('/documentation', function (req, res) {
+  res.sendFile(__dirname + "/public/views/documentation-window.html");
 });
 
-app.get('/about', function (req, res) {
-  res.sendFile(__dirname + "/public/views/about-window.html");
+app.get('/info', function (req, res) {
+  res.sendFile(__dirname + "/public/views/info-window.html");
 });
 
 app.get('/contact', function (req, res) {

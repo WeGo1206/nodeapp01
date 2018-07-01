@@ -88,7 +88,7 @@ app.post('/365t', function(req, res){
 app.post('/730t', function(req, res){   
   res.redirect('/730t');});
 
-app.get('/About', function (req, res) {
+app.get('/info', function (req, res) {
 res.send('Temperatur-Messung mit Raspberry PI und DS18B20 Sensor \n WeGo v0.0.4')});
 
 app.listen(port, hostname, () => {
