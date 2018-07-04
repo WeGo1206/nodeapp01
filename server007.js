@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var piFixedValue = require('./readPV');
 var piSelectValue = require('./readByDateInput');
 var resHTML = require('./responseHTML');
+var resSysInfo = require('./responseSysInfo');
 
 var app = express();
 
@@ -31,7 +32,7 @@ app.get('/documentation', function (req, res) {
 });
 
 app.get('/info', function (req, res) {
-  res.sendFile(__dirname + "/public/views/info-window.html");
+  res.send(resSysInfo.responseSysInfo());
 });
 
 app.get('/contact', function (req, res) {
