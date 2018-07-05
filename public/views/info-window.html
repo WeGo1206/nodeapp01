@@ -27,12 +27,12 @@
         <canvas id="canvas"></canvas>
     </div>
     <script>
-        var color = Chart.helpers.color;
+        //var color = Chart.helpers.color;
 		var horizontalBarChartData = {
 			labels: ['Total Memory', 'Used Memory'],
 			datasets: [{
 				label: 'Dataset 1',
-				backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+				backgroundColor: window.chartColors.grey,
 				borderColor: window.chartColors.red,
 				borderWidth: 1,
 				data: [
@@ -40,7 +40,7 @@
 				]
 			}, {
 				label: 'Dataset 2',
-				backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+				backgroundColor: window.chartColors.grey,
 				borderColor: window.chartColors.blue,
 				data: [
 					499
