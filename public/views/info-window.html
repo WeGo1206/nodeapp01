@@ -60,7 +60,7 @@
 
 		};
 
-		window.onload = function() {
+		function infoChart() {
 			var ctx = document.getElementById('info-canvas').getContext('2d');
 			window.myHorizontalBar = new Chart(ctx, {
 				type: 'horizontalBar',
@@ -85,7 +85,7 @@
 			});
 
 		};
-
+    infoChart();
 	
     </script>
 </div>
