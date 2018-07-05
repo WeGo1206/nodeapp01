@@ -24,7 +24,7 @@
         </tr>
     </table>
     <div class="info-trend">
-        <canvas id="canvas"></canvas>
+        <canvas id="info-canvas"></canvas>
     </div>
     <script>
         //var color = Chart.helpers.color;
@@ -50,7 +50,7 @@
 		};
 
 		window.onload = function() {
-			var ctx = document.getElementById('canvas').getContext('2d');
+			var ctx = document.getElementById('info-canvas').getContext('2d');
 			window.myHorizontalBar = new Chart(ctx, {
 				type: 'horizontalBar',
 				data: horizontalBarChartData,
