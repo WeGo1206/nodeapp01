@@ -10,7 +10,6 @@ function changeView(i) {
         if (this.readyState == 4 && this.status == 200) {
           console.log(this.status);
           document.getElementById("content").innerHTML = this.responseText;
-          window.myHorizontalBar.update();
           };
         };  
 
