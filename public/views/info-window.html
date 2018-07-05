@@ -23,4 +23,57 @@
             <td>_SysInfo4 MByte</th>
         </tr>
     </table>
+    <div class="info-trend">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script>
+		var horizontalBarChartData = {
+			labels: ['Total Memory', 'Used Memory'],
+			datasets: [{
+				label: 'Dataset 1',
+				backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.red,
+				borderWidth: 1,
+				data: [
+					927
+				]
+			}, {
+				label: 'Dataset 2',
+				backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+				borderColor: window.chartColors.blue,
+				data: [
+					499
+				]
+			}]
+
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myHorizontalBar = new Chart(ctx, {
+				type: 'horizontalBar',
+				data: horizontalBarChartData,
+				options: {
+					// Elements options apply to all of the options unless overridden in a dataset
+					// In this case, we are setting the border of each horizontal bar to be 2px wide
+					elements: {
+						rectangle: {
+							borderWidth: 2,
+						}
+					},
+					responsive: true,
+					legend: {
+						position: 'right',
+					},
+					title: {
+						display: true,
+						text: 'Chart.js Horizontal Bar Chart'
+					}
+				}
+			});
+
+		};
+
+	
+    </script>
 </div>
