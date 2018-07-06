@@ -192,19 +192,21 @@
 		var horizontalBarChartData = {
 			labels: ['Total Memory', 'Used Memory'],
 			datasets: [{
-				label: 'Dataset 1',
+				label: 'HDD',
 				backgroundColor: window.chartColors.grey,
 				borderColor: window.chartColors.red,
 				borderWidth: 1,
 				data: [
-					927
+					927,
+					455
 				]
 			}, {
-				label: 'Dataset 2',
+				label: 'RAM',
 				backgroundColor: window.chartColors.grey,
 				borderColor: window.chartColors.blue,
 				data: [
-					499
+					14.1,
+					8.1
 				]
 			}]
 
@@ -231,7 +233,7 @@
 					},
 					title: {
 						display: true,
-						text: 'Chart.js Horizontal Bar Chart'
+						text: 'Speicherauslastung Raspberry PI'
 					}
 				}
 			});
