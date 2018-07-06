@@ -117,6 +117,8 @@
 		<div class="hdd-trend">
 			<canvas id="info-hdd-canvas"></canvas>
 		</div>
+		<br>
+		<br>
 		<div class="ram-trend">
 			<canvas id="info-ram-canvas"></canvas>
 		</div>
@@ -193,7 +195,7 @@
 	<script>
         //var color = Chart.helpers.color;
 		var horizontalBarChartData1 = {
-			labels: ['Total Disk Space', 'Used Disk Space'],
+			labels: ['Free Disk Space', 'Used Disk Space'],
 			datasets: [{
 				label: 'HDD',
 				backgroundColor: [
@@ -201,14 +203,14 @@
 					window.chartColors.green
 					],
 				data: [
-					14.1,
+					6.5,
 					8.8
 				]
 			}]
 		};
 
 			var horizontalBarChartData2 = {
-			labels: ['Total Memory Space', 'Used Memory Space'],
+			labels: ['Free Memory Space', 'Used Memory Space'],
 			datasets: [{
 				label: 'RAM',
 				backgroundColor: [
@@ -216,7 +218,7 @@
 					window.chartColors.green
 					],
 				data: [
-					923,
+					467,
 					456
 				]
 			}]
@@ -243,7 +245,7 @@
 					},
 					title: {
 						display: true,
-						text: 'Speicherauslastung Raspberry PI'
+						text: 'HDD Raspberry PI'
 					},
 					/* scales: {
 					xAxes: [{
@@ -277,7 +279,7 @@
 					},
 					title: {
 						display: true,
-						text: 'Speicherauslastung Raspberry PI'
+						text: 'RAM Raspberry PI'
 					},
 					/* scales: {
 					xAxes: [{
