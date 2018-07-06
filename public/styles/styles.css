@@ -177,10 +177,12 @@ td, th {
 }
 .hdd-trend {
 	width: 65%;
+	height: 65%;
 }
 
 .ram-trend {
 	width: 65%;
+	height: 65%;
 }
 
 footer p {
