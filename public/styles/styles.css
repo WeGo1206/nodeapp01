@@ -175,6 +175,13 @@ td, th {
 		text-align: left;
 		padding: 4px;
 }
+.hdd-trend {
+	width: 65%;
+}
+
+.ram-trend {
+	width: 65%;
+}
 
 footer p {
 	text-align: center;
