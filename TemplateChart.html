@@ -245,7 +245,7 @@
 						display: true,
 						text: 'Speicherauslastung Raspberry PI'
 					},
-					scales: {
+					/* scales: {
 					xAxes: [{
 						ticks: {
 							min: 0,
@@ -256,12 +256,12 @@
 							min: 0,
 						}
 					}]
-					}
+					} */
 				}
 			});
 			var ctx3 = document.getElementById('info-ram-canvas').getContext('2d');
 			window.myHorizontalBar2 = new Chart(ctx3, {
-				type: 'horipiezontalBar',
+				type: 'pie',
 				data: horizontalBarChartData2,
 				options: {
 					// Elements options apply to all of the options unless overridden in a dataset
@@ -279,7 +279,7 @@
 						display: true,
 						text: 'Speicherauslastung Raspberry PI'
 					},
-					scales: {
+					/* scales: {
 					xAxes: [{
 						ticks: {
 							min: 0,
@@ -290,7 +290,7 @@
 							min: 0,
 						}
 					}]
-					}
+					} */
 				}
 			});
 
