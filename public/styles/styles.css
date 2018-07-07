@@ -184,14 +184,18 @@ td, th {
 }
 .hdd-trend {
 	grid-area: hdd-trend;
-	width: 60%;
-	/* height: 50%; */
 }
 
 .ram-trend {
 	grid-area: ram-trend;
-	width: 60%;
-	/* height: 50%; */
+}
+
+.hdd-canvas {
+	width:50%;
+}
+
+.ram-canvas {
+	width:50%;
 }
 
 footer p {
