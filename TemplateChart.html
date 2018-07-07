@@ -74,6 +74,8 @@
 					</form>
 				</fieldset>
 			</section>
+			<br>
+			<br>
 			<section class="info">
 				<fieldset>
 					<legend>Statistik des aktuellen Zeitbereichs</legend>
@@ -202,7 +204,7 @@
 	<script>
         //var color = Chart.helpers.color;
 		var horizontalBarChartData1 = {
-			labels: ['Free Disk Space', 'Used Disk Space'],
+			labels: ['Free', 'Used'],
 			datasets: [{
 				label: 'HDD',
 				backgroundColor: [
@@ -217,7 +219,7 @@
 		};
 
 			var horizontalBarChartData2 = {
-			labels: ['Free Memory Space', 'Used Memory Space'],
+			labels: ['Free', 'Used'],
 			datasets: [{
 				label: 'RAM',
 				backgroundColor: [
@@ -248,11 +250,12 @@
 					},
 					responsive: true,
 					legend: {
-						position: 'right',
+						position: 'top',
 					},
 					title: {
 						display: true,
-						text: 'HDD Raspberry PI'
+						text: 'HDD Raspberry PI',
+						position: 'bottom'
 					},
 					/* scales: {
 					xAxes: [{
@@ -282,11 +285,12 @@
 					},
 					responsive: true,
 					legend: {
-						position: 'right',
+						position: 'top',
 					},
 					title: {
 						display: true,
-						text: 'RAM Raspberry PI'
+						text: 'RAM Raspberry PI',
+						position: 'bottom'
 					},
 					/* scales: {
 					xAxes: [{
