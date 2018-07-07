@@ -121,6 +121,7 @@
 				<fieldset>
 					<legend>Aktuelle Speicherauslastung Raspberry PI</legend>
 						<div class= "bottom-container">
+							<br>
 							<div class="hdd-trend">
 								<canvas class="hdd-canvas" id="info-hdd-canvas"></canvas>
 							</div>
@@ -206,9 +207,9 @@
 	<script>
         //var color = Chart.helpers.color;
 		var horizontalBarChartData1 = {
-			labels: ['Free', 'Used'],
+			labels: ['Frei', 'Verwendet'],
 			datasets: [{
-				label: 'HDD',
+				label: 'SD Card',
 				backgroundColor: [
 					window.chartColors.green,
 					window.chartColors.blue
@@ -221,7 +222,7 @@
 		};
 
 			var horizontalBarChartData2 = {
-			labels: ['Free', 'Used'],
+			labels: ['Frei', 'Verwendet'],
 			datasets: [{
 				label: 'RAM',
 				backgroundColor: [
@@ -256,7 +257,7 @@
 					},
 					title: {
 						display: true,
-						text: 'HDD Raspberry PI',
+						text: '16GB SD Card Raspberry PI',
 						position: 'bottom'
 					},
 					/* scales: {
@@ -291,7 +292,7 @@
 					},
 					title: {
 						display: true,
-						text: 'RAM Raspberry PI',
+						text: '1GB RAM Raspberry PI',
 						position: 'bottom'
 					},
 					/* scales: {
