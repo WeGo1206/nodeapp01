@@ -14,11 +14,12 @@ module.exports = {
 
         singleValue = sysInfoFile.split(';');
 
-        responseSysInfo = htmlTemplateFile.replace("_SysInfo1", singleValue[1]);
-        responseSysInfo = responseSysInfo.replace("_SysInfo2", singleValue[2]);
-        responseSysInfo = responseSysInfo.replace("_SysInfo3", singleValue[4]);
-        responseSysInfo = responseSysInfo.replace("_SysInfo4", singleValue[5]);
-        
+        responseSysInfo = htmlTemplateFile.replace("_SysInfo1", singleValue[0]);
+        responseSysInfo = responseSysInfo.replace("_SysInfo2", singleValue[1]);
+        responseSysInfo = responseSysInfo.replace("_SysInfo3", singleValue[2]);
+        responseSysInfo = responseSysInfo.replace("_SysInfo4", singleValue[3]);
+        responseSysInfo = responseSysInfo.replace("_SysInfo5", singleValue[4]);
+        responseSysInfo = responseSysInfo.replace("_SysInfo6", singleValue[5]);
         return responseSysInfo;
     }
 }
