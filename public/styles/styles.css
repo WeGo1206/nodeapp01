@@ -180,20 +180,21 @@ td, th {
 	display: grid;
 	grid-gap: 20px;
 	grid-template-areas:
-	'hdd-trend ram-trend'
-	;
-
+	'hdd-trend hdd-trend ram-trend ram-trend'
+	'hdd-trend hdd-trend ram-trend ram-trend'
+	'hdd-trend hdd-trend ram-trend ram-trend'
+	'hdd-trend hdd-trend ram-trend ram-trend';
 }
 .hdd-trend {
 	grid-area: hdd-trend;
-	width: 40%;
-	height: 40%;
+	width: 50%;
+	height: 50%;
 }
 
 .ram-trend {
 	grid-area: ram-trend;
-	width: 40%;
-	height: 40%;
+	width: 50%;
+	height: 50%;
 }
 
 footer p {
