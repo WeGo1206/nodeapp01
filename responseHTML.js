@@ -90,10 +90,10 @@ module.exports = {
         responseHTML = responseHTML.replace("_avg3", avgOfYvalue3.toFixed(2));
         responseHTML = responseHTML.replace("id=\"_sDate\"", "id=\"_sDate\"" + "value=\"" + moment().format("YYYY-MM-DD") + "\"");
         responseHTML = responseHTML.replace("id=\"_eDate\"", "id=\"_eDate\"" + "value=\"" + moment().format("YYYY-MM-DD") + "\"");
-        responseHTML = responseHTML.replace.replace("_SysInfo1", singleValue[1]);
-        responseHTML = responseHTML.replace.replace("_SysInfo2", singleValue[2]);
-        responseHTML = responseHTML.replace.replace("_SysInfo3", singleValue[4]);
-        responseHTML = responseHTML.replace.replace("_SysInfo4", singleValue[5]);
+        responseHTML = responseHTML.replace("_SysInfo1", singleValue[1]);
+        responseHTML = responseHTML.replace("_SysInfo2", singleValue[2]);
+        responseHTML = responseHTML.replace("_SysInfo3", singleValue[4]);
+        responseHTML = responseHTML.replace("_SysInfo4", singleValue[5]);
         
         //console.log(responseHTML);
         return responseHTML;
