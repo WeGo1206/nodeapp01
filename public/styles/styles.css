@@ -190,14 +190,6 @@ td, th {
 	grid-area: ram-trend;
 }
 
-.hdd-canvas {
-	width:75%;
-}
-
-.ram-canvas {
-	width:75%;
-}
-
 footer p {
 	text-align: center;
 }
