@@ -176,14 +176,14 @@ td, th {
 		padding: 4px;
 }
 .hdd-trend {
-	width: 50%;
-	height: 50%;
+	width: 40%;
+	height: 40%;
 	float: left;
 }
 
 .ram-trend {
-	width: 50%;
-	height: 50%;
+	width: 40%;
+	height: 40%;
 	float: none;
 }
 
