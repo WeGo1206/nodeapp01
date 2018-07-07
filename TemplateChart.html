@@ -229,7 +229,7 @@
 			window.myLine = new Chart(ctx1, config);
 			var ctx2 = document.getElementById('info-hdd-canvas').getContext('2d');
 			window.myHorizontalBar1 = new Chart(ctx2, {
-				type: 'horizontalBar',
+				type: 'doughnut',
 				data: horizontalBarChartData1,
 				options: {
 					// Elements options apply to all of the options unless overridden in a dataset
@@ -263,7 +263,7 @@
 			});
 			var ctx3 = document.getElementById('info-ram-canvas').getContext('2d');
 			window.myHorizontalBar2 = new Chart(ctx3, {
-				type: 'horizontalBar',
+				type: 'doughnut',
 				data: horizontalBarChartData2,
 				options: {
 					// Elements options apply to all of the options unless overridden in a dataset
