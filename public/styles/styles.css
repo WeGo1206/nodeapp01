@@ -175,16 +175,25 @@ td, th {
 		text-align: left;
 		padding: 4px;
 }
+
+.bottom-container {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas:
+	'hdd-trend ram-trend'
+	;
+
+}
 .hdd-trend {
+	grid-area: hdd-trend;
 	width: 40%;
 	height: 40%;
-	float: left;
 }
 
 .ram-trend {
+	grid-area: ram-trend;
 	width: 40%;
 	height: 40%;
-	float: none;
 }
 
 footer p {
