@@ -173,7 +173,7 @@ td, th {
 		padding: 4px;
 }
 
-.bottom-container {
+/* .bottom-container {
 	display: grid;
 	grid-gap: 5px;
 	grid-template-areas:
@@ -181,13 +181,13 @@ td, th {
 	'hdd-trend hdd-trend ram-trend ram-trend'
 	'hdd-trend hdd-trend ram-trend ram-trend'
 	'hdd-trend hdd-trend ram-trend ram-trend';
-}
+} */
 .hdd-trend {
-	grid-area: hdd-trend;
+	/* grid-area: hdd-trend; */
 }
 
 .ram-trend {
-	grid-area: ram-trend;
+	/* grid-area: ram-trend; */
 }
 
 footer p {
