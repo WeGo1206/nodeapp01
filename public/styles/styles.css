@@ -178,11 +178,13 @@ td, th {
 .hdd-trend {
 	width: 50%;
 	height: 50%;
+	float: left;
 }
 
 .ram-trend {
 	width: 50%;
 	height: 50%;
+	float: none;
 }
 
 footer p {
