@@ -75,53 +75,58 @@
 				</fieldset>
 			</section>
 			<section class="info">
-				<div class="statistic-table">
-					<p class="tablename">Statistik des aktuellen Zeitbereichs</p>
-					<table>
-						<tr>
-							<th>Messstelle</th>
-							<th>Einheit</th>
-							<th>Min</th>
-							<th>Max</th>
-							<th>Durchschnitt</th>
-							<th>Anzahl Messwerte</th>
-						</tr>
+				<fieldset>
+					<legend>Statistik des aktuellen Zeitbereichs</legend>
+					<div class="statistic-table">
+						<table>
 							<tr>
-							<td>Aussen</th>
-							<td>&deg;C</td>	
-							<td>_min1</th>
-							<td>_max1</th>
-							<td>_avg1</th>
-							<td>_num1</th>
-						</tr>
-						<tr>
-							<td>Innen</th>
-							<td>&deg;C</td>	
-							<td>_min2</th>
-							<td>_max2</th>
-							<td>_avg2</th>
-							<td>_num2</th>
-						</tr>
-						<tr>
-							<td>PI Prozessor</th>
-							<td>&deg;C</td>	
-							<td>_min3</th>
-							<td>_max3</th>
-							<td>_avg3</th>
-							<td>_num3</th>
-						</tr>
-					</table>
-				</div>
+								<th>Messstelle</th>
+								<th>Einheit</th>
+								<th>Min</th>
+								<th>Max</th>
+								<th>Durchschnitt</th>
+								<th>Anzahl Messwerte</th>
+							</tr>
+								<tr>
+								<td>Aussen</th>
+								<td>&deg;C</td>	
+								<td>_min1</th>
+								<td>_max1</th>
+								<td>_avg1</th>
+								<td>_num1</th>
+							</tr>
+							<tr>
+								<td>Innen</th>
+								<td>&deg;C</td>	
+								<td>_min2</th>
+								<td>_max2</th>
+								<td>_avg2</th>
+								<td>_num2</th>
+							</tr>
+							<tr>
+								<td>PI Prozessor</th>
+								<td>&deg;C</td>	
+								<td>_min3</th>
+								<td>_max3</th>
+								<td>_avg3</th>
+								<td>_num3</th>
+							</tr>
+						</table>
+					</div>
+				</fieldset>
 				<br>
 				<br>
-				<div class= "bottom-container">
-					<div class="hdd-trend">
-						<canvas id="info-hdd-canvas"></canvas>
-					</div>
-					<div class="ram-trend">
-						<canvas id="info-ram-canvas"></canvas>
-					</div>
-			</div>
+				<fieldset>
+					<legend>Aktuelle Speicherauslastung Raspberry PI</legend>
+						<div class= "bottom-container">
+							<div class="hdd-trend">
+								<canvas id="info-hdd-canvas"></canvas>
+							</div>
+							<div class="ram-trend">
+								<canvas id="info-ram-canvas"></canvas>
+							</div>
+						</div>
+				</fieldset>
 			</section>
 		</div>
 		<footer>
