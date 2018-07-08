@@ -207,14 +207,14 @@
 	<script>
         //var color = Chart.helpers.color;
 		var horizontalBarChartData1 = {
-			labels: ['SD Card', 'RAM'],
+			labels: ['SD Card'],
 			datasets: [{
 				label: 'Frei',
 				backgroundColor: [
 					window.chartColors.green
 					],
 				data: [
-				_SysInfo1
+				_SysInfo2
 				]
 			},
 			{
@@ -223,21 +223,28 @@
 					window.chartColors.blue
 					],
 				data: [
-				_SysInfo2
+				_SysInfo1
 				]
 			}]
 		};
 
-			var horizontalBarChartData2 = {
-			labels: ['Frei', 'Verwendet'],
+		var horizontalBarChartData2 = {
+			labels: ['RAM'],
 			datasets: [{
-				label: 'RAM',
+				label: 'Frei',
 				backgroundColor: [
-					window.chartColors.green,
+					window.chartColors.green
+					],
+				data: [
+				_SysInfo4
+				]
+			},
+			{
+				label: 'Verwendet',
+				backgroundColor: [
 					window.chartColors.blue
 					],
 				data: [
-				_SysInfo4,
 				_SysInfo3
 				]
 			}]
@@ -267,7 +274,7 @@
 						text: '16GB SD Card Raspberry PI',
 						position: 'bottom'
 					},
-					/* scales: {
+					scales: {
 					xAxes: [{
 						ticks: {
 							min: 0,
@@ -278,12 +285,12 @@
 							min: 0,
 						}
 					}]
-					} */
+					}
 				}
 			});
 			var ctx3 = document.getElementById('info-ram-canvas').getContext('2d');
 			window.myHorizontalBar2 = new Chart(ctx3, {
-				type: 'doughnut',
+				type: 'horizontalBar',
 				data: horizontalBarChartData2,
 				options: {
 					// Elements options apply to all of the options unless overridden in a dataset
@@ -302,7 +309,7 @@
 						text: '1GB RAM Raspberry PI',
 						position: 'bottom'
 					},
-					/* scales: {
+					scales: {
 					xAxes: [{
 						ticks: {
 							min: 0,
@@ -313,7 +320,7 @@
 							min: 0,
 						}
 					}]
-					} */
+					}
 				}
 			});
 
