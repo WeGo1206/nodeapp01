@@ -201,15 +201,11 @@ td, th {
 }
 
 .hdd-canvas {
-	/* grid-area: hdd-trend; */
-	width: 70%;
-	height: 50%;
+	height: 100px;
 }
 
 .ram-canvas {
-	/* grid-area: ram-trend; */
-	width: 70%;
-	height: 50%;
+	height: 100px;
 }
 
 
