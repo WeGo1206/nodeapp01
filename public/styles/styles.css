@@ -30,6 +30,12 @@ body {
 
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .pi-pic {
 	width: 60%;
 }
