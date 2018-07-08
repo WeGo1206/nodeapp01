@@ -206,3 +206,7 @@ tr:nth-child(even) {
 		background-color: #cbd0ef;
 }
 */
+
+.info-table {
+	width: 60%;
+}
