@@ -228,18 +228,9 @@
 			}]
 		};
 
-/* 		var horizontalBarChartData2 = {
+var horizontalBarChartData2 = {
 			labels: ['RAM'],
 			datasets: [{
-				label: 'Frei',
-				backgroundColor: [
-					window.chartColors.green
-					],
-				data: [
-				_SysInfo4
-				]
-			},
-			{
 				label: 'Verwendet',
 				backgroundColor: [
 					window.chartColors.blue
@@ -247,15 +238,24 @@
 				data: [
 				_SysInfo3
 				]
+			},
+			{
+				label: 'Frei',
+				backgroundColor: [
+					window.chartColors.green
+					],
+				data: [
+				_SysInfo4
+				]
 			}]
-		}; */
+		};
 
 		window.onload = function() {
 			var ctx1 = document.getElementById('canvas').getContext('2d');
 			window.myLine = new Chart(ctx1, config);
 			var ctx2 = document.getElementById('info-hdd-canvas').getContext('2d');
 			window.myHorizontalBar1 = new Chart(ctx2, {
-				type: 'bar',
+				type: 'horizonzalBar',
 				data: horizontalBarChartData1,
 				options: {
 					// Elements options apply to all of the options unless overridden in a dataset
@@ -296,9 +296,9 @@
 						}
 				}
 			});
-			/* var ctx3 = document.getElementById('info-ram-canvas').getContext('2d');
+			var ctx3 = document.getElementById('info-ram-canvas').getContext('2d');
 			window.myHorizontalBar2 = new Chart(ctx3, {
-				type: 'bar',
+				type: 'horizontalBar',
 				data: horizontalBarChartData2,
 				options: {
 					// Elements options apply to all of the options unless overridden in a dataset
@@ -319,14 +319,14 @@
 					},
 					scales: {
 						xAxes: [{
-								stacked: 'true',	
+								stacked: true,	
 							}],
 						yAxes: [{
-								stacked: 'true',	
+								stacked: true,	
 							}]
 						}
 				}
-			}); */
+			});
 
 		};
     </script>
