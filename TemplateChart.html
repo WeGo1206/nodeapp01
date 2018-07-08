@@ -275,19 +275,21 @@
 						position: 'bottom'
 					},
 					scales: {
-						xAxes: [{
+						xAxes: [
+/* 							{
 									ticks: {
 										min: 0,
 									}
-								},
+								}, */
 								{
 									stacked: 'true',	
 							}],
-						yAxes: [{
+						yAxes: [
+/* 							{
 							ticks: {
 										min: 0,
 									}
-								},
+								}, */
 								{
 									stacked: 'true',	
 							}]
@@ -296,7 +298,7 @@
 			});
 			var ctx3 = document.getElementById('info-ram-canvas').getContext('2d');
 			window.myHorizontalBar2 = new Chart(ctx3, {
-				type: 'barar',
+				type: 'bar',
 				data: horizontalBarChartData2,
 				options: {
 					// Elements options apply to all of the options unless overridden in a dataset
@@ -316,21 +318,13 @@
 						position: 'bottom'
 					},
 					scales: {
-						xAxes: [{
-									ticks: {
-										min: 0,
-									}
-								},
+						xAxes: [
 								{
-									stacked: 'true',	
+								stacked: 'true',	
 							}],
-						yAxes: [{
-							ticks: {
-										min: 0,
-									}
-								},
+						yAxes: [
 								{
-									stacked: 'true',	
+								stacked: 'true',	
 							}]
 						}
 				}
