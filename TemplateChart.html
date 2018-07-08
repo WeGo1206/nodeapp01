@@ -207,16 +207,23 @@
 	<script>
         //var color = Chart.helpers.color;
 		var horizontalBarChartData1 = {
-			labels: ['Frei', 'Verwendet'],
+			labels: ['SD Card', 'RAM'],
 			datasets: [{
-				label: 'SD Card',
+				label: 'Frei',
 				backgroundColor: [
-					window.chartColors.green,
+					window.chartColors.green
+					],
+				data: [
+				_SysInfo1
+				]
+			},
+			{
+				label: 'Verwendet',
+				backgroundColor: [
 					window.chartColors.blue
 					],
 				data: [
-				_SysInfo2,
-				_SysInfo1
+				_SysInfo2
 				]
 			}]
 		};
@@ -241,7 +248,7 @@
 			window.myLine = new Chart(ctx1, config);
 			var ctx2 = document.getElementById('info-hdd-canvas').getContext('2d');
 			window.myHorizontalBar1 = new Chart(ctx2, {
-				type: 'doughnut',
+				type: 'horizontalBar',
 				data: horizontalBarChartData1,
 				options: {
 					// Elements options apply to all of the options unless overridden in a dataset
