@@ -208,5 +208,6 @@ tr:nth-child(even) {
 */
 
 .info-table {
-	width: 60%;
+	max-width: 50%;
+	margin: 20px;
 }
