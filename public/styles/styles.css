@@ -191,23 +191,14 @@ td, th {
 .hdd-trend {
 	/* grid-area: hdd-trend; */
 	width: 70%;
-	height: 50%;
+
 }
 
 .ram-trend {
 	/* grid-area: ram-trend; */
 	width: 70%;
-	height: 50%;
-}
 
-.hdd-canvas {
-	height: 100px;
 }
-
-.ram-canvas {
-	height: 100px;
-}
-
 
 footer p {
 	text-align: center;
