@@ -200,6 +200,19 @@ td, th {
 	height: 50%;
 }
 
+.hdd-canvas {
+	/* grid-area: hdd-trend; */
+	width: 70%;
+	height: 50%;
+}
+
+.ram-canvas {
+	/* grid-area: ram-trend; */
+	width: 70%;
+	height: 50%;
+}
+
+
 footer p {
 	text-align: center;
 }
