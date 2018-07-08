@@ -207,14 +207,15 @@
 	<script>
         //var color = Chart.helpers.color;
 		var horizontalBarChartData1 = {
-			labels: ['SD Card'],
+			labels: ['SD Card','RAM'],
 			datasets: [{
 				label: 'Frei',
 				backgroundColor: [
 					window.chartColors.green
 					],
 				data: [
-				_SysInfo2
+				_SysInfo2,
+				_SysInfo4
 				]
 			},
 			{
@@ -223,7 +224,8 @@
 					window.chartColors.blue
 					],
 				data: [
-				_SysInfo1
+				_SysInfo1,
+				_SysInfo3
 				]
 			}]
 		};
