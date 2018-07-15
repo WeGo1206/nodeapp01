@@ -26,10 +26,11 @@
 		<br>
 		<h3>Schaltplan</h3>
 		<img src="/images/RaspberryPI_DS18B20.jpg" alt="" class="circuit-pic">
-		<p>Anschluss von DS18B20 Sensoren an der GPIO Schnittstelle des PI.<br>
-		Pin 	1: +3.3V<br>
-		Pin 	4: GPIO4<br>
-		PIN 38: GND</p>
+		<p>Anschluss von DS18B20 Sensoren an der GPIO Schnittstelle des PI.<br><br>
+		Pin 1:&nbsp; +3.3V<br>
+		Pin 6:&nbsp; GND<br>
+		Pin 7:&nbsp; GPIO4</p>
+		<p>Pin1 ist oben links</p>
 	</div>
 	<div class="sensor">
 		<br>
@@ -57,7 +58,7 @@
 		</p>
 	</div>
 	<div class="code-description">
-		<h3>Pyton Programm zum Auslesen der Temperatur- Istwerte</h3>
+		<h3>Python Programm zum Auslesen der Temperatur- Istwerte</h3>
 		<p>Der W1- Bus speichert die aktuellen Messwerte der angeschlossenen Sensoren automatisch als Dateien ab. <br>
 		Dazu wird unter /sys/bus/w1/devices für jeden Sensor ein Unterverzeichnis mit dem Namen der jeweiligen Sensor- ID angelegt. <br><br>
 		In diesem Unterordner befindet sich die Datei w1_slave, welche den aktuellen Sensor- Messwert enthält. <br><br>
@@ -72,8 +73,8 @@
 		Beispiel des generierten Dateinamens: <br>
 		Temperatur_Wohnung_20180630.txt <br><br>
 
-		Speicherformat der Messwerte in der Datei: <br>
-		T1;T2;T3;timestamp <br>
+		Speicherformat der Messwerte in der Datei: <br><br>
+		T1;T2;T3;timestamp <br><br>
 
 		T1: Temperatur Aussen <br>
 		T2: Temperatur Innen <br>
