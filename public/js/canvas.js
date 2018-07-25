@@ -1,4 +1,4 @@
-var canvas = document.querySelector('canvas');
+var canvas = document.getElementById('animation-canvas');
 var c = canvas.getContext('2d');
 
 console.log('start canvas')
