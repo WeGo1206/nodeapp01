@@ -7,14 +7,16 @@ var cLeft = offsets.left;
 var cRight = offsets.right;
 var cBottom = offsets.bottom;
 
+
 var c = canvas.getContext('2d');
-console.log('start canvas',cTop, cLeft, cRight, cBottom );
+console.log('start canvas',cTop, cLeft, cRight, cBottom, cHeight, cWidth );
+console.log('start canvas',cTop - cBottom, cLeft - cRight );
 // c.fillRect(100, 100, 100, 100);
 
 
 
-var x = cLeft + 5;
-var y = cTop + 5;
+var x = 5;
+var y = 5;
 var dx = 1;
 var dy = 1;
 var radius = 5;
