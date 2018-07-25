@@ -1,9 +1,13 @@
 var canvas = document.getElementById('animation-canvas');
 var cHeight = document.getElementById('animation-canvas').clientHeight;
 var cWidth = document.getElementById('animation-canvas').clientWidth;
+var offsets = document.getElementById('animation-canvas').getBoundingClientRect;
+var cTop = offsets.top;
+var cLeft = offsets.left;
+var cRight = offsets.right;
+var cBottom = offsets.bottom;
 
 var c = canvas.getContext('2d');
-
 console.log('start canvas')
 // c.fillRect(100, 100, 100, 100);
 
@@ -23,10 +27,10 @@ function animate() {
     c.strokeStyle = 'blue';
     c.stroke();
 
-    if ( x + radius > cWidth || x - radius < 0) {
+    if ( x + radius > cRight || x - radius < cLeft) {
         dx = -dx;
     }
-    if ( y + radius > cHeight || y - radius < 0) {
+    if ( y + radius > cTop || y - radius < cBottom) {
         dy = -dy;
     }
     x += dx;
