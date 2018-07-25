@@ -31,9 +31,11 @@ function animate() {
 
     if ( x + radius > cWidth || x - radius < 0) {
         dx = -dx;
+        console.log(x);
     }
     if ( y + radius > cHeight || y - radius < 0) {
         dy = -dy;
+        console.log(y);
     }
     x += dx;
     y += dy;
