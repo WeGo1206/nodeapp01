@@ -13,19 +13,20 @@ var dy = 4;
 var radius = 30;
 
 function animate() {
-    requestAnimationFrame(animate) {
-        c.clearRect(0,0,innerWidth,innerHeight);
-        c.beginPath();
-        c.arc(x,y,radius,0,Math.PI * 2, false);
-        c.strokeStyle = 'blue';
-        c.stroke();
+    requestAnimationFrame(animate);
+    c.clearRect(0,0,innerWidth,innerHeight);
+    c.beginPath();
+    c.arc(x,y,radius,0,Math.PI * 2, false);
+    c.strokeStyle = 'blue';
+    c.stroke();
 
-        if ( x + radius > innerWidth || y - radius < 0) {
-            dx = -dx;
-        }
-        if ( x + radius > innerHeight || y - radius < 0) {
-            dy = -dy;
-        }
+    if ( x + radius > innerWidth || y - radius < 0) {
+        dx = -dx;
+    }
+    if ( x + radius > innerHeight || y - radius < 0) {
+        dy = -dy;
     }
 }
+
+animate();
 console.log('end canvas')
