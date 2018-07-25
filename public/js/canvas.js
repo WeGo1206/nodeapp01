@@ -30,11 +30,11 @@ function animate() {
     c.stroke();
     console.log(x,y);
     
-    if ( x + radius > 100 || x - radius < 0) {
+    if ( x + radius > 150 || x - radius < 0) {
         dx = -dx;
         console.log(x);
     }
-    if ( y + radius > 100 || y - radius < 0) {
+    if ( y + radius > 130 || y - radius < 0) {
         dy = -dy;
         console.log(y);
     }
