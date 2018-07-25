@@ -15,8 +15,8 @@ console.log('start canvas',cTop - cBottom, cLeft - cRight );
 
 
 
-var x = 5;
-var y = 5;
+var x = 15;
+var y = 15;
 var dx = 1;
 var dy = 1;
 var radius = 10;
