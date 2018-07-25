@@ -14,16 +14,16 @@ var radius = 30;
 
 function animate() {
     requestAnimationFrame(animate);
-    c.clearRect(0,0,innerWidth,innerHeight);
+    c.clearRect(0,0,windows.innerWidth,windows.innerHeight);
     c.beginPath();
     c.arc(x,y,radius,0,Math.PI * 2, false);
     c.strokeStyle = 'blue';
     c.stroke();
 
-    if ( x + radius > innerWidth || y - radius < 0) {
+    if ( x + radius > windows.innerWidth || y - radius < 0) {
         dx = -dx;
     }
-    if ( x + radius > innerHeight || y - radius < 0) {
+    if ( x + radius > windows.innerHeight || y - radius < 0) {
         dy = -dy;
     }
     x += dx;
