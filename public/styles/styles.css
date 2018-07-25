@@ -215,7 +215,7 @@ tr:nth-child(even) {
 }
 
 #animation-canvas {
-	margin-top: 20px;
+	margin-top: 10px;
 	border: 1px solid black;
 	height: 100%;
 	width: 100%;
