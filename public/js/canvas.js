@@ -31,7 +31,7 @@ function animate() {
     c.stroke();
     c.closePath();
     c.fill();
-    console.log(x,y);
+    // console.log(x,y);
     
     if ( x + radius > 300 || x - radius < 0) {
         dx = -dx;
