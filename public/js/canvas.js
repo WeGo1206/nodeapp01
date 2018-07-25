@@ -24,11 +24,13 @@ var radius = 10;
 function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0,0,cWidth,cHeight);
-    c.beginPath();
     c.fillStyle = 'red';
+    c.beginPath();
     c.arc(x,y,radius,0,Math.PI * 2, false);
     c.strokeStyle = 'red';
     c.stroke();
+    c.closePath();
+    c.fill();
     console.log(x,y);
     
     if ( x + radius > 300 || x - radius < 0) {
