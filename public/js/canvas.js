@@ -30,11 +30,11 @@ function animate() {
     c.stroke();
     console.log(x,y);
     
-    if ( x + radius > cWidth || x - radius < 0) {
+    if ( x + radius > 400 || x - radius < 0) {
         dx = -dx;
         console.log(x);
     }
-    if ( y + radius > cHeight || y - radius < 0) {
+    if ( y + radius > 400 || y - radius < 0) {
         dy = -dy;
         console.log(y);
     }
