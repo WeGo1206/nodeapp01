@@ -26,6 +26,8 @@ function animate() {
     if ( x + radius > innerHeight || y - radius < 0) {
         dy = -dy;
     }
+    x += dx;
+    y += dy;
 }
 
 animate();
