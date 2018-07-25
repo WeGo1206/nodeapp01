@@ -8,7 +8,7 @@ var cRight = offsets.right;
 var cBottom = offsets.bottom;
 
 var c = canvas.getContext('2d');
-console.log('start canvas')
+console.log('start canvas',cTop, cLeft, cRight, cBottom );
 // c.fillRect(100, 100, 100, 100);
 
 
