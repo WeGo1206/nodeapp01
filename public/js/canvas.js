@@ -23,10 +23,10 @@ function animate() {
     c.strokeStyle = 'blue';
     c.stroke();
 
-    if ( x + radius > cWidth || y - radius < 0) {
+    if ( x + radius > cWidth || x - radius < 0) {
         dx = -dx;
     }
-    if ( x + radius > cHeight || y - radius < 0) {
+    if ( y + radius > cHeight || y - radius < 0) {
         dy = -dy;
     }
     x += dx;
