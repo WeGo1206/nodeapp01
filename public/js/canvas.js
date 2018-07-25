@@ -28,7 +28,8 @@ function animate() {
     c.arc(x,y,radius,0,Math.PI * 2, false);
     c.strokeStyle = 'blue';
     c.stroke();
-
+    console.log(x,y);
+    
     if ( x + radius > cWidth || x - radius < 0) {
         dx = -dx;
         console.log(x);
