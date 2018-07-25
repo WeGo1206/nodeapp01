@@ -213,3 +213,7 @@ tr:nth-child(even) {
 	max-width: 60%;
 	margin: 20px;
 }
+
+canvas {
+	border: 1px solid black;
+}
