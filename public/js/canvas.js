@@ -9,11 +9,11 @@ console.log('start canvas')
 
 
 
-var x = 20;
-var y = 20;
-var dx = 4;
-var dy = 4;
-var radius = 30;
+var x = 5;
+var y = 5;
+var dx = 1;
+var dy = 1;
+var radius = 5;
 
 function animate() {
     requestAnimationFrame(animate);
