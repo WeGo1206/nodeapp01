@@ -1,4 +1,7 @@
 var canvas = document.getElementById('animation-canvas');
+var cheight = document.getElementById('animation-canvas').clientHeight;
+var cwidth = document.getElementById('animation-canvas').clientWidth;
+
 var c = canvas.getContext('2d');
 
 console.log('start canvas')
@@ -14,16 +17,16 @@ var radius = 30;
 
 function animate() {
     requestAnimationFrame(animate);
-    c.clearRect(0,0,windows.innerWidth,windows.innerHeight);
+    c.clearRect(0,0,cWidth,cHeight);
     c.beginPath();
     c.arc(x,y,radius,0,Math.PI * 2, false);
     c.strokeStyle = 'blue';
     c.stroke();
 
-    if ( x + radius > windows.innerWidth || y - radius < 0) {
+    if ( x + radius > cWidth || y - radius < 0) {
         dx = -dx;
     }
-    if ( x + radius > windows.innerHeight || y - radius < 0) {
+    if ( x + radius > cHeight || y - radius < 0) {
         dy = -dy;
     }
     x += dx;
