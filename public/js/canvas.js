@@ -30,7 +30,7 @@ function animate() {
     c.stroke();
     console.log(x,y);
     
-    if ( x + radius > 800 || x - radius < 0) {
+    if ( x + radius > 300 || x - radius < 0) {
         dx = -dx;
         console.log(x);
     }
