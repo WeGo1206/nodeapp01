@@ -1,6 +1,6 @@
 var canvas = document.getElementById('animation-canvas');
-var cheight = document.getElementById('animation-canvas').clientHeight;
-var cwidth = document.getElementById('animation-canvas').clientWidth;
+var cHeight = document.getElementById('animation-canvas').clientHeight;
+var cWidth = document.getElementById('animation-canvas').clientWidth;
 
 var c = canvas.getContext('2d');
 
