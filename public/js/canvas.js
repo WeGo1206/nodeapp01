@@ -66,11 +66,11 @@ function animate() {
     //     console.log(x2);
     // }
     if ( y2 + radius2 > 150 || y2 - radius2 < 0) {
-        dy2 = -dy2;
+        dy2 = -dy2*0.9;
         console.log(y2);
     }
     else (
-        dy2 += 1
+        dy2 += 0.5
     )
     // x2 += dx2;
     y2 += dy2;
