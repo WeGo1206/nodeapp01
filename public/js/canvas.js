@@ -70,7 +70,7 @@ function animate() {
         console.log(y2);
     }
     else (
-        dy2 += 0.5
+        dy2 += 0.5;
     )
     // x2 += dx2;
     y2 += dy2;
