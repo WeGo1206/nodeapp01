@@ -69,6 +69,9 @@ function animate() {
         dy2 = -dy2;
         console.log(y2);
     }
+    else (
+        dy2 += 1
+    )
     // x2 += dx2;
     y2 += dy2;
 }
