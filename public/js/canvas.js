@@ -71,7 +71,7 @@ function animate() {
         console.log(y2);
     }
     else {
-        dy2 += 1;
+        dy2 += 0.9;
         console.log(dy2);
     }
     // x2 += dx2;
