@@ -73,7 +73,7 @@ function animate() {
         dy2 += 0.3;
     }
     // x2 += dx2;
-    console.log(dy2);
+    //console.log(dy2);
     y2 += dy2;
 }
 
