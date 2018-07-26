@@ -76,6 +76,7 @@ function animate() {
     }
     // x2 += dx2;
     //console.log(dy2);
+    console.log(y2 + radius2);
     y2 += dy2;
 }
 
