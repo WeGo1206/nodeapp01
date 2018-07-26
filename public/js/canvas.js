@@ -21,9 +21,16 @@ var dx = 1;
 var dy = 1;
 var radius = 10;
 
+var x2 = 120;
+var y2 = 15;
+var dx2 = 1;
+var dy2 = 1;
+var radius2 = 10;
+
 function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0,0,cWidth,cHeight);
+    // Ball1
     c.fillStyle = 'red';
     c.beginPath();
     c.arc(x,y,radius,0,Math.PI * 2, false);
@@ -43,6 +50,27 @@ function animate() {
     }
     x += dx;
     y += dy;
+
+    // Ball2
+    c.fillStyle = 'blue';
+    c.beginPath();
+    c.arc(x2,y2,radius2,0,Math.PI * 2, false);
+    c.strokeStyle = 'blue';
+    c.stroke();
+    c.closePath();
+    c.fill();
+    // console.log(x,y);
+    
+    if ( x2 + radius2 > 300 || x2 - radius2 < 0) {
+        dx2 = -dx2;
+        console.log(x2);
+    }
+    if ( y2 + radius2 > 150 || y2 - radius2 < 0) {
+        dy2 = -dy2;
+        console.log(y2);
+    }
+    x2 += dx2;
+    y2 += dy2;
 }
 
 animate();
