@@ -68,6 +68,7 @@ function animate() {
     if ( y2 + radius2 > 150) {
         dy2 = (dy2 * -0.99);
         console.log(dy2);
+        console.log(y2);
     }
     else {
         dy2 += 0.3;
