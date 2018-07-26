@@ -42,11 +42,11 @@ function animate() {
     
     if ( x + radius > 300 || x - radius < 0) {
         dx = -dx;
-        console.log(x);
+        //console.log(x);
     }
     if ( y + radius > 150 || y - radius < 0) {
         dy = -dy;
-        console.log(y);
+        //console.log(y);
     }
     x += dx;
     y += dy;
