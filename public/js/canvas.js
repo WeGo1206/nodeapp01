@@ -70,7 +70,7 @@ function animate() {
         
     }
     else {
-        dy2 += 0.5;
+        dy2 += 0.3;
     }
     // x2 += dx2;
     console.log(dy2);
