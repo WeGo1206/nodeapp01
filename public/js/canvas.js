@@ -23,7 +23,7 @@ var radius = 10;
 
 var x2 = 120;
 var y2 = 15;
-var dx2 = 1;
+var dx2 = 10;
 var dy2 = 1;
 var radius2 = 10;
 
@@ -62,7 +62,7 @@ function animate() {
     // console.log(x,y);
     
     if ( x2 + radius2 > 300 || x2 - radius2 < 0) {
-        dx2 = -dx2 * 0.99;
+        dx2 = (dx2 * -0.99);
         console.log(dx2);
     }
     if ( y2 + radius2 > 150) {
