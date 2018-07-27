@@ -61,8 +61,23 @@ function animate() {
     c.fill();
     // console.log(x,y);
     
-    if ( x2 + radius2 > 300 || x2 - radius2 < 0) {
-        dx2 = (-dx2);
+    var bRightBorder;
+    var bLeftBorder;
+
+    if ( x2 + radius2 > 300) {
+        
+        if ( bRightBorder === false)
+        dx2 = (-dx2 * 0.99);
+        bRightBorder = true;
+        bLeftBorder = false;
+        console.log(dx2);
+    }
+    if ( x2 - radius2 < 0) {
+        
+        if ( bLeftBorder === false)
+        dx2 = (-dx2 * 0.99);
+        bLeftBorder = true;
+        bRightBorder = false;
         console.log(dx2);
     }
     if ( y2 + radius2 > 150) {
