@@ -61,22 +61,22 @@ function animate() {
     c.fill();
     // console.log(x,y);
     
-    // if ( x2 + radius2 > 300 || x2 - radius2 < 0) {
-    //     dx2 = -dx2;
-    //     console.log(x2);
-    // }
+    if ( x2 + radius2 > 300 || x2 - radius2 < 0) {
+        dx2 = -dx2;
+        //console.log(x2);
+    }
     if ( y2 + radius2 > 150) {
         dy2 = (dy2 * -0.99);
-        console.log(dy2);
-        console.log(y2);
+        //console.log(dy2);
+        //console.log(y2);
     }
     else {
         dy2 += 1;
-        console.log(dy2);
+        //console.log(dy2);
     }
-    // x2 += dx2;
+    x2 += dx2;
     //console.log(dy2);
-    console.log(y2 + radius2);
+    //console.log(y2 + radius2);
     y2 += dy2;
 }
 
