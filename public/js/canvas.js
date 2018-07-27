@@ -69,7 +69,7 @@ function animate() {
     if ( x2 + radius2 > 300) {
         
         if ( bRightBorder === false) {
-        dx2 = (-dx2 * 0.99);
+        dx2 = (-dx2 * 0.9);
         bRightBorder = true;
         bLeftBorder = false;
         console.log(dx2);
@@ -78,7 +78,7 @@ function animate() {
     if ( x2 - radius2 < 0) {
         
         if ( bLeftBorder === false) {
-        dx2 = (-dx2 * 0.99);
+        dx2 = (-dx2 * 0.9);
         bLeftBorder = true;
         bRightBorder = false;
         console.log(dx2);
