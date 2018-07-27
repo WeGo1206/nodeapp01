@@ -27,6 +27,9 @@ var dx2 = 10;
 var dy2 = 1;
 var radius2 = 10;
 
+var bRightBorder = false;
+var bLeftBorder = false;
+
 function animate() {
     requestAnimationFrame(animate);
     c.clearRect(0,0,cWidth,cHeight);
@@ -61,8 +64,7 @@ function animate() {
     c.fill();
     // console.log(x,y);
     
-    var bRightBorder;
-    var bLeftBorder;
+    
 
     if ( x2 + radius2 > 300) {
         
