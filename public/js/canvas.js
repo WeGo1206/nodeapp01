@@ -23,7 +23,7 @@ var radius = 10;
 
 var x2 = 120;
 var y2 = 15;
-var dx2 = 1;
+var dx2 = 5;
 var dy2 = 1;
 var radius2 = 10;
 
