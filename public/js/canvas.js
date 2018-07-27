@@ -73,6 +73,7 @@ function animate() {
         bRightBorder = true;
         bLeftBorder = false;
         console.log(dx2);
+        if ( Math.abs(dx2) <= 0.1 ) { dx2 = 0;}
         }
     }
     if ( x2 - radius2 < 0) {
@@ -82,6 +83,7 @@ function animate() {
         bLeftBorder = true;
         bRightBorder = false;
         console.log(dx2);
+        if ( Math.abs(dx2) <= 0.1 ) { dx2 = 0;}
         }
     }
     if ( y2 + radius2 > 150) {
