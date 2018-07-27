@@ -62,7 +62,7 @@ function animate() {
     // console.log(x,y);
     
     if ( x2 + radius2 > 300 || x2 - radius2 < 0) {
-        dx2 = -dx2;
+        dx2 = -dx2 * 0.99;
         //console.log(x2);
     }
     if ( y2 + radius2 > 150) {
