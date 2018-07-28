@@ -92,10 +92,8 @@ function animate() {
     }
     if ( y2 + radius2 >= cHeight) {
 
-        if ( bBottomBorder === false) {
+        if ( dy2 > 0 ) {
         dy2 = (dy2 * -0.99);
-        bTopBorder = false;
-        bBottomBorder = true;
         //console.log(dy2);
         //console.log(y2);
         }
@@ -109,10 +107,6 @@ function animate() {
     console.log(dy2);
     console.log(y2);
     y2 += dy2;
-    if (y2 <= (cHeight - 3)) {
-        bBottomBorder = false;
-        console.log("toggle");
-    }
 }
 
 animate();
