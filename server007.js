@@ -39,6 +39,10 @@ app.get('/contact', function (req, res) {
   res.sendFile(__dirname + "/public/views/contact-window.html");
 });
 
+app.get('/demo', function (req, res) {
+  res.sendFile(__dirname + "/canvas.html");
+});
+
 app.get('/fixedTimeRange', function (req, res) {
   res.send(resHTML.responseHTML(piFixedValue.readPV(req.query.timeRange)));
 });
