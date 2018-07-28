@@ -13,8 +13,8 @@ console.log('start canvas',cTop, cLeft, cRight, cBottom, cHeight, cWidth );
 console.log('start canvas',cTop - cBottom, cLeft - cRight );
 // c.fillRect(100, 100, 100, 100);
 
-c.width = screen.window.innerWidth;
-c.height = screen.window.innerHeight * 0.5;
+c.width = window.innerWidth;
+c.height = window.innerHeight * 0.5;
 
 var x = 15;
 var y = 15;
