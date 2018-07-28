@@ -68,7 +68,7 @@ function animate() {
     
     
 
-    if ( x2 + radius2 > 300) {
+    if ( x2 + radius2 > cWidth) {
         
         if ( bRightBorder === false) {
         dx2 = (-dx2 * 0.7);
@@ -88,7 +88,7 @@ function animate() {
         if ( Math.abs(dx2) <= 0.15 ) { dx2 = 0;}
         }
     }
-    if ( y2 + radius2 > 150) {
+    if ( y2 + radius2 > cHeight) {
         dy2 = (dy2 * -0.99);
         //console.log(dy2);
         //console.log(y2);
