@@ -27,7 +27,7 @@ var x2 = 120;
 var y2 = 15;
 var dx2 = 5;
 var dy2 = 1;
-var radius2 = 10;
+var radius2 = 20;
 
 var bRightBorder = false;
 var bLeftBorder = false;
