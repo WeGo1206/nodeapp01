@@ -93,7 +93,7 @@ function animate() {
     if ( y2 + radius2 >= cHeight) {
 
         if ( dy2 > 0 ) {
-        dy2 = (dy2 * -0.99);
+        dy2 = (dy2 * -0.9);
         //console.log(dy2);
         //console.log(y2);
         }
