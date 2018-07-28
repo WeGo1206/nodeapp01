@@ -107,7 +107,7 @@ function animate() {
         //console.log(dy2);
     }
    if ( dy2 === 0)  {
-    x2 = x2 + (dx2 * 0.8);
+    x2 = x2 + (dx2 * 0.5);
    }
    else {
     x2 += dx2;
