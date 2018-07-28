@@ -1,6 +1,6 @@
 var canvas = document.getElementById('animation-canvas');
 var cHeight = window.innerHeight * 0.5;
-var cWidth = window.innerWidth;
+var cWidth = window.innerWidth * 0.8;
 var offsets = document.getElementById('animation-canvas').getBoundingClientRect();
 var cTop = offsets.top;
 var cLeft = offsets.left;
