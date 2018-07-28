@@ -73,7 +73,7 @@ function animate() {
     if ( x2 + radius2 > cWidth) {
         
         if ( bRightBorder === false) {
-        dx2 = (-dx2 * 0.7);
+        dx2 = (-dx2 * 0.75);
         bRightBorder = true;
         bLeftBorder = false;
         console.log(dx2);
@@ -83,7 +83,7 @@ function animate() {
     if ( x2 - radius2 < 0) {
         
         if ( bLeftBorder === false) {
-        dx2 = (-dx2 * 0.7);
+        dx2 = (-dx2 * 0.75);
         bLeftBorder = true;
         bRightBorder = false;
         console.log(dx2);
@@ -93,7 +93,7 @@ function animate() {
     if ( y2 + radius2 >= cHeight) {
 
         if ( dy2 > 0 ) {
-        dy2 = (dy2 * -0.9);
+        dy2 = (dy2 * -0.95);
         if ( Math.abs(dy2) <= 0.5 ) { 
             dy2 = 0;
 
@@ -107,7 +107,7 @@ function animate() {
         //console.log(dy2);
     }
    if ( dy2 === 0)  {
-    dx2 = dx2 * 0.995;
+    dx2 = dx2 * 0.997;
     x2 += dx2;
     console.log("grounded", dx2);
    }
