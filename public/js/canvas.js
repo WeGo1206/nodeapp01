@@ -1,5 +1,5 @@
 var canvas = document.getElementById('animation-canvas');
-var cHeight = window.innerHeight;
+var cHeight = window.innerHeight * 0.5;
 var cWidth = window.innerWidth;
 var offsets = document.getElementById('animation-canvas').getBoundingClientRect();
 var cTop = offsets.top;
@@ -13,12 +13,9 @@ console.log('start canvas',cTop, cLeft, cRight, cBottom, cHeight, cWidth );
 console.log('start canvas',cTop - cBottom, cLeft - cRight );
 // c.fillRect(100, 100, 100, 100);
 
-c.width = cWidth;
-c.height = cHeight * 0.5;
+canvas.width = cWidth;
+canvas.height = cHeight;
 
-c.strokeStyle = 'black';
-c.lineWidth = '1';
-c.strokeRect(0, 0, c.width, c.height);
 
 var x = 15;
 var y = 15;
@@ -37,7 +34,7 @@ var bLeftBorder = false;
 
 function animate() {
     requestAnimationFrame(animate);
-    c.clearRect(0,0,c.width+100,c.height+100);
+    c.clearRect(0,0,cWidth+100,cHeight+100);
     // Ball1
     c.fillStyle = 'red';
     c.beginPath();
@@ -48,11 +45,11 @@ function animate() {
     c.fill();
     // console.log(x,y);
     
-    if ( x + radius > c.width || x - radius < 0) {
+    if ( x + radius > cWidth || x - radius < 0) {
         dx = -dx;
         //console.log(x);
     }
-    if ( y + radius > c.height || y - radius < 0) {
+    if ( y + radius > cHeight || y - radius < 0) {
         dy = -dy;
         //console.log(y);
     }
