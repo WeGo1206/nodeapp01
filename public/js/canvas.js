@@ -90,7 +90,7 @@ function animate() {
         if ( Math.abs(dx2) <= 0.15 ) { dx2 = 0;}
         }
     }
-    if ( y2 + radius2 > cHeight) {
+    if ( y2 + radius2 >= cHeight) {
 
         if ( bBottomBorder === false) {
         dy2 = (dy2 * -0.99);
