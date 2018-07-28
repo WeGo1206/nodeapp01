@@ -34,7 +34,7 @@ var bLeftBorder = false;
 
 function animate() {
     requestAnimationFrame(animate);
-    c.clearRect(0,0,cWidth+100,cHeight+100);
+    c.clearRect(0,0,cWidth,cHeight);
     // Ball1
     c.fillStyle = 'red';
     c.beginPath();
