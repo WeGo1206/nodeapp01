@@ -1,6 +1,6 @@
 var canvas = document.getElementById('animation-canvas');
-var cHeight = document.getElementById('animation-canvas').clientHeight;
-var cWidth = document.getElementById('animation-canvas').clientWidth;
+var cHeight = window.innerHeight;
+var cWidth = window.innerWidth;
 var offsets = document.getElementById('animation-canvas').getBoundingClientRect();
 var cTop = offsets.top;
 var cLeft = offsets.left;
@@ -13,8 +13,12 @@ console.log('start canvas',cTop, cLeft, cRight, cBottom, cHeight, cWidth );
 console.log('start canvas',cTop - cBottom, cLeft - cRight );
 // c.fillRect(100, 100, 100, 100);
 
-c.width = window.innerWidth;
-c.height = window.innerHeight * 0.5;
+c.width = cWidth;
+c.height = cHeight * 0.5;
+
+c.strokeStyle = 'black';
+c.lineWidth = '1';
+c.strokeRect(0, 0, c.width, c.height);
 
 var x = 15;
 var y = 15;
