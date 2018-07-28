@@ -107,7 +107,8 @@ function animate() {
         //console.log(dy2);
     }
    if ( dy2 === 0)  {
-    x2 = x2 + (dx2 * 0.3);
+    dx2 = dx2 * 0.5;
+    x2 += dx2;
     console.log("grounded", dx2);
    }
    else {
