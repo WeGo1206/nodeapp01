@@ -109,7 +109,10 @@ function animate() {
     console.log(dy2);
     console.log(y2);
     y2 += dy2;
-    if (y2 <= (cHeight - 3)) {bBottomBorder = false;}
+    if (y2 <= (cHeight - 3)) {
+        bBottomBorder = false;
+        console.log("toggle");
+    }
 }
 
 animate();
