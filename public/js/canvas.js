@@ -77,7 +77,7 @@ function animate() {
         bRightBorder = true;
         bLeftBorder = false;
         console.log(dx2);
-        if ( Math.abs(dx2) <= 0.25 ) { dx2 = 0;}
+        if ( Math.abs(dx2) <= 0.5 ) { dx2 = 0;}
         }
     }
     if ( x2 - radius2 < 0) {
@@ -87,13 +87,17 @@ function animate() {
         bLeftBorder = true;
         bRightBorder = false;
         console.log(dx2);
-        if ( Math.abs(dx2) <= 0.25 ) { dx2 = 0;}
+        if ( Math.abs(dx2) <= 0.5 ) { dx2 = 0;}
         }
     }
     if ( y2 + radius2 >= cHeight) {
 
         if ( dy2 > 0 ) {
         dy2 = (dy2 * -0.9);
+        if ( Math.abs(dy2) <= 0.5 ) { 
+            dy2 = 0;
+
+        }
         //console.log(dy2);
         //console.log(y2);
         }
