@@ -31,6 +31,8 @@ var radius2 = 10;
 
 var bRightBorder = false;
 var bLeftBorder = false;
+var bTopBorder = false;
+var bBottomBorder = false;
 
 function animate() {
     requestAnimationFrame(animate);
@@ -89,18 +91,25 @@ function animate() {
         }
     }
     if ( y2 + radius2 > cHeight) {
+
+        if ( bBottomBorder === false) {
         dy2 = (dy2 * -0.99);
+        bTopBorder = false;
+        bBottomBorder = true;
         //console.log(dy2);
         //console.log(y2);
+        }
     }
     else {
         dy2 += 1;
         //console.log(dy2);
     }
+   
     x2 += dx2;
     //console.log(dy2);
     //console.log(y2 + radius2);
     y2 += dy2;
+    if (y2 <= (cHeight - 3)) {bBottomBorder = false;}
 }
 
 animate();
