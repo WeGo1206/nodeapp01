@@ -13,7 +13,8 @@ console.log('start canvas',cTop, cLeft, cRight, cBottom, cHeight, cWidth );
 console.log('start canvas',cTop - cBottom, cLeft - cRight );
 // c.fillRect(100, 100, 100, 100);
 
-
+c.width = screen.window.width;
+c.height = screen.window.height * 0.5;
 
 var x = 15;
 var y = 15;
@@ -32,7 +33,7 @@ var bLeftBorder = false;
 
 function animate() {
     requestAnimationFrame(animate);
-    c.clearRect(0,0,cWidth+100,cHeight+100);
+    c.clearRect(0,0,c.width+100,c.height+100);
     // Ball1
     c.fillStyle = 'red';
     c.beginPath();
@@ -43,11 +44,11 @@ function animate() {
     c.fill();
     // console.log(x,y);
     
-    if ( x + radius > 300 || x - radius < 0) {
+    if ( x + radius > c.width || x - radius < 0) {
         dx = -dx;
         //console.log(x);
     }
-    if ( y + radius > 150 || y - radius < 0) {
+    if ( y + radius > c.height || y - radius < 0) {
         dy = -dy;
         //console.log(y);
     }
