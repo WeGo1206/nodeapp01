@@ -21,7 +21,7 @@ var x = 15;
 var y = 15;
 var dx = 1;
 var dy = 1;
-var radius = 10;
+var radius = 5;
 
 var x2 = 120;
 var y2 = 15;
@@ -107,7 +107,7 @@ function animate() {
         //console.log(dy2);
     }
    if ( dy2 === 0)  {
-    dx2 = dx2 * 0.98;
+    dx2 = dx2 * 0.999;
     x2 += dx2;
     console.log("grounded", dx2);
    }
