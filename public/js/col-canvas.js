@@ -104,7 +104,7 @@ var particles;
 
 function init() {
     particles = [];
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 50; i++) {
         const radius = 10;
         var x = randomIntFromRange(radius, cWidth - radius);
         var y = randomIntFromRange(radius, cHeight - radius);
