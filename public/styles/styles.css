@@ -218,3 +218,8 @@ tr:nth-child(even) {
 	margin-top: 10px;
 	border: 1px solid black;
 }
+
+#collision-canvas {
+	margin-top: 10px;
+	border: 1px solid black;
+}
