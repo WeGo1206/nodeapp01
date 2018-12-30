@@ -1,5 +1,6 @@
 var fs = require('fs');
 var moment = require('moment');
+var config = require('./serverConfig');
 
 module.exports = {
     responseSysInfo: function() {
@@ -10,7 +11,7 @@ module.exports = {
         var responseSysInfo;
 
         htmlTemplateFile = fs.readFileSync('./public/views/info-window.html', 'utf-8');
-        sysInfoFile = fs.readFileSync('/home/pi/Documents/PiSysInfo.txt', 'utf-8');
+        sysInfoFile = fs.readFileSync(config.filePathSysInfo, 'utf-8');
 
         singleValue = sysInfoFile.split(';');
 

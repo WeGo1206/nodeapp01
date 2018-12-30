@@ -14,6 +14,7 @@
 		purple: 'rgb(153, 102, 255)',
 		grey: 'rgb(201, 203, 207)'
 	};</script>
+	<script src="/js/clientConfig.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
 			<nav class="main-nav">
 				<ul>
 					<li>
-						<a id="nav-home" href="http://wego67.internet-box.ch">Messung</a>
+						<a id="nav-home" onclick="navigateTo('/');">Messung</a>
 					</li>
 					<li>
 						<a id="nav-documentation" href="#" onclick="changeView(2)">Dokumentation</a>
@@ -33,7 +34,7 @@
 						<a id="nav-contact" href="#" onclick="changeView(4)">Kontakt</a>
 					</li>
 					<li>
-						<a id="nav-demo" href="http://wego67.internet-box.ch/demo">Demo</a>
+						<a id="nav-demo" onclick="navigateTo('/demo');">Demo</a>
 					</li>
 				</ul>
 			</nav>
@@ -335,7 +336,7 @@ var horizontalBarChartData2 = {
 
 		};
     </script>
-	<script src="http://wego67.internet-box.ch/js/nav.js"></script>
+	<script src="/js/nav.js"></script>
 </body>
 
 </html>

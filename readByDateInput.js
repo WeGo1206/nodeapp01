@@ -1,6 +1,7 @@
 var fs = require('fs');
 var moment = require('moment');
 var path    = require("path");
+var config = require('./serverConfig');
 
 module.exports = {
     readByDateInput: function(sdate, edate) {
@@ -22,7 +23,7 @@ module.exports = {
 
         for (d = 0; d < fileName.length; d++) {
 	    try{
-               dataTemp = fs.readFileSync('/home/pi/Documents/' + fileName[d] + '.txt', 'utf-8');
+               dataTemp = fs.readFileSync(config.filePathTempData + fileName[d] + '.txt', 'utf-8');
                data = data.concat(dataTemp);
 	    }
 	    catch(err){

@@ -6,19 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <script src="/js/clientConfig.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <nav class="main-nav">
                 <ul>
                     <li>
-                        <a id="nav-home" href="http://wego67.internet-box.ch">Home</a>
+                        <a id="nav-home" onclick="navigateTo('/');">Home</a>
                     </li>
                     <li>
-                        <a id="gravity" href="http://wego67.internet-box.ch/demo">Gravity</a>
+                        <a id="gravity" onclick="navigateTo('/demo');">Gravity</a>
                     </li>
                     <li>
-                        <a id="collision" href="http://wego67.internet-box.ch/collision">Collision</a>
+                        <a id="collision" onclick="navigateTo('/collision');">Collision</a>
                     </li>
                 </ul>
             </nav>
@@ -31,6 +32,6 @@
             <p>2018 WeGo67</p>
         </footer>
     </div>
-    <script src="http://wego67.internet-box.ch/js/canvas.js"></script>
+    <script src="/js/canvas.js"></script>
 </body>
 </html>

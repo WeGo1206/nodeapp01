@@ -5,11 +5,12 @@ var piFixedValue = require('./readPV');
 var piSelectValue = require('./readByDateInput');
 var resHTML = require('./responseHTML');
 var resSysInfo = require('./responseSysInfo');
+var config = require('./serverConfig');
 
 var app = express();
 
-const hostname = '192.168.1.106';
-const port = 80;
+//const hostname = '192.168.1.106';
+//const port = 80;
 
 app.use(express.static('public'));
 app.use(bodyParser.json()); // for parsing application/json
@@ -74,6 +75,6 @@ app.post('/pi/2', function(req, res){
   res.redirect('/fixedTimeRange/?timeRange='+req.body.Zeitbereiche);
 });
 
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+app.listen(config.port, config.hostname, () => {
+  console.log(`Server running at http://${config.hostname}:${config.port}/`);
 });
