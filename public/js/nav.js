@@ -14,11 +14,11 @@ function changeView(i) {
         };  
 
     if (i===2){
-        xhttp.open("GET", "http://wego67.internet-box.ch/documentation", true);
+        xhttp.open("GET", siteURLDocu, true);
     } else if (i===3){
-        xhttp.open("GET", "http://wego67.internet-box.ch/info", true);
+        xhttp.open("GET", siteURLInfo, true);
     } else if (i===4){
-        xhttp.open("GET", "http://wego67.internet-box.ch/contact", true);
+        xhttp.open("GET", siteURLContact, true);
     }
     
     xhttp.send();

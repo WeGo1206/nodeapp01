@@ -6,6 +6,7 @@ var piSelectValue = require('./readByDateInput');
 var resHTML = require('./responseHTML');
 var resSysInfo = require('./responseSysInfo');
 var config = require('./serverConfig');
+var readActValues = require('./readActValues');
 
 var app = express();
 
@@ -54,6 +55,17 @@ app.get('/fixedTimeRange', function (req, res) {
 
 app.get('/selectedTimeRange', function (req, res) {
   res.send(resHTML.responseHTML(piSelectValue.readByDateInput(req.query.sdate, req.query.edate)));
+});
+
+app.get('/updActValues', function (req, res) {
+  var actTempValues = readActValues.readActValues();
+  var actValues = {
+    tempOutside: actTempValues[0] + " °C",
+    tempInside: actTempValues[1] + " °C",
+    tempProcessor: actTempValues[2] + " °C",
+    timeStamp:  actTempValues[3]
+  };
+  res.send(actValues);
 });
 
 app.post('/pi', function(req, res){ 

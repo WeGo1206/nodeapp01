@@ -89,7 +89,7 @@ body {
 	text-align: center;
 	color: var(--dark);
 	text-transform: uppercase;
-	font-size: 1.1rem;
+	font-size: 1.6rem;
 	box-shadow: var(--shadow);
 }
 
@@ -223,3 +223,47 @@ tr:nth-child(even) {
 	margin-top: 10px;
 	border: 1px solid black;
 }
+
+#value-overview {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.trend-area {
+	flex: 2;
+}
+
+#actValOutside {
+	flex: 1;
+	text-align: center;
+	color: rgb(30,144, 255);
+}
+
+#actValInside {
+	flex: 1;
+	text-align: center;
+	color:  rgb(255, 69, 0);
+}
+
+#actValProcessor {
+	flex: 1;
+	text-align: center;
+	color:rgb(255, 159, 64);
+}
+
+#actValTimeStamp {
+	flex: 1;
+	text-align: center;
+	color: rgb(83, 81, 81);
+}
+
+.show {
+	opacity: 1;
+	transition: opacity 1000ms;
+  }
+  
+.hide {
+	opacity: 0;
+	/* transition: opacity 1000ms; */
+  }

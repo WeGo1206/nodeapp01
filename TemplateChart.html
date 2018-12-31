@@ -2,8 +2,9 @@
 <html>
 
 <head>
-	<title>Chart</title>
+	<title>Raspberry Pi</title>
 	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 	<script>window.chartColors = {
 		red: 'rgb(255, 69, 0)',
@@ -39,7 +40,13 @@
 				</ul>
 			</nav>
 		<div id="content">
-			<h1 class="trend-area">Temperatur- Messung</h1>
+			<div id="value-overview" class="hide">
+				<h2 id="trend-area"></h2>
+				<h1 id="actValOutside"></h1>
+				<h1 id="actValInside"></h1>
+				<h1 id="actValProcessor"></h1>
+				<h3 id="actValTimeStamp"></h3>
+			</div>
 			<section class="top-container">
 				<div class="trend">
 					<canvas id="canvas"></canvas>
@@ -153,14 +160,14 @@
 					borderColor: window.chartColors.blue,
 					data: [_yvalues1],
 					fill: false,
-					pointRadius: 0
+					pointRadius: 0					
 				}, {
 					label: 'Innentemperatur',
 					fill: false,
 					backgroundColor: window.chartColors.red,
 					borderColor: window.chartColors.red,
 					data: [_yvalues2],
-					pointRadius: 0
+					pointRadius: 0					
 				}, {
 					label: 'PI Prozessortemperatur',
 					fill: false,
@@ -171,6 +178,12 @@
 				}]
 			},
 			options: {
+				legend: {
+            		display: true,
+            		labels: {
+                		fontSize: 20
+            		}
+        		},
 				responsive: true,
 				title: {
 					display: true,
@@ -337,6 +350,7 @@ var horizontalBarChartData2 = {
 		};
     </script>
 	<script src="/js/nav.js"></script>
+	<script src="/js/updActValues.js"></script>
 </body>
 
 </html>
