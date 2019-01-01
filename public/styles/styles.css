@@ -305,12 +305,13 @@ tr:nth-child(even) {
 		color: rgb(250, 249, 249);
 		margin: 10px 0 10px 0;
 	}
-	#canvas {
+/* 	#canvas {
 		width: 590px;
-	}
+	} */
 	footer p {
 		color: rgb(250, 249, 249);
 		font-size: 1.3rem;
+		margin: 5px;
 	}
 
   }
