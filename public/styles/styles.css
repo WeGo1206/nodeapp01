@@ -93,6 +93,10 @@ body {
 	box-shadow: var(--shadow);
 }
 
+.change-timerange {
+	display: flex;
+}
+
 .change-timerange a {
 	background: var(--primary);
 	display: block;
@@ -102,7 +106,7 @@ body {
 	text-align: center;
 	color: var(--dark);
 	font-size: 1.5rem;
-	border-radius: 2px;
+	border-radius: 5px;
 }
 
 .main-nav a:hover {
