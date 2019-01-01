@@ -6,6 +6,7 @@ var siteURLDocu = serverURL + "/documentation";
 var siteURLInfo = serverURL + "/info";
 var siteURLContact = serverURL + "/contact";
 
+var siteURLGetDay = '/fixedTimeRange/?timeRange=1';
 var siteURLGetWeek = '/fixedTimeRange/?timeRange=7';
 var siteURLGetMonth = '/fixedTimeRange/?timeRange=31';
 
