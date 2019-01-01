@@ -93,6 +93,17 @@ body {
 	box-shadow: var(--shadow);
 }
 
+.change-timerange a {
+	background: var(--primary);
+	display: block;
+	text-decoration: none;
+	padding: 0.1rem;
+	margin: 1rem;
+	text-align: center;
+	color: var(--dark);
+	font-size: 1rem;
+}
+
 .main-nav a:hover {
 	background: var(--dark);
 	color: var(--light);
