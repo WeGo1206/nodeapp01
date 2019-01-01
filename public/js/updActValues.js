@@ -7,7 +7,7 @@ if(init === false) {
     img.classList.add('show');
     updActValues();
     init = true;
-    window.document.body.style.zoom = 1.0;
+    window.parent.document.body.style.zoom = 1.0;
 }
 
 
