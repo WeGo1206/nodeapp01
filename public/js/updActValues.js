@@ -38,7 +38,7 @@ function updActValues() {
     xhttp.open("GET", "/updActValues", true);
     xhttp.send();
     fadeInOut = true;
-    setTimeout(function(){fadingActValues()},1000)
+    setTimeout(function(){fadingActValues()},100)
 };
 
 function fadingActValues() {

@@ -2,6 +2,9 @@
 <html>
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Raspberry Pi</title>
 	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
@@ -41,15 +44,15 @@
 			</nav>
 		<div id="content">
 			<div id="value-overview" class="hide">
-				<h2 id="trend-area"></h2>
-				<h1 id="actValOutside"></h1>
-				<h1 id="actValInside"></h1>
-				<h1 id="actValProcessor"></h1>
-				<h3 id="actValTimeStamp"></h3>
+				<div id="trend-area"></div>
+				<div id="actValOutside"></div>
+				<div id="actValInside"></div>
+				<div id="actValProcessor"></div>
+				<div id="actValTimeStamp"></div>
 			</div>
 			<section class="top-container">
 				<div class="trend">
-					<canvas id="canvas"></canvas>
+					<canvas id="canvas" width="600" height="600"></canvas>
 				</div>
 				<fieldset class="box-a">
 					<legend>Auswahl manueller Zeitbereich</legend>
@@ -150,6 +153,30 @@
 		</footer>
 	</div>
 	<script>
+		var cHeight = window.innerHeight;
+		var cWidth = window.innerWidth;
+		console.log(cHeight, cWidth);
+		var mobile;
+		var fontSizeLegend;
+		var fontColorLegend;
+		var titleFontSize;
+		var bodyFontSize;
+		
+		if(cWidth<= 600) {
+			mobile= true;
+			fontSizeLegend= 24;
+			bodyFontSize= 24;
+			titleFontSize= 24;
+			fontColorLegend= 'rgb(250, 249, 249)';
+		}
+		else {
+			mobile= false;
+			fontSizeLegend= 15;
+			bodyFontSize= 12;
+			titleFontSize= 12;
+			fontColorLegend= '#666';
+		}
+		
 		var config = {
 			type: 'line',
 			data: {
@@ -181,10 +208,15 @@
 				legend: {
             		display: true,
             		labels: {
-                		fontSize: 20
-            		}
+                		fontSize: fontSizeLegend,
+						fontColor: fontColorLegend
+            		},
+					fullWidth: mobile
+					
         		},
 				responsive: true,
+				maintainAspectRatio: false,
+				aspectRatio: 1,
 				title: {
 					display: true,
 					text: ''
@@ -192,6 +224,8 @@
 				tooltips: {
 					mode: 'index',
 					intersect: false,
+					bodyFontSize: bodyFontSize,
+					titleFontSize: titleFontSize
 				},
 				hover: {
 					mode: 'nearest',
@@ -199,14 +233,14 @@
 				},
 				scales: {
 					xAxes: [{
-						display: true,
+						display: !mobile,
 						scaleLabel: {
 							display: true,
 							labelString: '>>>> [ t ] >>>>'
 						}
 					}],
 					yAxes: [{
-						display: true,
+						display: !mobile,
 						scaleLabel: {
 							display: true,
 							labelString: '>>>> [ \u00b0C ] >>>>'

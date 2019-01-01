@@ -75,7 +75,7 @@ body {
 .main-nav ul {
 	width:100%;
 	display: grid;
-	grid-gap: 20px;
+	grid-gap: 10px;
 	padding: 0;
 	list-style: none;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -99,28 +99,28 @@ body {
 }
 
 .top-container {
-	display: grid;
+/* 	display: grid;
 	grid-gap: 20px;
 	grid-template-areas:
 	'trend trend trend trend trend trend'
 	'trend trend trend trend trend trend'
 	'trend trend trend trend trend trend'
 	'trend trend trend trend trend trend'
-	'box-a box-a box-a box-b box-b box-b';
+	'box-a box-a box-a box-b box-b box-b'; */
 
 }
 
 .trend {
-	grid-area: trend;
+	/* grid-area: trend; */
 	}
 
 .box-a {
-	grid-area: box-a;
+	/* grid-area: box-a; */
 	margin-bottom: 10px
 	}
 
 .box-b {
-	grid-area: box-b;
+	/* grid-area: box-b; */
 	margin-bottom: 10px
 	}
 
@@ -238,18 +238,24 @@ tr:nth-child(even) {
 	flex: 1;
 	text-align: center;
 	color: rgb(30,144, 255);
+	font-size: 28px;
+	font-weight: bold;
 }
 
 #actValInside {
 	flex: 1;
 	text-align: center;
 	color:  rgb(255, 69, 0);
+	font-size: 28px;
+	font-weight: bold;
 }
 
 #actValProcessor {
 	flex: 1;
 	text-align: center;
 	color:rgb(255, 159, 64);
+	font-size: 28px;
+	font-weight: bold;
 }
 
 #actValTimeStamp {
@@ -260,10 +266,51 @@ tr:nth-child(even) {
 
 .show {
 	opacity: 1;
-	transition: opacity 1000ms;
+	transition: opacity 5000ms;
   }
   
 .hide {
 	opacity: 0;
-	/* transition: opacity 1000ms; */
+	
+  }
+
+  @media (max-width: 600px) {
+	/* .main-nav {
+		display: none;
+	}; */
+	#nav-home, #nav-demo, #nav-info, #nav-documentation, #nav-contact, #canvas, .info {
+		display: none;
+	}
+	body {
+		margin: 5px;
+		/* background: rgb(43, 40, 87); */
+		background-image: url(../images/carbon.jpg);
+	}
+	#value-overview {
+		flex-direction: column-reverse;
+		font-size: 2rem;
+		align-items: center;
+	}
+	.box-a, .box-b {
+		display: none;
+		margin: 30px 0 0 0;
+		font-size: 28px;
+	}
+	#actValOutside, #actValInside, #actValProcessor  {
+		font-size: 3.2rem;
+		margin: 10px 0 10px 0;
+	}
+	#actValTimeStamp {
+		font-size: 1.9rem;
+		color: rgb(250, 249, 249);
+		margin: 10px 0 10px 0;
+	}
+	#canvas {
+		width: 590px;
+	}
+	footer p {
+		color: rgb(250, 249, 249);
+		font-size: 1.3rem;
+	}
+
   }
