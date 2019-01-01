@@ -161,6 +161,7 @@
 		var fontColorLegend;
 		var titleFontSize;
 		var bodyFontSize;
+		var nameInsideTemp, nameOutsideTemp, nameProcessorTemp;
 		
 		if(cWidth<= 600) {
 			mobile= true;
@@ -168,6 +169,10 @@
 			bodyFontSize= 20;
 			titleFontSize= 20;
 			fontColorLegend= 'rgb(250, 249, 249)';
+			nameInsideTemp =   'Innen    ',
+			nameOutsideTemp=   'Aussen   ',
+			nameProcessorTemp= 'Prozessor'
+
 		}
 		else {
 			mobile= false;
@@ -175,6 +180,9 @@
 			bodyFontSize= 12;
 			titleFontSize= 12;
 			fontColorLegend= '#666';
+			nameInsideTemp =   'Innen    ',
+			nameOutsideTemp=   'Aussen   ',
+			nameProcessorTemp= 'Prozessor'
 		}
 		
 		var config = {
