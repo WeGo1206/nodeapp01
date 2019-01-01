@@ -6,6 +6,8 @@ var siteURLDocu = serverURL + "/documentation";
 var siteURLInfo = serverURL + "/info";
 var siteURLContact = serverURL + "/contact";
 
+var siteURLGetWeek = serverURL +'/fixedTimeRange/?timeRange=7';
+var siteURLGetMonth = serverURL +'/fixedTimeRange/?timeRange=31';
 
 
 function navigateTo(route) {
