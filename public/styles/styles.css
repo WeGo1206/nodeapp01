@@ -289,7 +289,11 @@ tr:nth-child(even) {
 	#nav-home, #nav-demo, #nav-info, #nav-documentation, #nav-contact, #canvas, .info {
 		display: none;
 	}
+	html {
+		height: 100vh;
+	}
 	body {
+		height: 100vh;
 		margin: 5px;
 		/* background: rgb(43, 40, 87); */
 		background-image: url(../images/carbon.jpg);
