@@ -165,6 +165,7 @@
 		var fontSizeLegend;
 		var fontColorLegend;
 		var fontColorYAxes;
+		var gridLinesColor;
 		var titleFontSize;
 		var bodyFontSize;
 		var nameInsideTemp, nameOutsideTemp, nameProcessorTemp;
@@ -179,6 +180,7 @@
 			nameOutsideTemp=   'Aussen',
 			nameProcessorTemp= 'CPU';
 			fontColorYAxes= 'rgb(255, 255, 255)';
+			gridLinesColor= 'rgb(255, 255, 255)';
 
 		}
 		else {
@@ -191,6 +193,8 @@
 			nameOutsideTemp=   'Aussen';
 			nameProcessorTemp= 'CPU';
 			fontColorYAxes= 'rgb(0, 0, 0)';
+			gridLinesColor= 'rgb(0, 0, 0)';
+			
 		}
 		
 		var config = {
@@ -264,6 +268,9 @@
 						scaleLabel: {
 							display: !mobile,
 							labelString: '>>>> [ \u00b0C ] >>>>'
+						},
+						gridlines: {
+							color: gridLinesColor
 						}
 					}]
 				}
