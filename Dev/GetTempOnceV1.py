@@ -57,7 +57,7 @@ localtime = time.strftime("%d.%m.%Y %H:%M:%S")
 print(T1,"°C /", T2,"°C /",localtime)
 ##logText = "Raum= " + str(round(T2,1)) + "°C" + " / Aussen= " + str(round(T1,1)) + "°C" + " / CPU= " + str(fcpuTemp) + "°C / " + localtime + "\n"
 ##macht komische Zeichen vor °C
-logText = str(round(T1,2)) + ";" + str(round(T2,2)) + ";" + str(fcpuTemp) + ";" + localtime + "\n"
+logText = str(round(T1,1)) + ";" + str(round(T2,1)) + ";" + str(fcpuTemp) + ";" + localtime + "\n"
 logText = logText.replace(".",",",3)
 
 filename_daily= "/home/pi/Documents/Temperatur_Wohnung_Aktuell.txt"
