@@ -163,7 +163,7 @@
 		console.log(cHeight, cWidth);
 		var mobile;
 		var fontSizeLegend;
-		var fontColorLegend;
+		var fontColorLegend;fontColorYAxes;
 		var titleFontSize;
 		var bodyFontSize;
 		var nameInsideTemp, nameOutsideTemp, nameProcessorTemp;
@@ -176,7 +176,8 @@
 			fontColorLegend= 'rgb(250, 249, 249)';
 			nameInsideTemp =   'Innen',
 			nameOutsideTemp=   'Aussen',
-			nameProcessorTemp= 'CPU'
+			nameProcessorTemp= 'CPU';
+			fontColorYAxes= 'rgb(255, 255, 255)';
 
 		}
 		else {
@@ -185,9 +186,10 @@
 			bodyFontSize= 12;
 			titleFontSize= 12;
 			fontColorLegend= '#666';
-			nameInsideTemp =   'Innen',
-			nameOutsideTemp=   'Aussen',
-			nameProcessorTemp= 'CPU'
+			nameInsideTemp =   'Innen';
+			nameOutsideTemp=   'Aussen';
+			nameProcessorTemp= 'CPU';
+			fontColorYAxes= 'rgb(0, 0, 0)';
 		}
 		
 		var config = {
@@ -253,9 +255,13 @@
 						}
 					}],
 					yAxes: [{
-						display: !mobile,
+						display: true,
+						ticks: {
+							fontColor: fontColorYAxes,
+							stepSize: 10,
+						},
 						scaleLabel: {
-							display: true,
+							display: !mobile,
 							labelString: '>>>> [ \u00b0C ] >>>>'
 						}
 					}]
