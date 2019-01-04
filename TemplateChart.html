@@ -260,6 +260,11 @@
 						}
 					}],
 					yAxes: [{
+						gridlines: {
+								drawBorder: false,
+								color: gridLinesColor,
+								lineWidth: 1
+						},
 						display: true,
 						ticks: {
 							fontColor: fontColorYAxes,
@@ -269,10 +274,7 @@
 							display: !mobile,
 							labelString: '>>>> [ \u00b0C ] >>>>'
 						},
-						gridlines: {
-								color: gridLinesColor,
-								lineWidth: 1
-						}
+						
 					}]
 				}
 			}
