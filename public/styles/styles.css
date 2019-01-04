@@ -274,7 +274,7 @@ tr:nth-child(even) {
 
 .show {
 	opacity: 1;
-	transition: opacity 5000ms;
+	transition: opacity 2000ms;
   }
   
 .hide {
