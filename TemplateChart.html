@@ -180,7 +180,7 @@
 			nameOutsideTemp=   'Aussen',
 			nameProcessorTemp= 'CPU';
 			fontColorYAxes= 'rgb(255, 255, 255)';
-			gridLinesColor= 'rgba(255, 255, 255, 1)';
+			gridLinesColor= 'rgb(255, 255, 255)';
 
 		}
 		else {
@@ -193,7 +193,7 @@
 			nameOutsideTemp=   'Aussen';
 			nameProcessorTemp= 'CPU';
 			fontColorYAxes= 'rgb(0, 0, 0)';
-			gridLinesColor= 'rgba(0, 0, 0, 1)';
+			gridLinesColor= 'rgb(0, 0, 0)';
 			
 		}
 		
@@ -264,14 +264,14 @@
 						ticks: {
 							fontColor: fontColorYAxes,
 							stepSize: 10,
-							gridlines: {
-								color: gridLinesColor,
-								lineWidth: 1
-							}
 						},
 						scaleLabel: {
 							display: !mobile,
 							labelString: '>>>> [ \u00b0C ] >>>>'
+						},
+						gridlines: {
+								color: gridLinesColor,
+								lineWidth: 1
 						}
 					}]
 				}
