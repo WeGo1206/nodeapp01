@@ -316,7 +316,7 @@ tr:nth-child(even) {
 	}
 	#actValTimeStamp {
 		font-size: 1.5rem;
-		color: rgb(250, 249, 249);
+		color: rgba(250, 249, 249, 0.5);
 		margin: 10px 0 5px 0;
 	}
 /* 	#canvas {
