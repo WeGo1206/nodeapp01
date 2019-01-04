@@ -166,6 +166,7 @@
 		var fontColorLegend;
 		var fontColorYAxes;
 		var gridLinesColor;
+		var zeroLineColor;
 		var titleFontSize;
 		var bodyFontSize;
 		var nameInsideTemp, nameOutsideTemp, nameProcessorTemp;
@@ -181,6 +182,7 @@
 			nameProcessorTemp= 'CPU';
 			fontColorYAxes= 'rgb(255, 255, 255)';
 			gridLinesColor= 'rgba(255, 255, 255,0.3)';
+			zeroLineColor= 'rgba(255, 255, 255,0.6)';
 
 		}
 		else {
@@ -264,7 +266,9 @@
 						gridLines: {
 								color: gridLinesColor,
 								lineWidth: 1,
-								zeroLineColor: gridLinesColor
+								zeroLineColor: zeroLineColor,
+								tickMarkLength: 3,
+								borderDash: [8,3]
 						},
 						ticks: {
 							fontColor: fontColorYAxes,
