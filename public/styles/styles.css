@@ -94,11 +94,21 @@ body {
 }
 
 .change-timerange {
-	display: none;
+	display: flex;
+	align-items: center;
 }
 
 .change-timerange a {
-	display: none;
+	flex: 1;
+	background: var(--primary);
+	display: block;
+	text-decoration: none;
+	padding: 0.1rem;
+	margin: 0.1rem;
+	text-align: center;
+	color: var(--dark);
+	font-size: 1.5rem;
+	border-radius: 7px;
 }
 
 .main-nav a:hover {
@@ -124,11 +134,14 @@ body {
 
 .box-a {
 	/* grid-area: box-a; */
-	margin-bottom: 10px
+	margin-top: 20px;
+	margin-bottom: 10px;
+	
 	}
 
 .box-b {
 	/* grid-area: box-b; */
+	display: none;
 	margin-bottom: 10px
 	}
 
@@ -206,6 +219,10 @@ td, th {
 	/* grid-area: ram-trend; */
 	width: 70%;
 
+}
+
+#ressource-values {
+	display: none;
 }
 
 footer p {

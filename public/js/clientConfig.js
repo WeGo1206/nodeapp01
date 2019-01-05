@@ -14,3 +14,23 @@ var siteURLGetMonth = '/fixedTimeRange/?timeRange=31';
 function navigateTo(route) {
     window.location = siteURLHome + route;
 }
+
+function updateTrendData(objLineChart, days) {
+    updTrendData(objLineChart, days);
+}
+
+
+/* function onMediaQuery(x) {
+    if (x.matches) { // If media query matches
+        console.log('mediaquery matches');
+        
+    } else {
+        console.log('mediaquery does not match');
+       
+    };
+  };
+  
+  var x = window.matchMedia("(max-width: 600px)");
+  onMediaQuery(x); // Call listener function at run time
+  x.addListener(window.myLine.update()); // Attach listener function on state changes
+ */

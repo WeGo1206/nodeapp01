@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
-	<script>window.chartColors = {
+	<!-- <script>window.chartColors = {
 		red: 'rgb(255, 69, 0)',
 		orange: 'rgb(255, 159, 64)',
 		yellow: 'rgb(255, 205, 86)',
@@ -17,7 +17,7 @@
 		blue: 'rgb(30,144, 255)',
 		purple: 'rgb(153, 102, 255)',
 		grey: 'rgb(201, 203, 207)'
-	};</script>
+	};</script> -->
 	<script src="/js/clientConfig.js"></script>
 </head>
 
@@ -55,9 +55,13 @@
 					<canvas id="canvas" width="375" height="500"></canvas>
 				</div>
 				<div class="change-timerange">
-					<a onclick="navigateTo(siteURLGetDay);">1 Tag</a>
-					<a onclick="navigateTo(siteURLGetWeek);">1 Woche</a>
-					<a onclick="navigateTo(siteURLGetMonth);">1 Monat</a>
+					<a onclick="updateTrendData(window.myLine,1);">1 T</a>
+					<a onclick="updateTrendData(window.myLine,3);">3 T</a>
+					<a onclick="updateTrendData(window.myLine,7);">1 W</a>
+					<a onclick="updateTrendData(window.myLine,31);">1 M</a>
+					<a onclick="updateTrendData(window.myLine,183);">6 M</a>
+					<a onclick="updateTrendData(window.myLine,365);">1 J</a>
+					<a onclick="updateTrendData(window.myLine,730);">2 J</a>
 				</div>
 				<fieldset class="box-a">
 					<legend>Auswahl manueller Zeitbereich</legend>
@@ -96,7 +100,7 @@
 			<br>
 			<br>
 			<section class="info">
-				<fieldset>
+				<fieldset id="statistic-values">
 					<legend>Statistik des aktuellen Zeitbereichs</legend>
 					<div class="statistic-table">
 						<table>
@@ -111,33 +115,33 @@
 								<tr>
 								<td>Aussen</th>
 								<td>&deg;C</td>	
-								<td>_min1</th>
-								<td>_max1</th>
-								<td>_avg1</th>
-								<td>_num1</th>
+								<td id="min1">_min1</th>
+								<td id="max1">_max1</th>
+								<td id="avg1">_avg1</th>
+								<td id="num1">_num1</th>
 							</tr>
 							<tr>
 								<td>Innen</th>
 								<td>&deg;C</td>	
-								<td>_min2</th>
-								<td>_max2</th>
-								<td>_avg2</th>
-								<td>_num2</th>
+								<td id="min2">_min2</th>
+								<td id="max2">_max2</th>
+								<td id="avg2">_avg2</th>
+								<td id="num2">_num2</th>
 							</tr>
 							<tr>
 								<td>PI Prozessor</th>
 								<td>&deg;C</td>	
-								<td>_min3</th>
-								<td>_max3</th>
-								<td>_avg3</th>
-								<td>_num3</th>
+								<td id="min3">_min3</th>
+								<td id="max3">_max3</th>
+								<td id="avg3">_avg3</th>
+								<td id="num3">_num3</th>
 							</tr>
 						</table>
 					</div>
 				</fieldset>
 				<br>
 				<br>
-				<fieldset>
+				<fieldset id="ressource-values">
 					<legend>Aktuelle Speicherauslastung Raspberry PI</legend>
 						<div class= "bottom-container">
 							<br>
@@ -157,7 +161,7 @@
 			<p>2018 WeGo67 - Raspberry Pi mit Sensor DS18B20</p>
 		</footer>
 	</div>
-	<script>
+<!-- 	<script>
 		var cHeight = window.innerHeight;
 		var cWidth = window.innerWidth;
 		console.log(cHeight, cWidth);
@@ -368,22 +372,12 @@ var horizontalBarChartData2 = {
 					},
 					scales: {
  						xAxes: [
-/* 							{
-									ticks: {
-										min: 0,
-									}
-								}, */
-								{
-									stacked: true	
+							{
+								stacked: true	
 							}], 
 						yAxes: [
-/* 							{
-							ticks: {
-										min: 0,
-									}
-								}, */
-								{
-									stacked: true	
+							{
+								stacked: true	
 							}]
 						}
 				}
@@ -420,11 +414,12 @@ var horizontalBarChartData2 = {
 						}
 				}
 			});
-
 		};
-    </script>
+    </script> -->
 	<script src="/js/nav.js"></script>
 	<script src="/js/updActValues.js"></script>
+	<script src="/js/updCharts.js"></script>
+	
 </body>
 
 </html>

@@ -7,6 +7,7 @@ var resHTML = require('./responseHTML');
 var resSysInfo = require('./responseSysInfo');
 var config = require('./serverConfig');
 var readActValues = require('./readActValues');
+var resTimeseriesData = require('./responseTimeseriesData');
 
 var app = express();
 
@@ -66,6 +67,34 @@ app.get('/updActValues', function (req, res) {
     timeStamp:  actTempValues[3]
   };
   res.send(actValues);
+});
+
+app.get('/updTrendData/1', function (req, res) {
+  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(1)));
+});
+
+app.get('/updTrendData/3', function (req, res) {
+  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(3)));
+});
+
+app.get('/updTrendData/7', function (req, res) {
+  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(7)));
+});
+
+app.get('/updTrendData/31', function (req, res) {
+  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(31)));
+});
+
+app.get('/updTrendData/183', function (req, res) {
+  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(183)));
+});
+
+app.get('/updTrendData/365', function (req, res) {
+  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(365)));
+});
+
+app.get('/updTrendData/730', function (req, res) {
+  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(730)));
 });
 
 app.post('/pi', function(req, res){ 
