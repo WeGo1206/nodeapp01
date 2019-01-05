@@ -22,8 +22,11 @@ module.exports = {
         var minValue3;
         var maxValue3;
         var numValue3;
-      
-        for (i = 0; i < dataArray.length; i++) {
+        var inc = 1;
+
+        if(dataArray.length >= 360) { inc= 3; };
+
+        for (i = 0; i < dataArray.length; i += inc) {
             if(dataArray[i][3]) {
                 dataArray[i][3] = dataArray[i][3].substring(0,19);
                 //arrayOfTime.push("\"" + dataArray[i][3] + "\"");
@@ -43,21 +46,23 @@ module.exports = {
             };
         };
        
-        for(i=0; i< arrayOfYvalue1.length; i++) {
-		avgOfYvalue1 += arrayOfYvalue1[i];
+        for(i=0; i< dataArray[i].length; i++) {
+		    avgOfYvalue1 += dataArray[i][0];
         };
     
-	    avgOfYvalue1 = avgOfYvalue1/arrayOfYvalue1.length;
+	    avgOfYvalue1 = avgOfYvalue1/dataArray[i].length;
  
-	    for(i=0; i< arrayOfYvalue2.length; i++) {
-		    avgOfYvalue2 += arrayOfYvalue2[i];
-	    };
-        avgOfYvalue2 = avgOfYvalue2/arrayOfYvalue2.length;
+	    for(i=0; i< dataArray[i].length; i++) {
+            avgOfYvalue2 += dataArray[i][0];
+            };
         
-        for(i=0; i< arrayOfYvalue3.length; i++) {
-		    avgOfYvalue3 += arrayOfYvalue3[i];
-	    };
-	    avgOfYvalue3 = avgOfYvalue3/arrayOfYvalue3.length;
+        avgOfYvalue2 = avgOfYvalue2/dataArray[i].length;
+        
+        for(i=0; i< dataArray[i].length; i++) {
+            avgOfYvalue3 += dataArray[i][0];
+            };
+        
+        avgOfYvalue3 = avgOfYvalue3/dataArray[i].length;
 
         numValue1= arrayOfYvalue1.length;
         numValue2= arrayOfYvalue2.length;
