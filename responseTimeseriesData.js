@@ -64,9 +64,9 @@ module.exports = {
         
         avgOfYvalue3 = avgOfYvalue3/dataArray[i].length;
 
-        numValue1= arrayOfYvalue1.length;
-        numValue2= arrayOfYvalue2.length;
-        numValue3= arrayOfYvalue3.length;
+        numValue1= dataArray.length;
+        numValue2= dataArray.length;
+        numValue3= dataArray.length;
 
         minValue1= Math.min(...arrayOfYvalue1).toFixed(1)+'  /  '+ 
         arrayOfTime[arrayOfYvalue1.indexOf(Math.min(...arrayOfYvalue1))].replace(/\"/g,"");
