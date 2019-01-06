@@ -27,7 +27,7 @@ function changeView(i) {
     for(c=1; c<=4; c++) {
 
         elId= c+'-menue-btn';
-        el= document.getElementByClass(elId);
+        el= document.getElementsByClassName(elId);
         el.classList.remove('selected-menue-btn');
         el.classList.add('deselected-menue-btn');
         console.log(el);
@@ -35,24 +35,24 @@ function changeView(i) {
     
     switch (i) {
         case 1:
-            el= document.getElementByClass('1-menue-btn');
+            el= document.getElementsByClassName('1-menue-btn');
             el.classList.remove('deselected-menue-btn');
             el.classList.add('selected-menue-btn');
             console.log('case 1');
             console.log(el);
           break;
         case 2:
-            el= document.getElementByClass('2-menue-btn');
+            el= document.getElementsByClassName('2-menue-btn');
             el.classList.remove('deselected-menue-btn');
             el.classList.add('selected-menue-btn');
           break;
         case 3:
-            el= document.getElementByClass('3-menue-btn');
+            el= document.getElementsByClassName('3-menue-btn');
             el.classList.remove('deselected-menue-btn');
             el.classList.add('selected-menue-btn');
           break;
         case 4:
-            el= document.getElementByClass('4-menue-btn');
+            el= document.getElementsByClassName('4-menue-btn');
             el.classList.remove('deselected-menue-btn');
             el.classList.add('selected-menue-btn');
     };
