@@ -1,7 +1,8 @@
 var serverURL = "http://wego67.internet-box.ch";
-//var serverURL = "http://192.168.1.114";
+//var serverURL = "http://192.168.179.30";
 
 var siteURLHome = serverURL;
+var siteURLMeasurement= serverURL + "/measurement";
 var siteURLDocu = serverURL + "/documentation";
 var siteURLInfo = serverURL + "/info";
 var siteURLContact = serverURL + "/contact";
