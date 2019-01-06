@@ -116,6 +116,7 @@ body {
 	background: var(--dark);
 	border-style: solid;
 	border-color: var(--primary);
+	border-width: 1px;
 	color: var(--primary);
 }
 
@@ -123,6 +124,7 @@ body {
 	background: var(--primary);
 	border-style: solid;
 	border-color: var(--dark);
+	border-width: 1px;
 	color: var(--dark);
 }
 
