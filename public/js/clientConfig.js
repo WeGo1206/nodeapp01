@@ -30,7 +30,7 @@ function updateTrendData(objLineChart, days) {
     }
     
     switch (days) {
-        case 1:
+        case '1':
             el= document.getElementById('0-sel-btn');
             el.classList.add('selected-timerange-btn');
           break;
