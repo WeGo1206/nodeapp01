@@ -81,6 +81,10 @@ app.get('/updTrendData/7', function (req, res) {
   res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(7)));
 });
 
+app.get('/updTrendData/14', function (req, res) {
+  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(7)));
+});
+
 app.get('/updTrendData/31', function (req, res) {
   res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(31)));
 });

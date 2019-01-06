@@ -111,6 +111,14 @@ body {
 	border-radius: 7px;
 }
 
+.selected-timerange-btn {
+	background: rgba(142, 248, 128, 0.8);
+}
+
+.deselected-timerange-btn {
+	background: var(--primary);
+}
+
 .main-nav a:hover {
 	background: var(--dark);
 	color: var(--light);
