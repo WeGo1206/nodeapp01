@@ -112,7 +112,9 @@ body {
 }
 
 .selected-timerange-btn {
-	background: rgba(142, 248, 128, 0.8);
+	/* background: rgba(142, 248, 128, 0.8); */
+	border-style: solid;
+  	border-color: var(--dark);
 }
 
 .deselected-timerange-btn {
