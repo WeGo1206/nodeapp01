@@ -357,6 +357,14 @@ footer p {
 		color: var(--dark);
 	}
 
+
+	.selected-menue-btn {
+		background: var(--dark);
+	}
+	.deselected-menue-btn {
+		background: var(--primary);
+	}
+
 	.info-text {
 		margin: 0;
 		padding: 0;
