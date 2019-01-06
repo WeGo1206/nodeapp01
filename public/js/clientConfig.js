@@ -25,7 +25,7 @@ function updateTrendData(objLineChart, days) {
 
         elId= i+'-sel-btn';
         el= document.getElementById(elId);
-        el.classList.remmove('selected-timerange-btn');
+        el.classList.remove('selected-timerange-btn');
         el.classList.add('deselected-timerange-btn');
     }
     
