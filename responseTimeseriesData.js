@@ -24,7 +24,7 @@ module.exports = {
         var numValue3;
         var inc = 1;
 
-        if(dataArray.length >= 360) { inc= 3; };
+        if(dataArray.length >= 360) { inc= 12; };
 
         for (i = 0; i < dataArray.length; i += inc) {
             if(dataArray[i][3]) {

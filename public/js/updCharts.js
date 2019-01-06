@@ -264,12 +264,12 @@ function updTrendData(objLineChart, days) {
             this.objLineChart.config.data.datasets[1].data = obj.arrayOfYvalue2;
             this.objLineChart.config.data.datasets[2].data = obj.arrayOfYvalue3;
 
-            if(days>31) {
+            /* if(days>31) {
                 this.objLineChart.config.options.animation.duration= 0;
             } 
             else {
                 this.objLineChart.config.options.animation.duration= 1000;
-            }
+            } */
 
             this.objLineChart.update();
 
