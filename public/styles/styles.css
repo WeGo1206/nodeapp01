@@ -314,20 +314,20 @@ footer p {
 	}
 
 	html {
-		max-height: 100vh;
+		/* max-height: 100vh; */
 		max-width: 100vw;
 		color: var(--light);
 	}
 
 	body {
-		max-height: 100vh;
+		/* max-height: 100vh; */
 		max-width: 100vw;
 		margin: 5px;
 		background-image: url(../images/carbon.jpg);
 	}
 
 	.wrapper, .main-nav, #content {
-		max-height: 100vh;
+		/* max-height: 100vh; */
 		max-width: 100vw;
 	}
 
