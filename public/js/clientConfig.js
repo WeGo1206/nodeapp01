@@ -33,36 +33,44 @@ function updateTrendData(objLineChart, days) {
     switch (days) {
         case 1:
             el= document.getElementById('0-sel-btn');
+            el.classList.remove('deselected-timerange-btn');
             el.classList.add('selected-timerange-btn');
             console.log('case 1');
             console.log(el);
           break;
         case 3:
             el= document.getElementById('1-sel-btn');
+            el.classList.remove('deselected-timerange-btn');
             el.classList.add('selected-timerange-btn');
           break;
         case 7:
             el= document.getElementById('2-sel-btn');
+            el.classList.remove('deselected-timerange-btn');
             el.classList.add('selected-timerange-btn');
           break;
         case 14:
             el= document.getElementById('3-sel-btn');
+            el.classList.remove('deselected-timerange-btn');
             el.classList.add('selected-timerange-btn');
           break;
         case 31:
             el= document.getElementById('4-sel-btn');
+            el.classList.remove('deselected-timerange-btn');
             el.classList.add('selected-timerange-btn');
           break;
         case 183:
             el= document.getElementById('5-sel-btn');
+            el.classList.remove('deselected-timerange-btn');
             el.classList.add('selected-timerange-btn');
           break;
         case 365:
             el= document.getElementById('6-sel-btn');
+            el.classList.remove('deselected-timerange-btn');
             el.classList.add('selected-timerange-btn');
           break;
         case 730:
             el= document.getElementById('7-sel-btn');
+            el.classList.remove('deselected-timerange-btn');
             el.classList.add('selected-timerange-btn');
       }
 
