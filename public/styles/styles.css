@@ -326,7 +326,7 @@ footer p {
 		background-image: url(../images/carbon.jpg);
 	}
 
-	.wrapper {
+	.wrapper, .main-nav, #content {
 		max-height: 100vh;
 		max-width: 100vw;
 	}
