@@ -97,9 +97,11 @@ body {
 
 .selected-menue-btn {
 	background: var(--dark);
+	color: var(--primary);
 }
 .deselected-menue-btn {
 	background: var(--primary);
+	color: var(--dark);
 }
 
 .change-timerange, .change-timerange2 {
@@ -133,10 +135,10 @@ body {
 	margin: 1px;
 }
 
-.main-nav a:hover {
+/* .main-nav a:hover {
 	background: var(--dark);
 	color: var(--light);
-}
+} */
 
 .box-a {
 	margin-top: 20px;
