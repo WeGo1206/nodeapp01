@@ -29,7 +29,7 @@ function updateTrendData(objLineChart, days) {
         el.classList.add('deselected-timerange-btn');
         console.log(el);
     }
-    
+    console.log(days);
     switch (days) {
         case '1':
             el= document.getElementById('0-sel-btn');
