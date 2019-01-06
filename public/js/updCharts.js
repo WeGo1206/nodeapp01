@@ -135,7 +135,7 @@ var config = {
                 },
                 ticks: {
                     fontColor: fontColorYAxes,
-                    stepSize: 10,
+                    stepSize: 5,
                 },
                 scaleLabel: {
                     display: !mobile,
