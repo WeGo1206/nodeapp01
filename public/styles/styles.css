@@ -113,6 +113,7 @@ body {
 
 .selected-timerange-btn {
 	/* background: rgba(142, 248, 128, 0.8); */
+	background: var(--primary);
 	border-style: solid;
   	border-color: var(--dark);
 }
