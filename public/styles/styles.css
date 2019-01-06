@@ -93,12 +93,12 @@ body {
 	box-shadow: var(--shadow);
 }
 
-.change-timerange {
+.change-timerange, .change-timerange2 {
 	display: flex;
 	align-items: center;
 }
 
-.change-timerange a {
+.change-timerange a, .change-timerange2 a {
 	flex: 1;
 	background: var(--primary);
 	display: block;
