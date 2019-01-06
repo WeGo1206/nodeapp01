@@ -90,10 +90,16 @@ body {
 	text-decoration: none;
 	padding: 0.8rem;
 	text-align: center;
-	color: var(--dark);
 	text-transform: uppercase;
 	font-size: 1.1rem;
 	box-shadow: var(--shadow);
+}
+
+.selected-menue-btn {
+	background: var(--dark);
+}
+.deselected-menue-btn {
+	background: var(--primary);
 }
 
 .change-timerange, .change-timerange2 {
@@ -355,14 +361,6 @@ footer p {
 		border-color: var(--dark);
 		border-width: 1px;
 		color: var(--dark);
-	}
-
-
-	.selected-menue-btn {
-		background: var(--dark);
-	}
-	.deselected-menue-btn {
-		background: var(--primary);
 	}
 
 	.info-text {
