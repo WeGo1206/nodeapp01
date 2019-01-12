@@ -1,5 +1,5 @@
 var serverURL = "http://wego67.internet-box.ch";
-//var serverURL = "http://192.168.179.30";
+//var serverURL = "http://192.168.1.114";
 
 var siteURLHome = serverURL;
 var siteURLMeasurement= serverURL + "/measurement";
@@ -74,28 +74,31 @@ function updateTrendData(objLineChart, days) {
             el.classList.remove('deselected-timerange-btn');
             el.classList.add('selected-timerange-btn');
       }
-
-
-
-
-
-
-
-
 }
+var onMediaQuerryMobile = false;
+if (window.innerWidth <= 500) {
+        onMediaQuerryMobile= true;
+    } else {
+        onMediaQuerryMobile= false;
+    }
 
-
-/* function onMediaQuery(x) {
-    if (x.matches) { // If media query matches
+function onMediaQuery(e) {
+    var conf;
+    if (e.matches) { // If media query matches
         console.log('mediaquery matches');
-        
+        //updateTrendData(window.myLine,1);
+        onMediaQuerryMobile = true;
+        navigateTo('/');
+               
     } else {
         console.log('mediaquery does not match');
-       
+        //updateTrendData(window.myLine,1)
+        onMediaQuerryMobile = false;
+        navigateTo('/');
+             
     };
   };
   
-  var x = window.matchMedia("(max-width: 600px)");
-  onMediaQuery(x); // Call listener function at run time
-  x.addListener(window.myLine.update()); // Attach listener function on state changes
- */
+  var mql = window.matchMedia("(max-width: 500px)");
+  //onMediaQuery(x); // Call listener function at run time
+  mql.addListener(onMediaQuery); // Attach listener function on state changes

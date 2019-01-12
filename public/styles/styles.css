@@ -289,7 +289,7 @@ footer p {
 	border-radius: 7px;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 500px) {
 	.main-nav ul {
 		display: flex;
 		flex-direction: column;

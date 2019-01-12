@@ -8,17 +8,7 @@ window.chartColors = {
     grey: 'rgb(201, 203, 207)'
 }
     
-var cHeight = window.innerHeight;
-var cWidth = window.innerWidth;
-var mobile;
-var fontSizeLegend;
-var fontColorLegend;
-var fontColorYAxes;
-var gridLinesColor;
-var zeroLineColor;
-var titleFontSize;
-var bodyFontSize;
-var nameInsideTemp, nameOutsideTemp, nameProcessorTemp;
+
 
 var _xvalues;
 var _yvalues1;
@@ -31,121 +21,146 @@ var _SysInfo3;
 var _SysInfo4;
 
 
-if(cWidth<= 600) {
-    mobile= true;
-    fontSizeLegend= 22;
-    bodyFontSize= 20;
-    titleFontSize= 20;
-    fontColorLegend= 'rgb(250, 249, 249)';
-    nameInsideTemp =   'Innen',
-    nameOutsideTemp=   'Aussen',
-    nameProcessorTemp= 'CPU';
-    fontColorYAxes= 'rgb(255, 255, 255)';
-    gridLinesColor= 'rgba(255, 255, 255,0.3)';
-    zeroLineColor= 'rgba(255, 255, 255,0.6)';
-}
-else {
-    mobile= false;
-    fontSizeLegend= 15;
-    bodyFontSize= 12;
-    titleFontSize= 12;
-    fontColorLegend= '#666';
-    nameInsideTemp =   'Innen';
-    nameOutsideTemp=   'Aussen';
-    nameProcessorTemp= 'CPU';
-    fontColorYAxes= 'rgb(0, 0, 0)';
+var render = function(){
+
+    var cHeight = window.innerHeight;
+    var cWidth = window.innerWidth;
+    var mobile;
+    var fontSizeLegend;
+    var fontColorLegend;
+    var fontColorYAxes;
+    var gridLinesColor;
+    var zeroLineColor;
+    var titleFontSize;
+    var bodyFontSize;
+    var nameInsideTemp, nameOutsideTemp, nameProcessorTemp;
+
+    if(onMediaQuerryMobile ) {
+        mobile= true;
+        fontSizeLegend= 22;
+        bodyFontSize= 20;
+        titleFontSize= 20;
+        fontColorLegend= 'rgb(250, 249, 249)';
+        nameInsideTemp =   'Innen',
+        nameOutsideTemp=    'Aussen',
+        nameProcessorTemp= 'CPU';
+        fontColorYAxes= 'rgb(255, 255, 255)';
+        gridLinesColor= 'rgba(255, 255, 255,0.3)';
+        zeroLineColor= 'rgba(255, 255, 255,0.6)';
+        console.log("<=600:" + cWidth + onMediaQuerryMobile);
+    }
+    else {
+        mobile= false;
+        fontSizeLegend= 15;
+        bodyFontSize= 12;
+        titleFontSize= 12;
+        fontColorLegend= '#666';
+        nameInsideTemp =   'Innen';
+        nameOutsideTemp=   'Aussen';
+        nameProcessorTemp= 'CPU';
+        fontColorYAxes= 'rgb(0, 0, 0)';
+        console.log(">600:" + cWidth + onMediaQuerryMobile);
+    };
+    var config = {
+        type: 'line',
+        data: {
+            labels: _xvalues,
+            datasets: [{
+                label: nameOutsideTemp,
+                backgroundColor: window.chartColors.blue,
+                borderColor: window.chartColors.blue,
+                data: _yvalues1,
+                fill: false,
+                pointRadius: 0					
+            }, {
+                label: nameInsideTemp,
+                fill: false,
+                backgroundColor: window.chartColors.red,
+                borderColor: window.chartColors.red,
+                data: _yvalues2,
+                pointRadius: 0					
+            }, {
+                label: nameProcessorTemp,
+                fill: false,
+                backgroundColor: window.chartColors.orange,
+                borderColor: window.chartColors.orange,
+                data: _yvalues3,
+                pointRadius: 0
+            }]
+        },
+        options: {
+            layout: {
+                padding: {
+                    right: 15,
+                    bottom: 20
+                }
+            },
+            legend: {
+                display: true,
+                labels: {
+                    fontSize: fontSizeLegend,
+                    fontColor: fontColorLegend
+                },
+                fullWidth: mobile
+                
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            aspectRatio: 0.75,
+            title: {
+                display: true,
+                text: ''
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+                bodyFontSize: bodyFontSize,
+                titleFontSize: titleFontSize
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            scales: {
+                xAxes: [{
+                    display: !mobile,
+                    scaleLabel: {
+                        display: true,
+                        labelString: '>>>> [ t ] >>>>'
+                    }
+                }],
+                yAxes: [{
+                    display: true,
+                    gridLines: {
+                            color: gridLinesColor,
+                            lineWidth: 1,
+                            zeroLineColor: zeroLineColor,
+                            tickMarkLength: 3,
+                            borderDash: [8,3]
+                    },
+                    ticks: {
+                        fontColor: fontColorYAxes,
+                        stepSize: 5,
+                    },
+                    scaleLabel: {
+                        display: !mobile,
+                        labelString: '>>>> [ \u00b0C ] >>>>'
+                    },
+                    
+                }]
+            }
+        }
+    };
+
+    console.log("rendered");
+    console.log(fontColorLegend + " - " + fontSizeLegend);
+    console.log(config.options.legend.labels.fontColor);
+    console.log(config.options.legend.labels.fontSize);
+    return config;
 }
 
-var config = {
-    type: 'line',
-    data: {
-        labels: _xvalues,
-        datasets: [{
-            label: nameOutsideTemp,
-            backgroundColor: window.chartColors.blue,
-            borderColor: window.chartColors.blue,
-            data: _yvalues1,
-            fill: false,
-            pointRadius: 0					
-        }, {
-            label: nameInsideTemp,
-            fill: false,
-            backgroundColor: window.chartColors.red,
-            borderColor: window.chartColors.red,
-            data: _yvalues2,
-            pointRadius: 0					
-        }, {
-            label: nameProcessorTemp,
-            fill: false,
-            backgroundColor: window.chartColors.orange,
-            borderColor: window.chartColors.orange,
-            data: _yvalues3,
-            pointRadius: 0
-        }]
-    },
-    options: {
-        layout: {
-            padding: {
-                right: 15,
-                bottom: 20
-            }
-        },
-        legend: {
-            display: true,
-            labels: {
-                fontSize: fontSizeLegend,
-                fontColor: fontColorLegend
-            },
-            fullWidth: mobile
-            
-        },
-        responsive: true,
-        maintainAspectRatio: false,
-        aspectRatio: 0.75,
-        title: {
-            display: true,
-            text: ''
-        },
-        tooltips: {
-            mode: 'index',
-            intersect: false,
-            bodyFontSize: bodyFontSize,
-            titleFontSize: titleFontSize
-        },
-        hover: {
-            mode: 'nearest',
-            intersect: true
-        },
-        scales: {
-            xAxes: [{
-                display: !mobile,
-                scaleLabel: {
-                    display: true,
-                    labelString: '>>>> [ t ] >>>>'
-                }
-            }],
-            yAxes: [{
-                display: true,
-                gridLines: {
-                        color: gridLinesColor,
-                        lineWidth: 1,
-                        zeroLineColor: zeroLineColor,
-                        tickMarkLength: 3,
-                        borderDash: [8,3]
-                },
-                ticks: {
-                    fontColor: fontColorYAxes,
-                    stepSize: 5,
-                },
-                scaleLabel: {
-                    display: !mobile,
-                    labelString: '>>>> [ \u00b0C ] >>>>'
-                },
-                
-            }]
-        }
-    }
-};
+var config = render();
+
 
 var configHorizontalBar1 = {
     type: 'horizontalBar',
@@ -270,8 +285,9 @@ function updTrendData(objLineChart, days) {
             else {
                 this.objLineChart.config.options.animation.duration= 1000;
             } */
-
+            
             this.objLineChart.update();
+                       
 
             document.getElementById("min1").innerHTML = obj.minValue1;
             document.getElementById("max1").innerHTML = obj.maxValue1;
