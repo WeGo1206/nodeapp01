@@ -314,9 +314,9 @@ footer p {
 	text-align: left;
     
 	/* Position the tooltip text - see examples below! */
-	position: absolute;
+	position: relative;
 	z-index: 1;
-	top: -100px;
+	top: 0;
 	left: 0;
   }
   
