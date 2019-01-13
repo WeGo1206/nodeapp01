@@ -305,7 +305,6 @@ footer p {
   /* Tooltip text */
   #tooltip-text-details {
 	/* visibility: hidden; */
-	display: none;
 	width: 250px;
 	background-color:var(--primary);
 	color: var(--dark);;
