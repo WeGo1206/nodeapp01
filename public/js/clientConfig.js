@@ -104,8 +104,8 @@ function onMediaQuery(e) {
   mql.addListener(onMediaQuery); // Attach listener function on state changes
 
   function showDetails() {
-    var x = getElementById("tooltip-text-details");
-    var y = getElementById("tooltip-show-details");
+    var x = document.getElementById("tooltip-text-details");
+    var y = document.getElementById("tooltip-show-details");
     if (x.style.display= "none") {
         x.style.display= "block";
         document.getElementById("tooltip-show-details").innerHTML = "weniger Details";
