@@ -106,7 +106,7 @@ function onMediaQuery(e) {
   function showDetails() {
     var x = document.getElementById("tooltip-text-details");
     var y = document.getElementById("tooltip-show-details");
-    if (x.style.display= "none") {
+    if (x.style.display == "none") {
         x.style.display= "block";
         document.getElementById("tooltip-show-details").innerHTML = "weniger Details";
     } else {
