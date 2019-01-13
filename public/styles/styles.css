@@ -307,7 +307,7 @@ footer p {
   /* Tooltip text */
   #tooltip-show-details #tooltip-text-details {
 	/* visibility: hidden; */
-	transform: scale(0);
+	display: none;
 	width: 250px;
 	background-color:var(--primary);
 	color: var(--dark);;
@@ -323,21 +323,7 @@ footer p {
 	left: 0;
 	-webkit-transition: transform ease-in-out 500ms;
   }
-
-
   
-  /* Show the tooltip text when you mouse over the tooltip container */
-  #tooltip-show-details:hover #tooltip-text-details {
-	/* visibility: visible; */
-	transform: scale(1);
-  }
-
-  #tooltip-show-details:hover {
-	/* visibility: visible; */
-	background: rgba(104, 104, 104, 0.3);
-	color:  rgba(255, 255, 255, 0.842);
-  }
-
 @media (max-width: 500px) {
 	.main-nav ul {
 		display: flex;
