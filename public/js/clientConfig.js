@@ -113,4 +113,4 @@ function onMediaQuery(e) {
         x.style.display= 'none';
         document.getElementById("tooltip-show-details").innerHTML = "mehr Details";
     }
-  }
+  };

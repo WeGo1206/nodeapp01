@@ -317,7 +317,7 @@ footer p {
 	/* Position the tooltip text - see examples below! */
 	position: absolute;
 	z-index: 1;
-	top: -400px;
+	top: -100px;
 	left: 0;
   }
   
