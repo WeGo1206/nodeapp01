@@ -106,8 +106,11 @@ function onMediaQuery(e) {
   function showDetails() {
     var x = document.getElementById("tooltip-text-details");
     x.style.display= 'block';
+    console.log("show");
   };
+
   function hideDetails() {
     var x = document.getElementById("tooltip-text-details");
     x.style.display= 'none';
+    console.log("hide");
   };
