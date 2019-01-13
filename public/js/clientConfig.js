@@ -105,12 +105,15 @@ function onMediaQuery(e) {
 
   function showDetails() {
     var x = document.getElementById("tooltip-text-details");
-    x.style.display= 'block';
+    console.log( x.style.display);
+    if( x.style.display=== 'none'){
+        x.style.display= 'block';
+        console.log("show" + x.style.display);
+    } else {
+        x.style.display= 'none';
+        console.log("hide" + x.style.display);
+    }
+    
     console.log("show");
   };
 
-  function hideDetails() {
-    var x = document.getElementById("tooltip-text-details");
-    x.style.display= 'none';
-    console.log("hide");
-  };
