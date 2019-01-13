@@ -319,7 +319,7 @@ footer p {
 	position: absolute;
 	z-index: 1;
 	top: -400px;
-	left: 40px;
+	left: -40px;
   }
   
 @media (max-width: 500px) {
