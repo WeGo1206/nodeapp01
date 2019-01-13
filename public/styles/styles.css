@@ -301,6 +301,7 @@ footer p {
 	font-size: 1.0rem;
 	border-radius: 7px;
 	width: 50%;
+	-webkit-transition: transform ease-in-out 500ms;
 }
 
   /* Tooltip text */
