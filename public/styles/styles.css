@@ -300,12 +300,10 @@ footer p {
 	font-size: 1.0rem;
 	border-radius: 7px;
 	width: 50%;
-	-webkit-transition: background ease-in-out 500ms;
-	-webkit-transition: color ease-in-out 500ms;
 }
 
   /* Tooltip text */
-  #tooltip-show-details #tooltip-text-details {
+  #tooltip-text-details {
 	/* visibility: hidden; */
 	display: none;
 	width: 250px;
@@ -321,7 +319,6 @@ footer p {
 	z-index: 1;
 	top: -400px;
 	left: 0;
-	-webkit-transition: transform ease-in-out 500ms;
   }
   
 @media (max-width: 500px) {

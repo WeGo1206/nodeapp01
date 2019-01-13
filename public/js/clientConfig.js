@@ -110,7 +110,7 @@ function onMediaQuery(e) {
         x.style.display= "block";
         document.getElementById("tooltip-show-details").innerHTML = "weniger Details";
     } else {
-        x.sytle.display= "none";
+        x.stylee.display= "none";
         document.getElementById("tooltip-show-details").innerHTML = "mehr Details";
     }
   }
