@@ -305,6 +305,7 @@ footer p {
   /* Tooltip text */
   #tooltip-text-details {
 	/* visibility: hidden; */
+	display: none;
 	width: 250px;
 	background-color:var(--primary);
 	color: var(--dark);;
@@ -314,7 +315,7 @@ footer p {
 	text-align: left;
     
 	/* Position the tooltip text - see examples below! */
-	position: relative;
+	position: absolute;
 	z-index: 1;
 	top: 0;
 	left: 0;
