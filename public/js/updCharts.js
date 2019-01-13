@@ -292,14 +292,23 @@ function updTrendData(objLineChart, days) {
             document.getElementById("min1").innerHTML = obj.minValue1;
             document.getElementById("max1").innerHTML = obj.maxValue1;
             document.getElementById("num1").innerHTML = obj.numValue1;
+            document.getElementById("avg1").innerHTML = obj.avgOfYvalue1;
+
 
             document.getElementById("min2").innerHTML = obj.minValue2;
             document.getElementById("max2").innerHTML = obj.maxValue2;
             document.getElementById("num2").innerHTML = obj.numValue2;
+            document.getElementById("avg2").innerHTML = obj.avgOfYvalue2;
 
             document.getElementById("min3").innerHTML = obj.minValue3;
             document.getElementById("max3").innerHTML = obj.maxValue3;
             document.getElementById("num3").innerHTML = obj.numValue3;
+            document.getElementById("avg3").innerHTML = obj.avgOfYvalue3;
+
+            document.getElementById("tooltip-text-details").innerHTML = 
+            "Aussen: "+"</br>"+"Min: "+ obj.minValue1 + "</br>"+"Max: "+obj.maxValue1+ "</br>"+"&Oslash;: "+obj.avgOfYvalue1+ "&#x2103;" + "</br>"+"n: "+obj.numValue1
+            + "</br></br>"+"Innen: "+"</br>"+"Min: "+ obj.minValue2 + "</br>"+"Max: "+obj.maxValue2+ "</br>"+"&Oslash;: "+obj.avgOfYvalue2+ "&#x2103;" + "</br>"+"n: "+obj.numValue2
+            + "</br></br>"+"CPU: "+"</br>"+"Min: "+ obj.minValue3 + "</br>"+"Max: "+obj.maxValue3+ "</br>"+"&Oslash;: "+obj.avgOfYvalue3+ "&#x2103;" + "</br>"+"n: "+obj.numValue3
 
             console.log(obj.arrayOfTime);
             console.log(obj.arrayOfYvalue1);

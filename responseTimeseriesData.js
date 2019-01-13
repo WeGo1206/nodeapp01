@@ -46,7 +46,7 @@ module.exports = {
             };
         };
        
-        for(i=0; i< dataArray[i].length; i++) {
+/*         for(i=0; i< dataArray[i].length; i++) {
 		    avgOfYvalue1 += dataArray[i][0];
         };
     
@@ -62,24 +62,36 @@ module.exports = {
             avgOfYvalue3 += dataArray[i][0];
             };
         
-        avgOfYvalue3 = avgOfYvalue3/dataArray[i].length;
+        avgOfYvalue3 = avgOfYvalue3/dataArray[i].length; */
+
+        var avgOfYvalue1 = arrayOfYvalue1.reduce((a,b) => a + b, 0) / arrayOfYvalue1.length
+        avgOfYvalue1 = avgOfYvalue1.toFixed(1);
+        //console.log("avg1" +avgOfYvalue1);
+
+        var avgOfYvalue2 = arrayOfYvalue2.reduce((a,b) => a + b, 0) / arrayOfYvalue2.length
+        avgOfYvalue2 = avgOfYvalue2.toFixed(1);
+        //console.log("avg2" +avgOfYvalue2);
+
+        var avgOfYvalue3 = arrayOfYvalue3.reduce((a,b) => a + b, 0) / arrayOfYvalue3.length
+        avgOfYvalue3 = avgOfYvalue3.toFixed(1);
+        //console.log("avg3" +avgOfYvalue3);
 
         numValue1= dataArray.length;
         numValue2= dataArray.length;
         numValue3= dataArray.length;
 
-        minValue1= Math.min(...arrayOfYvalue1).toFixed(1)+'  /  '+ 
+        minValue1= Math.min(...arrayOfYvalue1).toFixed(1)+'&#x2103;  -  '+ 
         arrayOfTime[arrayOfYvalue1.indexOf(Math.min(...arrayOfYvalue1))].replace(/\"/g,"");
-        minValue2= Math.min(...arrayOfYvalue2).toFixed(1)+'  /  '+ 
+        minValue2= Math.min(...arrayOfYvalue2).toFixed(1)+'&#x2103;  -  '+ 
         arrayOfTime[arrayOfYvalue2.indexOf(Math.min(...arrayOfYvalue2))].replace(/\"/g,"");
-        minValue3= Math.min(...arrayOfYvalue3).toFixed(1)+'  /  '+ 
+        minValue3= Math.min(...arrayOfYvalue3).toFixed(1)+'&#x2103;  -  '+ 
         arrayOfTime[arrayOfYvalue3.indexOf(Math.min(...arrayOfYvalue3))].replace(/\"/g,"");
 
-        maxValue1= Math.max(...arrayOfYvalue1).toFixed(1)+'  /  '+ 
+        maxValue1= Math.max(...arrayOfYvalue1).toFixed(1)+'&#x2103;  -  '+ 
         arrayOfTime[arrayOfYvalue1.indexOf(Math.max(...arrayOfYvalue1))].replace(/\"/g,"");
-        maxValue2= Math.max(...arrayOfYvalue2).toFixed(1)+'  /  '+ 
+        maxValue2= Math.max(...arrayOfYvalue2).toFixed(1)+'&#x2103;  -  '+ 
         arrayOfTime[arrayOfYvalue2.indexOf(Math.max(...arrayOfYvalue2))].replace(/\"/g,"");
-        maxValue3= Math.max(...arrayOfYvalue3).toFixed(1)+'  /  '+ 
+        maxValue3= Math.max(...arrayOfYvalue3).toFixed(1)+'&#x2103;  -  '+ 
         arrayOfTime[arrayOfYvalue3.indexOf(Math.max(...arrayOfYvalue3))].replace(/\"/g,"");
         
 
