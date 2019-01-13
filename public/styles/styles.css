@@ -336,8 +336,8 @@ footer p {
 	/* visibility: visible; */
 	background: rgba(104, 104, 104, 0.1);
 	width: 2px;
-	font-size: 0;
-	padding: 1rem;
+	font-size: 0.01rem;
+	padding: 0.75rem;
 
   }
 
