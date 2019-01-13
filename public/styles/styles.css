@@ -290,7 +290,6 @@ footer p {
 }
 
 #tooltip-show-details {
-	transform: scale(1);
 	position: relative;
 	background: var(--primary);
 	display: block;
@@ -301,7 +300,7 @@ footer p {
 	font-size: 1.0rem;
 	border-radius: 7px;
 	width: 50%;
-	-webkit-transition: transform ease-in-out 500ms;
+	-webkit-transition: width ease-in-out 500ms;
 }
 
   /* Tooltip text */
@@ -332,7 +331,7 @@ footer p {
 
   #tooltip-show-details:hover {
 	/* visibility: visible; */
-	transform: scale(0);
+	width: 0;
   }
 
 @media (max-width: 500px) {
