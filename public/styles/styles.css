@@ -318,8 +318,8 @@ footer p {
 	/* Position the tooltip text - see examples below! */
 	position: absolute;
 	z-index: 1;
-	top: -400px;
-	left: -80px;
+	top: -420px;
+	left: -100px;
   }
   
 @media (max-width: 500px) {
