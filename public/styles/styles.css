@@ -291,6 +291,7 @@ footer p {
 
 #tooltip-show-details {
 	position: relative;
+	margin: auto;
 	background: var(--primary);
 	display: block;
 	text-decoration: none;
