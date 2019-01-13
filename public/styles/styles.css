@@ -331,7 +331,7 @@ footer p {
 
   #tooltip-show-details:hover {
 	/* visibility: visible; */
-	background: rgba(104, 104, 104, 0.1);
+	background: rgba(104, 104, 104, 0.3);
   }
 
 @media (max-width: 500px) {
