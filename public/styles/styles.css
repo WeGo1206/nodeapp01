@@ -290,6 +290,7 @@ footer p {
 }
 
 #tooltip-show-details {
+	transform: scale(1);
 	position: relative;
 	background: var(--primary);
 	display: block;
@@ -326,8 +327,13 @@ footer p {
   #tooltip-show-details:hover #tooltip-text-details {
 	/* visibility: visible; */
 	transform: scale(1);
-	
   }
+
+  #tooltip-show-details:hover {
+	/* visibility: visible; */
+	transform: scale(0);
+  }
+
 @media (max-width: 500px) {
 	.main-nav ul {
 		display: flex;
