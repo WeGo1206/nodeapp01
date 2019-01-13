@@ -300,10 +300,7 @@ footer p {
 	font-size: 1.0rem;
 	border-radius: 7px;
 	width: 50%;
-	-webkit-transition: background ease-in-out 1ms;
-	-webkit-transition: width ease-in-out 500ms;
-	-webkit-transition: font-size ease-in-out 1ms;
-	-webkit-transition: padding ease-in-out 1ms;
+	-webkit-transition: background ease-in-out 500ms;
 }
 
   /* Tooltip text */
@@ -335,10 +332,6 @@ footer p {
   #tooltip-show-details:hover {
 	/* visibility: visible; */
 	background: rgba(104, 104, 104, 0.1);
-	width: 2px;
-	font-size: 0.01rem;
-	padding: 0.75rem;
-
   }
 
 @media (max-width: 500px) {
