@@ -299,7 +299,7 @@ footer p {
 	color: var(--dark);
 	font-size: 1.0rem;
 	border-radius: 7px;
-	width: 10%;
+	width: 20%;
 }
 
   /* Tooltip text */
@@ -317,8 +317,8 @@ footer p {
 	/* Position the tooltip text - see examples below! */
 	position: absolute;
 	z-index: 1;
-	top: -400px;
-	left: 10px;
+	top: -500px;
+	left: 20px;
   }
   
 @media (max-width: 500px) {
