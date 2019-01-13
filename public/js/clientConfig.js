@@ -102,3 +102,15 @@ function onMediaQuery(e) {
   var mql = window.matchMedia("(max-width: 500px)");
   //onMediaQuery(x); // Call listener function at run time
   mql.addListener(onMediaQuery); // Attach listener function on state changes
+
+  function showDetails() {
+    var x = getElementById("tooltip-text-details");
+    var y = getElementById("tooltip-show-details");
+    if (x.style.display= "none") {
+        x.style.display= "block";
+        document.getElementById("tooltip-show-details").innerHTML = "weniger Details";
+    } else {
+        x.sytle.display= "none";
+        document.getElementById("tooltip-show-details").innerHTML = "mehr Details";
+    }
+  }
