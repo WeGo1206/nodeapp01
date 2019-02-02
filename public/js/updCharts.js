@@ -38,8 +38,8 @@ var render = function(){
     if(onMediaQuerryMobile ) {
         mobile= true;
         fontSizeLegend= 22;
-        bodyFontSize= 20;
-        titleFontSize= 20;
+        bodyFontSize= 15;
+        titleFontSize= 15;
         fontColorLegend= 'rgb(250, 249, 249)';
         nameInsideTemp =   'Innen',
         nameOutsideTemp=    'Aussen',
@@ -115,7 +115,13 @@ var render = function(){
                 mode: 'index',
                 intersect: false,
                 bodyFontSize: bodyFontSize,
-                titleFontSize: titleFontSize
+                titleFontSize: titleFontSize,
+		backgroundColor: 'rgba(176,196,222,1)',
+		bodyFontColor: 'rgba(0,0,0,1)',
+		titleFontColor: 'rgba(0,0,0,1)',
+		caretSize: 15,
+		borderWidth: 1,
+		borderColor: 'rgba(128,128,128,1)'
             },
             hover: {
                 mode: 'nearest',
