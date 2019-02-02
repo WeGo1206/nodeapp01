@@ -69,10 +69,6 @@ module.exports = {
         
         avgOfYvalue3 = avgOfYvalue3/dataArray[i].length; */
 
-	//console.log(dataArray);
-	dataArray.pop();
-	//console.log(dataArray);
-
 
 	arrTime = dataArray.map((val) => {return val[3].substring(0,19)});
 	//console.log(arrTime);

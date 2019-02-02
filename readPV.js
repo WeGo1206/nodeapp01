@@ -37,6 +37,9 @@ module.exports = {
             arrayOfSeparatedValues.push(splitByValue);
         };
         
+	//trim array - remove last undefind
+	arrayOfSeparatedValues.pop();
+	console.log(arrayOfSeparatedValues);
         return arrayOfSeparatedValues;
     }
 }
