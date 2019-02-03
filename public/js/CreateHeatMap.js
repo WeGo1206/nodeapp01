@@ -71,7 +71,7 @@ Highcharts.chart('heatmap-container', {
         showLastLabel: true,
         tickLength: 5,
 	tickWidth: 2,
-	startOnTick: true,
+	startOnTick: false,
         endOnTick: true,
 	tickInterval: 24 * 3600 * 1000 *60 //in milliseconds
 
