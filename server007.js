@@ -8,7 +8,7 @@ var resSysInfo = require('./responseSysInfo');
 var config = require('./serverConfig');
 var readActValues = require('./readActValues');
 var resTimeseriesData = require('./responseTimeseriesData');
-
+var resHeatmapData = require('./responseHeatmapData');
 var app = express();
 
 //const hostname = '192.168.1.106';
@@ -99,6 +99,10 @@ app.get('/updTrendData/365', function (req, res) {
 
 app.get('/updTrendData/730', function (req, res) {
   res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(730)));
+});
+
+app.get('/reqHeatmapData/730', function (req, res) {
+  res.send(resHeatmapData.responseHeatmapData(piFixedValue.readPV(730)));
 });
 
 app.post('/pi', function(req, res){ 

@@ -9,15 +9,13 @@
 	<link rel="stylesheet" type="text/css" href="/styles/styles.css">
 	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-	<!-- <script>window.chartColors = {
-		red: 'rgb(255, 69, 0)',
-		orange: 'rgb(255, 159, 64)',
-		yellow: 'rgb(255, 205, 86)',
-		green: 'rgb(34, 139, 34)',
-		blue: 'rgb(30,144, 255)',
-		purple: 'rgb(153, 102, 255)',
-		grey: 'rgb(201, 203, 207)'
-	};</script> -->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/heatmap.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/data.js"></script>
+	<script src="https://code.highcharts.com/modules/boost-canvas.js"></script>
+	<script src="https://code.highcharts.com/modules/boost.js"></script>
+	<script src="/js/heatMap.js"></script>
 	<script src="/js/clientConfig.js"></script>
 </head>
 
@@ -39,6 +37,7 @@
 					</li>
 				</ul>
 			</nav>
+		
 		<div id="content">
 			<div id="value-overview" class="hide">
 				<div id="trend-area"></div>
@@ -66,7 +65,11 @@
 				<div id="tooltip-show-details" onClick="showDetails();">Details
 					<div id="tooltip-text-details">text</div>
 				</div>
-				
+				<div id="show-heatmap" onClick="showHeatmap();">HEATMAP
+					<div id="calc-heatmap">Lade Daten...</div>
+					<div id="heatmap-container" style="height: 400px; min-width: 360px; max-width: 1000px; margin: 0 auto"></div>
+
+				</div>
 				<fieldset class="box-a">
 					<legend>Auswahl manueller Zeitbereich</legend>
 					<form action="/pi" method="POST">
@@ -161,269 +164,15 @@
 				</fieldset>
 			</section>
 		</div>
+		
 		<footer>
 			<p>2018 WeGo67 - Raspberry Pi mit Sensor DS18B20</p>
 		</footer>
 	</div>
-<!-- 	<script>
-		var cHeight = window.innerHeight;
-		var cWidth = window.innerWidth;
-		console.log(cHeight, cWidth);
-		var mobile;
-		var fontSizeLegend;
-		var fontColorLegend;
-		var fontColorYAxes;
-		var gridLinesColor;
-		var zeroLineColor;
-		var titleFontSize;
-		var bodyFontSize;
-		var nameInsideTemp, nameOutsideTemp, nameProcessorTemp;
-		
-		if(cWidth<= 600) {
-			mobile= true;
-			fontSizeLegend= 22;
-			bodyFontSize= 20;
-			titleFontSize= 20;
-			fontColorLegend= 'rgb(250, 249, 249)';
-			nameInsideTemp =   'Innen',
-			nameOutsideTemp=   'Aussen',
-			nameProcessorTemp= 'CPU';
-			fontColorYAxes= 'rgb(255, 255, 255)';
-			gridLinesColor= 'rgba(255, 255, 255,0.3)';
-			zeroLineColor= 'rgba(255, 255, 255,0.6)';
-
-		}
-		else {
-			mobile= false;
-			fontSizeLegend= 15;
-			bodyFontSize= 12;
-			titleFontSize= 12;
-			fontColorLegend= '#666';
-			nameInsideTemp =   'Innen';
-			nameOutsideTemp=   'Aussen';
-			nameProcessorTemp= 'CPU';
-			fontColorYAxes= 'rgb(0, 0, 0)';
-			
-			
-		}
-		
-		var config = {
-			type: 'line',
-			data: {
-				labels: [_xvalues],
-				datasets: [{
-					label: nameOutsideTemp,
-					backgroundColor: window.chartColors.blue,
-					borderColor: window.chartColors.blue,
-					data: [_yvalues1],
-					fill: false,
-					pointRadius: 0					
-				}, {
-					label: nameInsideTemp,
-					fill: false,
-					backgroundColor: window.chartColors.red,
-					borderColor: window.chartColors.red,
-					data: [_yvalues2],
-					pointRadius: 0					
-				}, {
-					label: nameProcessorTemp,
-					fill: false,
-					backgroundColor: window.chartColors.orange,
-					borderColor: window.chartColors.orange,
-					data: [_yvalues3],
-					pointRadius: 0
-				}]
-			},
-			options: {
-				layout: {
-					padding: {
-						right: 15,
-						bottom: 20
-					}
-				},
-				legend: {
-            		display: true,
-            		labels: {
-                		fontSize: fontSizeLegend,
-						fontColor: fontColorLegend
-            		},
-					fullWidth: mobile
-					
-        		},
-				responsive: true,
-				maintainAspectRatio: false,
-				aspectRatio: 0.75,
-				title: {
-					display: true,
-					text: ''
-				},
-				tooltips: {
-					mode: 'index',
-					intersect: false,
-					bodyFontSize: bodyFontSize,
-					titleFontSize: titleFontSize
-				},
-				hover: {
-					mode: 'nearest',
-					intersect: true
-				},
-				scales: {
-					xAxes: [{
-						display: !mobile,
-						scaleLabel: {
-							display: true,
-							labelString: '>>>> [ t ] >>>>'
-						}
-					}],
-					yAxes: [{
-						display: true,
-						gridLines: {
-								color: gridLinesColor,
-								lineWidth: 1,
-								zeroLineColor: zeroLineColor,
-								tickMarkLength: 3,
-								borderDash: [8,3]
-						},
-						ticks: {
-							fontColor: fontColorYAxes,
-							stepSize: 10,
-						},
-						scaleLabel: {
-							display: !mobile,
-							labelString: '>>>> [ \u00b0C ] >>>>'
-						},
-						
-					}]
-				}
-			}
-		};
-
-/* 		window.onload = function() {
-			var ctx = document.getElementById('canvas').getContext('2d');
-			window.myLine = new Chart(ctx, config);
-		}; */
-	</script>
-	<script>
-        //var color = Chart.helpers.color;
-		var horizontalBarChartData1 = {
-			labels: ['HDD'],
-			datasets: [{
-				label: 'Verwendet',
-				backgroundColor: [
-					window.chartColors.blue
-					],
-				data: [
-				_SysInfo1
-				]
-			},
-			{
-				label: 'Frei',
-				backgroundColor: [
-					window.chartColors.green
-					],
-				data: [
-				_SysInfo2
-				]
-			}]
-		};
-
-var horizontalBarChartData2 = {
-			labels: ['RAM'],
-			datasets: [{
-				label: 'Verwendet',
-				backgroundColor: [
-					window.chartColors.blue
-					],
-				data: [
-				_SysInfo3
-				]
-			},
-			{
-				label: 'Frei',
-				backgroundColor: [
-					window.chartColors.green
-					],
-				data: [
-				_SysInfo4
-				]
-			}]
-		};
-
-		window.onload = function() {
-			var ctx1 = document.getElementById('canvas').getContext('2d');
-			window.myLine = new Chart(ctx1, config);
-			var ctx2 = document.getElementById('info-hdd-canvas').getContext('2d');
-			window.myHorizontalBar1 = new Chart(ctx2, {
-				type: 'horizontalBar',
-				data: horizontalBarChartData1,
-				options: {
-					// Elements options apply to all of the options unless overridden in a dataset
-					// In this case, we are setting the border of each horizontal bar to be 2px wide
-					elements: {
-						rectangle: {
-							borderWidth: 2,
-						}
-					},
-					responsive: false,
-					barPercentage: 0.5,
-					legend: {
-						position: 'top',
-					},
-					title: {
-						display: true,
-						text: '16 GB SD Card',
-						position: 'bottom'
-					},
-					scales: {
- 						xAxes: [
-							{
-								stacked: true	
-							}], 
-						yAxes: [
-							{
-								stacked: true	
-							}]
-						}
-				}
-			});
-			var ctx3 = document.getElementById('info-ram-canvas').getContext('2d');
-			window.myHorizontalBar2 = new Chart(ctx3, {
-				type: 'horizontalBar',
-				data: horizontalBarChartData2,
-				options: {
-					// Elements options apply to all of the options unless overridden in a dataset
-					// In this case, we are setting the border of each horizontal bar to be 2px wide
-					elements: {
-						rectangle: {
-							borderWidth: 2,
-						}
-					},
-					responsive: false,
-					barPercentage: 0.5,
-					legend: {
-						position: 'top',
-					},
-					title: {
-						display: true,
-						text: '1 GB RAM',
-						position: 'bottom'
-					},
-					scales: {
-						xAxes: [{
-								stacked: true,	
-							}],
-						yAxes: [{
-								stacked: true,	
-							}]
-						}
-				}
-			});
-		};
-    </script> -->
 	<script src="/js/nav.js"></script>
 	<script src="/js/updActValues.js"></script>
 	<script src="/js/updCharts.js"></script>
-	
+
 </body>
 
 </html>

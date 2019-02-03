@@ -117,3 +117,20 @@ function onMediaQuery(e) {
     console.log("show");
   };
 
+  function showHeatmap() {
+    var x = document.getElementById("heatmap-container");
+    var x2= document.getElementById("calc-heatmap");
+    console.log( x.style.display);
+    if( x.style.display!== 'block'){
+        x.style.display= 'block';
+	x2.style.display= 'block';
+        console.log("show" + x.style.display);
+    } else {
+        x.style.display= 'none';
+	x2.style.display= 'none';
+        console.log("hide" + x.style.display);
+    }
+    reqHeatmapData(730);
+    console.log("show");
+  };
+

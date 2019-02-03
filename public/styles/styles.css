@@ -321,6 +321,28 @@ footer p {
 	top: -420px;
 	left: -100px;
   }
+
+#show-heatmap {
+	position: relative;
+	margin-top: 10px;
+	background: var(--primary);
+	display: block;
+	text-decoration: none;
+	color: var(--dark);
+	border-radius: 7px;
+	padding: 0.1rem;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+#heatmap-container {
+	display: none;
+}
+#calc-heatmap {
+	display: none;
+	margin-top: 20px;
+	font-size: 1.0rem;
+}
   
 @media (max-width: 500px) {
 	.main-nav ul {

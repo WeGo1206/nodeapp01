@@ -7,7 +7,6 @@ window.chartColors = {
     purple: 'rgb(153, 102, 255)',
     grey: 'rgb(201, 203, 207)'
 }
-    
 
 
 var _xvalues;
@@ -37,7 +36,7 @@ var render = function(){
 
     if(onMediaQuerryMobile ) {
         mobile= true;
-        fontSizeLegend= 18;
+        fontSizeLegend= 22;
         bodyFontSize= 13;
         titleFontSize= 13;
         fontColorLegend= 'rgb(250, 249, 249)';
@@ -323,7 +322,7 @@ function updTrendData(objLineChart, days) {
             console.log(obj.avgOfYvalue1);
             console.log(obj.avgOfYvalue2);
             console.log(obj.avgOfYvalue3);
-           
+
             };
         };  
     var route= "/updtrendData/"+days

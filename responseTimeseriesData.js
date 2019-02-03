@@ -27,6 +27,7 @@ module.exports = {
         var maxValue3;
         var numValue3;
         var inc = 1;
+	
 
         if(dataArray.length >= (3*24*90)) { inc= 12; };
 
@@ -103,8 +104,8 @@ module.exports = {
         maxValue1= Math.max(...arrY1).toFixed(1)+'&#x2103;  -  '+ arrTime[arrY1.indexOf(Math.max(...arrY1))].replace(/\"/g,"");
         maxValue2= Math.max(...arrY2).toFixed(1)+'&#x2103;  -  '+ arrTime[arrY2.indexOf(Math.max(...arrY2))].replace(/\"/g,"");
         maxValue3= Math.max(...arrY3).toFixed(1)+'&#x2103;  -  '+ arrTime[arrY3.indexOf(Math.max(...arrY3))].replace(/\"/g,"");
-        
 
+	
         return {
             arrayOfTime,
             arrayOfYvalue1, 
@@ -121,7 +122,8 @@ module.exports = {
             numValue2,
             minValue3,
             maxValue3,
-            numValue3,
+            numValue3
+	    
         };
     }
 }
