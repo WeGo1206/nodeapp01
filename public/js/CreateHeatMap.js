@@ -22,6 +22,11 @@ function reqHeatmapData(days) {
 };
 
 var createHeatmap = function(arrHeatmapData){
+var currDate = new Date();
+var currYear = currDate.getFullYear();
+var currMonth = currDate.getMonth();
+var currDay = currDate.getDate();
+
 Highcharts.chart('heatmap-container', {
 
     data: {
@@ -38,29 +43,34 @@ Highcharts.chart('heatmap-container', {
     },
 
     title: {
-        text: '',
+        text: 'Aussen-Temperatur °C',
         align: 'left',
         x: 10
     },
 
     subtitle: {
-        text: 'Aussen-Temperatur je Tag und Stunde',
+        text: 'seit Mai 2018',
         align: 'left',
         x: 10
     },
 
+    exporting: { 
+	enabled: false 
+    },
+
     xAxis: {
         type: 'datetime',
-        min: Date.UTC(2018, 5, 1),
-        max: Date.UTC(2019, 1, 1, 23, 59, 59),
+        min: Date.UTC(2018, 4, 22),
+        max: Date.UTC(currYear, currMonth, currDay),
         labels: {
-            align: 'left',
-            x: 5,
+            align: 'center',
+            x: 0,
             y: 14,
             format: '{value:%m/%y}' // long month
         },
-        showLastLabel: false,
-        tickLength: 16,
+        showLastLabel: true,
+        tickLength: 5,
+	tickWidth: 2,
 	startOnTick: false,
         endOnTick: false,
 
@@ -71,14 +81,15 @@ Highcharts.chart('heatmap-container', {
             text: null
         },
         labels: {
-            format: '{value}:00'
+	    format: '{value}:00'
         },
         minPadding: 0,
         maxPadding: 0,
         startOnTick: true,
         endOnTick: true,
-        tickPositions: [0, 6, 12, 18, 24],
-        tickWidth: 1,
+        tickPositions: [0, 6, 12, 18, 23],
+        tickWidth: 2,
+	tickLength: 5,
         min: 0,
         max: 23,
         reversed: true
