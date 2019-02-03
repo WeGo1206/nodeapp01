@@ -16,6 +16,14 @@ body {
 	margin: 30px 50px;
 }
 
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
 .wrapper {
 	display: grid;
 	grid-gap: 0px;
