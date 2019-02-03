@@ -299,35 +299,34 @@ footer p {
 
 #tooltip-show-details {
 	position: relative;
-	margin: auto;
+	margin-top: 10px;
 	background: var(--primary);
 	display: block;
 	text-decoration: none;
-	padding: 0.2rem;
-	text-align: center;
 	color: var(--dark);
-	font-size: 1.0rem;
 	border-radius: 7px;
-	width: 25%;
+	padding: 0.1rem;
+	text-align: center;
+	font-size: 1.5rem;
 }
 
   /* Tooltip text */
   #tooltip-text-details {
 	/* visibility: hidden; */
 	display: none;
-	width: 250px;
-	background-color:var(--primary);
-	color: var(--dark);;
+	/*width: 250px;*/
+	background-color:rgba(221,221,221,1.0);
+	color: var(--dark);
 	padding: 20px;
 	border-radius: 6px;
 	font-size: 0.9rem;
 	text-align: left;
     
 	/* Position the tooltip text - see examples below! */
-	position: absolute;
+	/*position: absolute;
 	z-index: 1;
-	top: -420px;
-	left: -100px;
+	top: -430px;
+	left: 40px;*/
   }
 
 #show-heatmap {
