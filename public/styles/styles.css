@@ -160,6 +160,7 @@ select {
 }
 
 .info {
+	display: none;
 	width:100%;
 }
 

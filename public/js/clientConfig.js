@@ -103,9 +103,9 @@ function onMediaQuery(e) {
   //onMediaQuery(x); // Call listener function at run time
   mql.addListener(onMediaQuery); // Attach listener function on state changes
 
-  function showDetails() {
+  function showDetails(event) {
     var x = document.getElementById("tooltip-text-details");
-    console.log( x.style.display);
+    if(event.target.id === "tooltip-show-details"){
     if( x.style.display!== 'block'){
         x.style.display= 'block';
         console.log("show" + x.style.display);
@@ -113,14 +113,15 @@ function onMediaQuery(e) {
         x.style.display= 'none';
         console.log("hide" + x.style.display);
     }
-    
+    }
     console.log("show");
   };
 
-  function showHeatmap() {
+  function showHeatmap(event) {
     var x = document.getElementById("heatmap-container");
     var x2= document.getElementById("calc-heatmap");
     console.log( x.style.display);
+    if(event.target.id === "show-heatmap"){
     if( x.style.display!== 'block'){
         x.style.display= 'block';
 	x2.style.display= 'block';
@@ -129,6 +130,7 @@ function onMediaQuery(e) {
         x.style.display= 'none';
 	x2.style.display= 'none';
         console.log("hide" + x.style.display);
+    }
     }
     reqHeatmapData(730);
     console.log("show");
