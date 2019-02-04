@@ -231,11 +231,13 @@ footer p {
 #animation-canvas {
 	margin-top: 10px;
 	border: 1px solid black;
+	width: 95vw;
 }
 
 #collision-canvas {
 	margin-top: 10px;
 	border: 1px solid black;
+	width: 95vw;
 }
 
 #value-overview {
