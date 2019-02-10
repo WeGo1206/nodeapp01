@@ -98,7 +98,7 @@ app.get('/updTrendData/365', function (req, res) {
 });
 
 app.get('/updTrendData/730', function (req, res) {
-  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(730)));
+  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(3*365)));
 });
 
 app.get('/reqHeatmapData/730', function (req, res) {
