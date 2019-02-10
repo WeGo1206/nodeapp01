@@ -1,5 +1,5 @@
 var serverURL = "http://wego67.internet-box.ch";
-//var serverURL = "http://192.168.1.114";
+//var serverURL = "http://192.168.179.30";
 
 var siteURLHome = serverURL;
 var siteURLMeasurement= serverURL + "/measurement";
@@ -105,13 +105,16 @@ function onMediaQuery(e) {
 
   function showDetails(event) {
     var x = document.getElementById("tooltip-text-details");
-    if(event.target.id === "tooltip-show-details"){
+    var carret = document.getElementById("more-details");
+    if((event.target.id === "more-details")||(event.target.id === "tooltip-show-details")){
     if( x.style.display!== 'block'){
         x.style.display= 'block';
+        carret.innerHTML= '&#9650';
         console.log("show" + x.style.display);
     } else {
         x.style.display= 'none';
         console.log("hide" + x.style.display);
+        carret.innerHTML= '&#9660';
     }
     }
     console.log("show");
@@ -120,15 +123,18 @@ function onMediaQuery(e) {
   function showHeatmap(event) {
     var x = document.getElementById("heatmap-container");
     var x2= document.getElementById("calc-heatmap");
+    var carret = document.getElementById("more-heatmap");
     console.log( x.style.display);
-    if(event.target.id === "show-heatmap"){
+    if((event.target.id === "show-heatmap")||(event.target.id === "more-heatmap")){
     if( x.style.display!== 'block'){
         x.style.display= 'block';
-	x2.style.display= 'block';
+        x2.style.display= 'block';
+        carret.innerHTML= '&#9650';
         console.log("show" + x.style.display);
     } else {
         x.style.display= 'none';
-	x2.style.display= 'none';
+        x2.style.display= 'none';
+        carret.innerHTML= '&#9660';
         console.log("hide" + x.style.display);
     }
     }

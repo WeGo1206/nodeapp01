@@ -332,8 +332,10 @@ footer p {
 	left: 40px;*/
 	}
 	
-#more-details {
-	font-size: 0.7rem;
+#more-details, #more-heatmap {
+	position: absolute;
+	right: 10px;
+	font-size: 1.5rem;
 }
 
 #show-heatmap {
@@ -355,7 +357,7 @@ footer p {
 #calc-heatmap {
 	position: absolute;
 	top: 50px;
-	left: 180px;
+	left: 10px;
 	display: none;
 	margin-top: 20px;
 	font-size: 1.0rem;
