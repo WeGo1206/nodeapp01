@@ -35,6 +35,7 @@ Highcharts.chart('heatmap-container', {
 
     chart: {
         type: 'heatmap',
+        borderRadius: 7,
         margin: [60, 5, 80, 50]
     },
 
