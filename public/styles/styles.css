@@ -349,6 +349,8 @@ footer p {
 	display: none;
 }
 #calc-heatmap {
+	position: absolute;
+	top: -50px;
 	display: none;
 	margin-top: 20px;
 	font-size: 1.0rem;
