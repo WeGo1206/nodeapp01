@@ -350,10 +350,11 @@ footer p {
 }
 #calc-heatmap {
 	position: absolute;
-	top: -50px;
+	top: 50px;
 	display: none;
 	margin-top: 20px;
 	font-size: 1.0rem;
+	text-align: center;
 }
   
 @media (max-width: 500px) {
