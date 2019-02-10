@@ -330,7 +330,12 @@ footer p {
 	z-index: 1;
 	top: -430px;
 	left: 40px;*/
-  }
+	}
+	
+#more-details {
+	text-align: right;
+	font-size: 0.5rem;
+}
 
 #show-heatmap {
 	position: relative;
