@@ -115,12 +115,12 @@ var render = function(){
                 intersect: false,
                 bodyFontSize: bodyFontSize,
                 titleFontSize: titleFontSize,
-		backgroundColor: 'rgba(0,0,0,0.7)',
-		bodyFontColor: 'rgba(255,255,255,1)',
-		titleFontColor: 'rgba(255,255,255,1)',
-		caretSize: 15,
-		borderWidth: 1,
-		borderColor: 'rgba(255,255,255,1)'
+                backgroundColor: 'rgba(0,0,0,0.7)',
+                bodyFontColor: 'rgba(255,255,255,1)',
+                titleFontColor: 'rgba(255,255,255,1)',
+                caretSize: 15,
+                borderWidth: 1,
+                borderColor: 'rgba(255,255,255,1)'
             },
             hover: {
                 mode: 'nearest',
@@ -284,16 +284,8 @@ function updTrendData(objLineChart, days) {
             this.objLineChart.config.data.datasets[1].data = obj.arrayOfYvalue2;
             this.objLineChart.config.data.datasets[2].data = obj.arrayOfYvalue3;
 
-            /* if(days>31) {
-                this.objLineChart.config.options.animation.duration= 0;
-            } 
-            else {
-                this.objLineChart.config.options.animation.duration= 1000;
-            } */
-            
             this.objLineChart.update();
-                       
-
+                    
             document.getElementById("min1").innerHTML = obj.minValue1;
             document.getElementById("max1").innerHTML = obj.maxValue1;
             document.getElementById("num1").innerHTML = obj.numValue1;
