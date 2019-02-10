@@ -335,9 +335,9 @@ footer p {
 #more-details {
 	position: absolute;
 	left: 400px;
-	top: 5px;
+	top: 10px;
 	text-align: right;
-	font-size: 0.5rem;
+	font-size: 0.7rem;
 }
 
 #show-heatmap {
