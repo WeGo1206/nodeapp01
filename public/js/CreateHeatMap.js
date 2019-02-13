@@ -114,6 +114,7 @@ Highcharts.chart('heatmap-container', {
         }
     },
 
+    
     series: [{
         boostThreshold: 100,
         borderWidth: 0,
