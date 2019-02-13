@@ -10,7 +10,7 @@ module.exports = {
         var arrayOfYvalue1 = [];
         var arrayOfYvalue2 = [];
         var arrayOfYvalue3 = [];
-	var arrTime = [];
+	    var arrTime = [];
         var arrY1 = [];
         var arrY2 = [];
         var arrY3 = [];
@@ -71,14 +71,14 @@ module.exports = {
         avgOfYvalue3 = avgOfYvalue3/dataArray[i].length; */
 
 
-	arrTime = dataArray.map((val) => {return val[3].substring(0,19)});
-	//console.log(arrTime);
-	arrY1 = dataArray.map((val)=>{return Number(val[0].replace(",","."))});
-	//console.log(arrY1);
-	arrY2 = dataArray.map((val)=>{return Number(val[1].replace(",","."))});
-	//console.log(arrY2);
-	arrY3 = dataArray.map((val)=>{return Number(val[2].replace(",","."))});
-	//console.log(arrY3);
+        arrTime = dataArray.map((val) => {return val[3].substring(0,19)});
+        //console.log(arrTime);
+        arrY1 = dataArray.map((val)=>{return Number(val[0].replace(",","."))});
+        //console.log(arrY1);
+        arrY2 = dataArray.map((val)=>{return Number(val[1].replace(",","."))});
+        //console.log(arrY2);
+        arrY3 = dataArray.map((val)=>{return Number(val[2].replace(",","."))});
+        //console.log(arrY3);
 
         var avgOfYvalue1 = arrY1.reduce((a,b) => a + b, 0) / arrY1.length
         avgOfYvalue1 = avgOfYvalue1.toFixed(1);

@@ -23,8 +23,8 @@ module.exports = {
 
         for (d = 0; d < fileName.length; d++) {
 	    try{
-               dataTemp = fs.readFileSync(config.filePathTempData + fileName[d] + '.txt', 'utf-8');
-               data = data.concat(dataTemp);
+            dataTemp = fs.readFileSync(config.filePathTempData + fileName[d] + '.txt', 'utf-8');
+            data = data.concat(dataTemp);
 	    }
 	    catch(err){
 
