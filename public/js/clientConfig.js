@@ -88,7 +88,7 @@ function onMediaQuery(e) {
         console.log('mediaquery matches');
         //updateTrendData(window.myLine,1);
         onMediaQuerryMobile = true;
-        navigateTo('/');
+        navigateTo('/Messung');
                
     } else {
         console.log('mediaquery does not match');
