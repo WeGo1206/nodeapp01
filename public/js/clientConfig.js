@@ -94,7 +94,7 @@ function onMediaQuery(e) {
         console.log('mediaquery does not match');
         //updateTrendData(window.myLine,1)
         onMediaQuerryMobile = false;
-        navigateTo('/');
+        navigateTo('/Messung');
              
     };
   };
