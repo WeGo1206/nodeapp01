@@ -34,7 +34,7 @@ var mustBeLoggedIn = function(req, res, next){
     next();
   } else {
     req.session.save(function(){
-      res.redirect('/LoginPage');
+      res.redirect('/');
     })
   }
 }
