@@ -1,9 +1,9 @@
 module.exports = {
-    filePathTempData: '/home/pi/Documents/',
-    hostname: '192.168.1.106',
-    port: 80,
-    filePathSysInfo: '/home/pi/Documents/PiSysInfo.txt',
-    filePathActValue: '/home/pi/Documents/Temperatur_Wohnung_Aktuell.txt'
+    filePathTempData: 'Dev\\TestData\\',
+    hostname: '192.168.1.119',
+    port: 3000,
+    filePathSysInfo: 'Dev\\TestData\\PiSysInfo.txt'    ,
+    filePathActValue: 'Dev\\TestData\\Temperatur_Wohnung_Aktuell.txt'
 }
 
 //filePathTempData Linux: '/home/pi/Documents/',
