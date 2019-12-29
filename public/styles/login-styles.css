@@ -48,3 +48,7 @@ input {
     border: 2px solid #1e62d0;
     border-radius: 4px;
   }
+
+  footer p {
+	text-align: center;
+}
