@@ -17,8 +17,12 @@ print('free disk size= %s' % freesize)
 
 lines = os.popen('free -m').readlines()[-2]
 print('readlines %s' % lines)
-usedmem, freemem = map(int, os.popen('free -m').readlines()[-2].split()[2:])
-totmem = usedmem + freemem
+
+test = os.popen('free -m').readlines()[-2].split()[1:]
+print('test %s' % test)
+
+totmem, usedmem = map(int, os.popen('free -m').readlines()[-2].split()[1:3])
+freemem = totmem - usedmem
 print('used memory (RAM)= %s' % usedmem)
 print('free memory (RAM)= %s' % freemem)
 print('total memory (RAM)= %s' % totmem)
