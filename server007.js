@@ -51,7 +51,7 @@ app.get('/LoginPage', function (req, res) {
 
 app.post('/login', function (req, res) {
   console.log(req.body);
-  if(req.body.username=="admin" && req.body.password=="@ct3mium") {
+  if(req.body.username=="WeG" && req.body.password=="Server007js") {
     req.session.user = {favColor: "blue", username: req.body.username}
     res.redirect('/Messung');
   }
