@@ -15,7 +15,13 @@ var app = express();
 var bcrypt = require("bcryptjs");
 
 var salt = bcrypt.genSaltSync(10);
-var hashedPw = "$2a$10$vXHoQqVHooOUb/NrgGxWdeBvlNs7fT9D83QM5pBTk0dfAF70WryE2"
+var userName1 = 'WeG';
+var hashedPw1 = '$2a$10$vXHoQqVHooOUb/NrgGxWdeBvlNs7fT9D83QM5pBTk0dfAF70WryE2';
+var userName2 = 'admin';
+var hashedPw2 = '$2a$10$3xFvsNqgZNxuuu0opF3jLeoACDhTfwE/RkBOASK83ZKL3uecpE/Um';
+
+//var hashedPw2 = bcrypt.hashSync("MyPassword", salt);
+//console.log(hashedPw2);
 
 var sessionOptions = session({
   secret: "haelhdhdkfgr",
@@ -54,14 +60,26 @@ app.get('/LoginPage', function (req, res) {
 });
 
 app.post('/login', function (req, res) {
-  console.log(req.body);
-  if(req.body.username=="WeG" && bcrypt.compareSync(hashedPw, req.body.password)) {
-    req.session.user = {favColor: "blue", username: req.body.username}
-    res.redirect('/Messung');
-  }
+  //console.log(req.body);
+  if(
+	(req.body.username==userName1 && bcrypt.compareSync(req.body.password, hashedPw1)) || 
+	(req.body.username==userName2 && bcrypt.compareSync(req.body.password, hashedPw2))) {
+    
+	req.session.user = {favColor: "blue", username: req.body.username}
+    	req.session.save(function() {
+		res.redirect('/Messung')})
+   }
+
   else {
-    res.redirect('/LoginPage');
-  }
+    	req.session.save(function(){
+      	res.redirect('/');
+    	})
+       }
+});
+
+app.post('/logout', function (req, res) {
+	req.session.destroy(function() {
+		res.redirect('/LoginPage')})
 });
 
 app.get('/Messung', mustBeLoggedIn, function (req, res) {
