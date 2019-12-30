@@ -12,6 +12,10 @@ var readActValues = require('./readActValues');
 var resTimeseriesData = require('./responseTimeseriesData');
 var resHeatmapData = require('./responseHeatmapData');
 var app = express();
+var bcrypt = require("bcryptjs");
+
+var salt = bcrypt.genSaltSync(10);
+var hashedPw = "$2a$10$vXHoQqVHooOUb/NrgGxWdeBvlNs7fT9D83QM5pBTk0dfAF70WryE2"
 
 var sessionOptions = session({
   secret: "haelhdhdkfgr",
@@ -51,7 +55,7 @@ app.get('/LoginPage', function (req, res) {
 
 app.post('/login', function (req, res) {
   console.log(req.body);
-  if(req.body.username=="WeG" && req.body.password=="Server007js") {
+  if(req.body.username=="WeG" && bcrypt.compareSync(hashedPw, req.body.password)) {
     req.session.user = {favColor: "blue", username: req.body.username}
     res.redirect('/Messung');
   }
