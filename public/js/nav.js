@@ -7,9 +7,15 @@ function changeView(i) {
     xhttp = new XMLHttpRequest();
     
     xhttp.onreadystatechange = function(i) {
+      var homeURL =[];
         if (this.readyState == 4 && this.status == 200) {
-          console.log(this.status);
+          console.log(this.readyState, this.status, this.responseURL);
           document.getElementById("content").innerHTML = this.responseText;
+          } else if(this.status == 401){
+            console.log('--', this.readyState, this.status, this.responseURL);
+            homeURL = this.responseURL.split('/');
+            console.log(homeURL);
+            window.location = homeURL[0]+'//'+homeURL[2]+'/LoginPage';
           };
         };  
 

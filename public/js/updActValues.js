@@ -33,6 +33,11 @@ function updActValues() {
           document.getElementById("actValInside").innerHTML = obj.tempInside;
           document.getElementById("actValProcessor").innerHTML = obj.tempProcessor;
           document.getElementById("actValTimeStamp").innerHTML = obj.timeStamp;
+          } else if(this.status == 401){
+            console.log('--', this.readyState, this.status, this.responseURL);
+            homeURL = this.responseURL.split('/');
+            console.log(homeURL);
+            window.location = homeURL[0]+'//'+homeURL[2]+'/LoginPage';
           };
         };  
 

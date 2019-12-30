@@ -11,10 +11,15 @@ function reqHeatmapData(days) {
             //console.log("empfange Heatmap-Daten: " + this.responseText);
             var obj = JSON.parse(this.responseText);
             console.log(obj.arrHeatmapData);
-	    createHeatmap(obj.arrHeatmapData);
+	        createHeatmap(obj.arrHeatmapData);
      	    var x= document.getElementById("calc-heatmap");
     	    x.style.display= 'none';
-            };
+            } else if(this.status == 401){
+                console.log('--', this.readyState, this.status, this.responseURL);
+                homeURL = this.responseURL.split('/');
+                console.log(homeURL);
+                window.location = homeURL[0]+'//'+homeURL[2]+'/LoginPage';
+              };
     };  
     var route= "/reqHeatmapData/"+days
     xhttp.open("GET", route, true);

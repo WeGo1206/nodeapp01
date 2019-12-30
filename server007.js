@@ -43,9 +43,10 @@ var mustBeLoggedIn = function(req, res, next){
   if(req.session.user){
     next();
   } else {
+    
     req.session.save(function(){
-      res.redirect('/LoginPage');
-    })
+      res.status(401).send();
+    });
   }
 }
 

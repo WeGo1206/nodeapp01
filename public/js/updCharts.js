@@ -315,7 +315,12 @@ function updTrendData(objLineChart, days) {
             console.log(obj.avgOfYvalue2);
             console.log(obj.avgOfYvalue3);
 
-            };
+            } else if(this.status == 401){
+                console.log('--', this.readyState, this.status, this.responseURL);
+                homeURL = this.responseURL.split('/');
+                console.log(homeURL);
+                window.location = homeURL[0]+'//'+homeURL[2]+'/LoginPage';
+              };
         };  
     var route= "/updtrendData/"+days
     xhttp.open("GET", route, true);
@@ -337,6 +342,11 @@ function updBarChartData() {
             _SysInfo2= obj.SysInfo2;
             _SysInfo3= obj.SysInfo3;
             _SysInfo4= obj.SysInfo4;
+          } else if(this.status == 401){
+            console.log('--', this.readyState, this.status, this.responseURL);
+            homeURL = this.responseURL.split('/');
+            console.log(homeURL);
+            window.location = homeURL[0]+'//'+homeURL[2]+'/LoginPage';
           };
         };  
     xhttp.open("GET", "/updBarChartData", true);
