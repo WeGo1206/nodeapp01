@@ -27,7 +27,7 @@ var sessionOptions = session({
   secret: "haelhdhdkfgr",
   resave: false,
   saveUninitialized: false,
-  cookie: {maxAge: 1000 * 60 * 3, httpOnly: true}
+  cookie: {maxAge: 1000 * 60 * 15, httpOnly: true}
 });
 
 app.use(sessionOptions);
@@ -44,7 +44,7 @@ var mustBeLoggedIn = function(req, res, next){
     next();
   } else {
     req.session.save(function(){
-      res.redirect('/');
+      res.redirect('/LoginPage');
     })
   }
 }
@@ -72,7 +72,7 @@ app.post('/login', function (req, res) {
 
   else {
     	req.session.save(function(){
-      	res.redirect('/');
+      	res.redirect('/LoginPage');
     	})
        }
 });
