@@ -19,6 +19,8 @@ var userName1 = 'WeG';
 var hashedPw1 = '$2a$10$vXHoQqVHooOUb/NrgGxWdeBvlNs7fT9D83QM5pBTk0dfAF70WryE2';
 var userName2 = 'admin';
 var hashedPw2 = '$2a$10$3xFvsNqgZNxuuu0opF3jLeoACDhTfwE/RkBOASK83ZKL3uecpE/Um';
+var userName3 = 'gAst'
+var hashedPw3 = '$2a$10$3L8g/Tnx4B9TYufSkLuFq.yLFmm6A0NYXRnJw/cH8kV5WT45h/6Sm';
 
 //var hashedPw2 = bcrypt.hashSync("MyPassword", salt);
 //console.log(hashedPw2);
@@ -64,7 +66,8 @@ app.post('/login', function (req, res) {
   //console.log(req.body);
   if(
 	(req.body.username==userName1 && bcrypt.compareSync(req.body.password, hashedPw1)) || 
-	(req.body.username==userName2 && bcrypt.compareSync(req.body.password, hashedPw2))) {
+  (req.body.username==userName2 && bcrypt.compareSync(req.body.password, hashedPw2)) ||
+  (req.body.username==userName3 && bcrypt.compareSync(req.body.password, hashedPw3))) {
     
 	req.session.user = {favColor: "blue", username: req.body.username}
     	req.session.save(function() {
