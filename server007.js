@@ -165,11 +165,11 @@ app.get('/updTrendData/365', mustBeLoggedIn, function (req, res) {
 });
 
 app.get('/updTrendData/730', mustBeLoggedIn, function (req, res) {
-  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(3*365)));
+  res.send(resTimeseriesData.responseTimeseriesData(piFixedValue.readPV(5*365)));
 });
 
 app.get('/reqHeatmapData/730', mustBeLoggedIn, function (req, res) {
-  res.send(resHeatmapData.responseHeatmapData(piFixedValue.readPV(730)));
+  res.send(resHeatmapData.responseHeatmapData(piFixedValue.readPV(5*365)));
 });
 
 app.post('/pi', mustBeLoggedIn, function(req, res){ 
